@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="google-site-verification" content="N9G6F46qFYJm1zHtuHEa8AdIIInPS8R6EDjRhOZu2Cg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="copyright" content=" Copyright &copy; 2015, Kim Ravn Hansen">
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="keywords" content="Personal page of Kim Ravn Hansen">
+        <meta name="author" content="Kim Ravn Hansen">
+
+
+        <title>{{ this.page.meta_title }}</title>
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900">
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ ['assets/scss/style.scss', 'assets/prism.css'] | theme }}">
+        <link rel="canonical" href="{{ ''|page }}" />
+        <link ref="author" href="{{ 'cv' | page }}">
+
+        {% styles %}
+
+        <!--
+        Dear human,
+
+        if you are reading this, you may be interested in how this site was
+        constructed. Check out {{ 'about-site' | page }} to find out more.
+
+        NOTE ABOUT ADBLOCK PLUS:
+        if you use AdBlockPlus on this site, there is a chance that certain icons
+        will not appear correctly.
+        This is an issue with AdBlockPlus blocking false positives. Especially
+        in the case of brand icons or social icons.
+
+        Learn more about this issue here:
+            https://github.com/FortAwesome/Font-Awesome/issues/1799
+            https://adblockplus.org/forum/viewtopic.php?f=2&t=21976
+
+        If you want the »best« experience, simply disable APB on this domain.
+
+        NOTE ABOUT PRINTING:
+        Printing is optimized for Chrome.
+        -->
+    </head>
+
+    <body>
+        <article class="container">
+            {% page %}
+        </article>
+
+
+        <!-- Well. Even a site "without any javascript at all" needs some tracking, right? :-) -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-69799299-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+        <script src="{{ 'assets/prism.js' | theme }}"></script>
+    </body>
+</html>
