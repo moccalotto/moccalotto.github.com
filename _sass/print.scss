@@ -1,0 +1,34 @@
+html, body {
+    width: 210mm;
+    height: 297mm;
+}
+
+img.profile {
+    width:5cm;
+    border-radius:5px;
+    margin-right:1cm;
+    float:left;
+    margin-bottom:1cm;
+}
+
+section, li {
+    page-break-inside: avoid;
+}
+
+.page-break {
+    page-break-before: always;
+}
+
+@for $i from 1 through 6 {
+  .h#{$i},h#{$i} {
+      page-break-after: avoid;
+  }
+}
+
+.popover {
+    display:none;
+}
+
+.screen-only {
+    display:none;
+}

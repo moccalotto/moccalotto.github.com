@@ -1,0 +1,41 @@
+/* START POPOVER LOGIC */
+/* The element to hover over */
+.note {
+    cursor: help;
+    display: inline-block;
+    
+    position: relative;
+    text-align: center;
+    
+    text-decoration: underline;
+}
+
+.note .popover {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    bottom: 30px;
+    color: #fff;
+    display: none;
+    font-size: 12px;
+    left: -70px; /* best guess for »average« size word */
+    padding: 7px 10px;
+    position: absolute;
+    width: 200px;
+    z-index: 4;
+}
+.note .popover:before {
+      /* down-arrow: https://css-tricks.com/examples/ShapesOfCSS/ */
+    border-top: 7px solid rgba(0, 0, 0, 0.85);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    bottom: -7px;
+    content: '';
+    display: block;
+    left: 50%;
+    margin-left: -7px;
+    position: absolute;
+}
+.note:hover .popover {
+    display: block;
+}
