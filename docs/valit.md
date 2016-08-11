@@ -145,9 +145,6 @@ try {
 }
 ```
 
-The `ValidationException` will contain a list of all the error messages,
-that can be accessed via the `getErrorMessages` method like so:
-
 ```php
 /*
 |----------------------------------------------------------
@@ -157,6 +154,10 @@ that can be accessed via the `getErrorMessages` method like so:
 | If you want to assert that all checks pass, and you want
 | info about all tests, you can use the Check facade in
 | combination with the `orThrowException` method.
+|
+| The thrown `ValidationException` will contain a list of
+| all the error messages. These can be accessed via the
+| `errorMessages` method like so:
 |
  */
 
