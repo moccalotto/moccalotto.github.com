@@ -1,21 +1,33 @@
 ---
 layout: default
 ---
+<header>
+    <h1 class="text-center">Projects</h1>
+</header>
 
-<div class="home">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 col-xs-offset-0 col-xs-12">
+        <h3>Valit</h3>
 
-  <h1 class="page-heading">Posts</h1>
+        <p>
+            Validate variables using a fluent syntax.
+            Easily assert that variables pass certain critera.
+            Re-use the same validators for many variables.
+        </p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div>
+<pre>
+<code class="language-php">Ensure::that($age)
+    ->isNumeric()
+    ->isGreaterThanOrEqual(18)
+    ->isLessThanOrEqual(130)
+</code></pre>
+        </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
+        <a href="{{ 'docs/valit' | page }}">Documentation</a>
+        &nbsp;|&nbsp;
+        <a href="https://packagist.org/packages/moccalotto/valit">Packagist</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/moccalotto/valit">Github</a>
+    </div>
 </div>
