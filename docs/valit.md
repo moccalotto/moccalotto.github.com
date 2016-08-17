@@ -173,3 +173,23 @@ try {
      */
 }
 ```
+
+### Checks
+
+Below is a list of all available checks.
+
+**Note**: <code class="language-php">$value</code> is the value that is being checked.
+<br>
+<br>
+
+<table>
+{% for check in site.data.validationChecks %}
+    <tr>
+        <h4>{{ check.description }}</h4>
+        {% for alias in check.aliases %}
+            <pre><code class="language-php">{{ alias }}({{ check.paramlist }})</code></pre>
+        {% endfor %}
+        <br>
+    </tr>
+{% endfor %}
+</table>

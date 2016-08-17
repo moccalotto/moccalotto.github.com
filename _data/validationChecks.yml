@@ -1,0 +1,467 @@
+[
+    {
+        "name": "checkXmlString",
+        "description": "Check if $value is a string containing valid xml.",
+        "aliases": [
+            "isValidXml",
+            "validXml"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkMatchesXmlAdvanced",
+        "description": "Check that $value and $against are semantically the same.",
+        "aliases": [
+            "matchesXmlAdvanced"
+        ],
+        "paramlist": "$against, $skipWhite, $ignoreCase"
+    },
+    {
+        "name": "checkMatchesXmlWithWhiteSpace",
+        "description": "Check that $value matches $against, enforcing whitespace similarity as well.",
+        "aliases": [
+            "matchesXmlWithWhiteSpace"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkMatchesXmlWithCase",
+        "description": "Check that $value matches $against, enforcing case similarity as well.",
+        "aliases": [
+            "matchesXmlWithCase"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkMatchesXmlStrict",
+        "description": "Check that $value matches $against, enforcing whitespace and case similarities as well.",
+        "aliases": [
+            "matchesXmlWithWhiteSpaceAndCase",
+            "matchesXmlStrict"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkMatchesXml",
+        "description": "Check that $value matches $against, ignoring differences in case and whitespace.",
+        "aliases": [
+            "matchesXml"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkIsJson",
+        "description": "Check that $value is valid json.",
+        "aliases": [
+            "isValidJson",
+            "validJson",
+            "isJson"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkIdenticalTo",
+        "description": "Check that $value === $against.",
+        "aliases": [
+            "isIdenticalTo",
+            "identicalTo",
+            "sameAs",
+            "isSameAs"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkEquals",
+        "description": "Check that $value == $against (loose comparison).",
+        "aliases": [
+            "is",
+            "equals"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkIsTruthy",
+        "description": "Check that $value is truthy.",
+        "aliases": [
+            "isTruthy",
+            "truthy"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkIsFalsy",
+        "description": "Check that $value is falsy.",
+        "aliases": [
+            "isFalsy",
+            "falsy"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkIsFalse",
+        "description": "Check that $value is identical to false.",
+        "aliases": [
+            "isTrue",
+            "true"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkHasType",
+        "description": "Check that $value is identical to false.",
+        "aliases": [
+            "hasType",
+            "isType"
+        ],
+        "paramlist": "$type"
+    },
+    {
+        "name": "checkScalar",
+        "description": "Check that $value is scalar.",
+        "aliases": [
+            "isScalar",
+            "scalar"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkBool",
+        "description": "Check that $value is a boolean.",
+        "aliases": [
+            "isBool",
+            "isBoolean"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkArray",
+        "description": "Check that $value is an array.",
+        "aliases": [
+            "isArray"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkFloat",
+        "description": "Check that $value is a float.",
+        "aliases": [
+            "isFloat",
+            "isDouble"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkInteger",
+        "description": "Check that $value is a float.",
+        "aliases": [
+            "isInt",
+            "isInteger"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkString",
+        "description": "Check that $value is a float.",
+        "aliases": [
+            "isString"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkObject",
+        "description": "Check that $value is a float.",
+        "aliases": [
+            "isObject"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkNull",
+        "description": "Check that $value is null.",
+        "aliases": [
+            "isNull"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkNotNull",
+        "description": "Check that $value is null.",
+        "aliases": [
+            "isNotNull",
+            "notNull"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkResource",
+        "description": "Check that $value is a resource.",
+        "aliases": [
+            "isResource"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkResourceType",
+        "description": "Check that $value is a resource of the given type.",
+        "aliases": [
+            "isResourceOfType",
+            "resourceType"
+        ],
+        "paramlist": "$type"
+    },
+    {
+        "name": "checkCallable",
+        "description": "Check that $value is callable.",
+        "aliases": [
+            "isCallable"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkNumeric",
+        "description": "Check that $value is numeric.",
+        "aliases": [
+            "numeric",
+            "isNumeric"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkRealNumber",
+        "description": "Check that $value is a real number.",
+        "aliases": [
+            "realNumber",
+            "isRealNumber"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkNaturalNumber",
+        "description": "Check that $value is a natural number.",
+        "aliases": [
+            "isNaturalNumber",
+            "naturalNumber",
+            "isWholeNumber",
+            "wholeNumber"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkGreaterThan",
+        "description": "Check if $value > $against.",
+        "aliases": [
+            "greaterThan",
+            "isGreaterThan",
+            "gt"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkGreaterThanOrEqual",
+        "description": "Check if $value >= $against.",
+        "aliases": [
+            "greaterThanOrEqual",
+            "isGreaterThanOrEqual",
+            "gte"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkLessThan",
+        "description": "Check if $value < $against.",
+        "aliases": [
+            "lessThan",
+            "isLessThan",
+            "lowerThan",
+            "isLowerThan",
+            "lt"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkLessThanOrEqual",
+        "description": "Check if $value <= $against.",
+        "aliases": [
+            "lessThanOrEqual",
+            "isLessThanOrEqual",
+            "lowerThanOrEqual",
+            "isLowerThanOrEqual",
+            "lte"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkFloatEqual",
+        "description": "Check if $value is extremely close to $against.",
+        "aliases": [
+            "closeTo",
+            "isCloseTo",
+            "floatEquals",
+            "isFloatEqualTo"
+        ],
+        "paramlist": "$against, $epsilon"
+    },
+    {
+        "name": "checkOdd",
+        "description": "Check that $value is an odd integer.",
+        "aliases": [
+            "odd",
+            "isOdd"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkEven",
+        "description": "Check that $value is an even integer.",
+        "aliases": [
+            "even",
+            "isEven"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkPositive",
+        "description": "Check if $value is positive.",
+        "aliases": [
+            "positive",
+            "isPositive"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkNegative",
+        "description": "Check if $value is negative.",
+        "aliases": [
+            "negative",
+            "isNegative"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkPrimeRelativeTo",
+        "description": "Check if $value is prime relative to $against.",
+        "aliases": [
+            "isPrimeRelativeTo",
+            "primeRelativeTo",
+            "isRelativePrime",
+            "relativePrime",
+            "isCoprimeTo",
+            "coprimeTo"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkDivisibleBy",
+        "description": "Check if $value is prime relative to $against.",
+        "aliases": [
+            "isDivisibleBy",
+            "divisibleBy",
+            "dividesBy"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkHexString",
+        "description": "Check if $value contains only hexidecimal characters.",
+        "aliases": [
+            "isHexString",
+            "hexString",
+            "isHex"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkDecimalString",
+        "description": "Check if $value contains only decimal characters.",
+        "aliases": [
+            "decimalString",
+            "isDecimalString"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkEmail",
+        "description": "Check if $value contains a syntax-valid email address.",
+        "aliases": [
+            "isEmail",
+            "isEmailAddress",
+            "emailAddress"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkUppercase",
+        "description": "Check if $value is only uppercase characters.",
+        "aliases": [
+            "isUppercase",
+            "uppercase"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkLowercase",
+        "description": "Check if $value is only lowercase characters.",
+        "aliases": [
+            "isLowercase",
+            "lowercase"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkAlphaNumeric",
+        "description": "Check if $value contains only alpha-numeric characters.",
+        "aliases": [
+            "isAlphaNumeric",
+            "alphaNumeric",
+            "alphaNum",
+            "isAlphaNum"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkMatchesRegex",
+        "description": "Check if $value matches a given regular regex.",
+        "aliases": [
+            "matches",
+            "matchesRegex"
+        ],
+        "paramlist": "$pattern"
+    },
+    {
+        "name": "checkStringable",
+        "description": "Check if a given value can be converted to a string in a meaningful way.",
+        "aliases": [
+            "stringable",
+            "isStringable",
+            "stringCastable",
+            "isStringCastable"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkStartsWith",
+        "description": "Check if $value starts with a given string.",
+        "aliases": [
+            "startsWith",
+            "beginsWith"
+        ],
+        "paramlist": "$startsWith"
+    },
+    {
+        "name": "checkEndsWith",
+        "description": "Check if $value ends with a given string.",
+        "aliases": [
+            "endsWith"
+        ],
+        "paramlist": "$endsWith"
+    },
+    {
+        "name": "checkContainsString",
+        "description": "Check if $value contains a given string.",
+        "aliases": [
+            "containsString",
+            "containsTheString"
+        ],
+        "paramlist": "$contains"
+    }
+]
