@@ -108,25 +108,3 @@ dd {
 .nowrap {
     white-space:nowrap;
 }
-
-img.circular {
-    border-radius:50%;
-}
-
-img.grayscale {
-    filter: gray;
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    -ms-filter: grayscale(1);
-    -o-filter: grayscale(1);
-}
-
-img.grayscale:hover {
-    filter: none;
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-    -moz-filter: grayscale(0);
-    -ms-filter: grayscale(0);
-    -o-filter: grayscale(0);
-}
