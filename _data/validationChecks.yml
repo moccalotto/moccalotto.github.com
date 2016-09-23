@@ -98,11 +98,20 @@
         "paramlist": ""
     },
     {
-        "name": "checkIsFalse",
-        "description": "Check that $value is identical to false.",
+        "name": "checkIsTrue",
+        "description": "Check that $value is identical to true.",
         "aliases": [
             "isTrue",
             "true"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkIsFalse",
+        "description": "Check that $value is identical to false.",
+        "aliases": [
+            "isFalse",
+            "false"
         ],
         "paramlist": ""
     },
@@ -463,5 +472,14 @@
             "containsTheString"
         ],
         "paramlist": "$contains"
+    },
+    {
+        "name": "checkIsUuid",
+        "description": "Check if $value is a uuid.",
+        "aliases": [
+            "isUuid",
+            "uuid"
+        ],
+        "paramlist": ""
     }
 ]
