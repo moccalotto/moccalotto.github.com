@@ -50,6 +50,50 @@
         "paramlist": "$against"
     },
     {
+        "name": "checkDateParsable",
+        "description": "Check if $value is a string containing valid xml.",
+        "aliases": [
+            "isParsableDate",
+            "parsableDate",
+            "isDateString",
+            "dateString"
+        ],
+        "paramlist": "$format"
+    },
+    {
+        "name": "checkDateAfter",
+        "description": "Check if $value is a date after $against",
+        "aliases": [
+            "isDateAfter",
+            "occursAfter",
+            "dateAfter",
+            "laterThan",
+            "isLaterThan"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkDateBefore",
+        "description": "Check if $value is a date after $against",
+        "aliases": [
+            "isDateBefore",
+            "occursBefore",
+            "dateBefore",
+            "earlierThan",
+            "isEarlierThan"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkInThePast",
+        "description": "Check if $value is a date in the past",
+        "aliases": [
+            "dateInThePast",
+            "isDateInThePast"
+        ],
+        "paramlist": ""
+    },
+    {
         "name": "checkIsJson",
         "description": "Check that $value is valid json.",
         "aliases": [
@@ -58,6 +102,24 @@
             "isJson"
         ],
         "paramlist": ""
+    },
+    {
+        "name": "checkIsUuid",
+        "description": "Check if $value is a uuid.",
+        "aliases": [
+            "isUuid",
+            "uuid"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkUuidVersion",
+        "description": "Check if $value is a uuid.",
+        "aliases": [
+            "isUuidVersion",
+            "uuidVersion"
+        ],
+        "paramlist": "$version"
     },
     {
         "name": "checkIdenticalTo",
@@ -472,23 +534,5 @@
             "containsTheString"
         ],
         "paramlist": "$contains"
-    },
-    {
-        "name": "checkIsUuid",
-        "description": "Check if $value is a uuid.",
-        "aliases": [
-            "isUuid",
-            "uuid"
-        ],
-        "paramlist": ""
-    },
-    {
-        "name": "checkUuidVersion",
-        "description": "Check if $value is a uuid.",
-        "aliases": [
-            "isUuidVersion",
-            "uuidVersion"
-        ],
-        "paramlist": "$version"
     }
 ]
