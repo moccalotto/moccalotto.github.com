@@ -481,5 +481,14 @@
             "uuid"
         ],
         "paramlist": ""
+    },
+    {
+        "name": "checkUuidVersion",
+        "description": "Check if $value is a uuid.",
+        "aliases": [
+            "isUuidVersion",
+            "uuidVersion"
+        ],
+        "paramlist": "$version"
     }
 ]
