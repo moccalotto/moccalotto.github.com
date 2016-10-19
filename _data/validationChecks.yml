@@ -94,6 +94,26 @@
         "paramlist": ""
     },
     {
+        "name": "checkInTheFuture",
+        "description": "Check if $value is a date in the past",
+        "aliases": [
+            "dateInTheFuture",
+            "isDateInTheFuture"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkAtMidnight",
+        "description": "Check if $value is a date where the time-component is 00:00:00",
+        "aliases": [
+            "dateTimeAtMidnight",
+            "isDateTimeAtMidnight",
+            "isDateOnly",
+            "dateOnly"
+        ],
+        "paramlist": ""
+    },
+    {
         "name": "checkIsJson",
         "description": "Check that $value is valid json.",
         "aliases": [
