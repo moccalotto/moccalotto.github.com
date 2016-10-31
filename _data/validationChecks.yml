@@ -50,6 +50,70 @@
         "paramlist": "$against"
     },
     {
+        "name": "checkDateParsable",
+        "description": "Check if $value is a string containing valid xml.",
+        "aliases": [
+            "isParsableDate",
+            "parsableDate",
+            "isDateString",
+            "dateString"
+        ],
+        "paramlist": "$format"
+    },
+    {
+        "name": "checkDateAfter",
+        "description": "Check if $value is a date after $against",
+        "aliases": [
+            "isDateAfter",
+            "occursAfter",
+            "dateAfter",
+            "laterThan",
+            "isLaterThan"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkDateBefore",
+        "description": "Check if $value is a date after $against",
+        "aliases": [
+            "isDateBefore",
+            "occursBefore",
+            "dateBefore",
+            "earlierThan",
+            "isEarlierThan"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkInThePast",
+        "description": "Check if $value is a date in the past",
+        "aliases": [
+            "dateInThePast",
+            "isDateInThePast"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkInTheFuture",
+        "description": "Check if $value is a date in the past",
+        "aliases": [
+            "dateInTheFuture",
+            "isDateInTheFuture"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkAtMidnight",
+        "description": "Check if $value is a date where the time-component is 00:00:00",
+        "aliases": [
+            "dateTimeAtMidnight",
+            "isDateTimeAtMidnight",
+            "isDateOnly",
+            "dateOnly"
+        ],
+        "paramlist": ""
+    },
+    {
         "name": "checkIsJson",
         "description": "Check that $value is valid json.",
         "aliases": [
@@ -58,6 +122,24 @@
             "isJson"
         ],
         "paramlist": ""
+    },
+    {
+        "name": "checkIsUuid",
+        "description": "Check if $value is a uuid.",
+        "aliases": [
+            "isUuid",
+            "uuid"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkUuidVersion",
+        "description": "Check if $value is a uuid.",
+        "aliases": [
+            "isUuidVersion",
+            "uuidVersion"
+        ],
+        "paramlist": "$version"
     },
     {
         "name": "checkIdenticalTo",
@@ -98,11 +180,20 @@
         "paramlist": ""
     },
     {
-        "name": "checkIsFalse",
-        "description": "Check that $value is identical to false.",
+        "name": "checkIsTrue",
+        "description": "Check that $value is identical to true.",
         "aliases": [
             "isTrue",
             "true"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkIsFalse",
+        "description": "Check that $value is identical to false.",
+        "aliases": [
+            "isFalse",
+            "false"
         ],
         "paramlist": ""
     },
