@@ -554,5 +554,66 @@
             "containsTheString"
         ],
         "paramlist": "$contains"
+    },
+    {
+        "name": "checkArrayAccess",
+        "description": "Check that $value can be accessed as an array.",
+        "aliases": [
+            "hasArrayAccess",
+            "arrayAccessible"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkAssociative",
+        "description": "Check that $value is an associative array - i.e. that it contains no integer-keys.",
+        "aliases": [
+            "isAssociative",
+            "associative",
+            "isAssociativeArray",
+            "associativeArray"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkNumericIndex",
+        "description": "Check that $value is a conventional array - i.e. that it contains only integer-keys.",
+        "aliases": [
+            "hasNumericIndex",
+            "isConventionalArray",
+            "conventionalArray",
+            "isNotAssociative",
+            "notAssociative"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkNotEmpty",
+        "description": "Check that $value is a non-empty array or Countable",
+        "aliases": [
+            "isNotEmptyArray",
+            "notEmptyArray",
+            "isNotEmpty",
+            "notEmpty"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkUniqueValues",
+        "description": "Check that $value is an array with unique values.",
+        "aliases": [
+            "hasUniqueValues",
+            "uniqueValues"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkKeyExists",
+        "description": "Check that $value is an array or ArrayAccess that has the given $key",
+        "aliases": [
+            "hasKey",
+            "keyExists"
+        ],
+        "paramlist": "$key"
     }
 ]
