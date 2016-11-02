@@ -24,3 +24,21 @@ Ensure::that($age)
 [Packagist](https://packagist.org/packages/moccalotto/valit)
 |
 [Github](https://github.com/moccalotto/valit)
+
+## Hayttp
+
+Make http api requests using a fluent and intuitive syntax.
+
+```php
+$jsonResponse = Hayttp::post($url)
+    ->sendsJson(['http' => 'rocks'])
+    ->expectsJson()
+    ->send()
+    ->decoded();
+```
+
+[Documentation]({{ '/docs/hayttp' | page }})
+|
+[Packagist](https://packagist.org/packages/moccalotto/hayttp)
+|
+[Github](https://github.com/moccalotto/hayttp)
