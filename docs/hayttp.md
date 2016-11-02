@@ -63,11 +63,25 @@ $response = Hayttp::post($url)
     ]);
 ```
 
-A DELETE request that expects an XML body in the response.
+A PUT request with an XML body.
+The `sendsXml` method is called with a SimpleXmlElement argument:
+
+```php
+$simpleXmlElement = new SimpleXmlElement($xmlString);
+
+$response = Hayttp::post($url)
+    ->expectsXml()
+    ->sendsXml($simpleXmlElement)
+    ->send();
+```
+
+A DELETE request with an XML body.
+The `sendsXml` method is called with a string argument:
 
 ```php
 $response = Hayttp::delete($url)
     ->expectsXml()
+    ->sendsXml($xmlString)
     ->send();
 ```
 
