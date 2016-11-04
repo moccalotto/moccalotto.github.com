@@ -85,6 +85,117 @@ $response = Hayttp::delete($url)
     ->send();
 ```
 
+### Send blobs and files
+
+Files and blobs can be sent as fields in multipart/form-data post requsts.
+
+Sending a single blob:
+
+```php
+Hayttp::post($url)
+    ->addBlob(
+        'formFieldName',    // name of form field
+        json_encode($data), // the blob data
+        'application/json'  // the mime type of the data (optional)
+    )->send()
+```
+
+Sending a single file:
+
+```php
+Hayttp::post($url)
+    ->addFile(
+        'fieldName[]',
+        '/path/to/file',
+        'nameOfFileWhenPosted.txt',
+        'text/plain'
+    )->send()
+```
+
+Sending a custom multipart field
+
+```php
+Hayttp::post($url)
+    ->addMultipartField(
+        'fieldName[]',
+         file_get_contents('myimg.gif'),
+         'r.gif',
+         'image/gif'
+     )->send();
+```
+
+### Fine-tune the request
+```php
+Hayttp::post($url)
+    ->timeout(2.5) // 2.5 second timeout
+    ->withHeaders([
+        'X-My-Request-Id' => uniqid(),
+        'X-Foo-Bar' => 'Baz',
+    ])
+    ->userAgent('API-Requester Service')
+        'fieldName[]',
+         file_get_contents('myimg.gif'),
+         'r.gif',
+         'image/gif'
+     )->send();
+```
+
+
+### Take charge of the encryption
+
+You can control which cryptographical method is used via the `withEncryption` method.
+
+Thje possible options are: `any`, `sslv3`, `tls`, `tlsv1.0`, `tlsv1.1`,`tlsv1.2`,
+
+```php
+Hayttp::post($url)
+    ->withCryptoMethod('tlsv1.2')
+    ->send();
+```
+
+
+If you prefer constants, you can use the following constants on `Moccalotto\Hayttp\Contracts\Request`:
+
+```php
+
+namespace Moccalotto\Hayttp\Contracts;
+
+interface Request {
+    const CRYPTO_ANY = 'any';
+    const CRYPTO_SSLV3 = 'sslv3';
+    const CRYPTO_TLS = 'tls';
+    const CRYPTO_TLS_1_0 = 'tlsv1.0';
+    const CRYPTO_TLS_1_1 = 'tlsv1.1';
+    const CRYPTO_TLS_1_2 = 'tlsv1.2';
+}
+```
+
+If you want to disable all peer verification, you can use the `withInsecureSsl` meethod:
+
+```php
+Hayttp::post($url)
+    ->withInsecureSsl()
+    ->send();
+```
+
+
+### Change the engine
+
+Hayttp uses the internal PHP http [stream wrapper](http://php.net/manual/wrappers.http.php).
+
+We also provide support for curl. The only real difference from the user's point of view is
+the execution meta data available. Curl has a lot of timing information that can be used for benchmarking.
+
+To access that metadata, use the `response()` method on the response.
+
+
+Below is an example of using the CurlEngine provided out of the box:
+
+```php
+use Moccalotto\Hayttp\Engines\CurlEngine;
+
+$request = Hayttp::get($url)->withEngine(new CurlEngine());
+```
 
 ### Decode responses
 
@@ -121,8 +232,11 @@ $array = Hayttp::get($url)
 Decode the respose, inferring the data type from the Content-Type header:
 
 ```php
-$variable = Hayttp::get($url)->send()->decoded();
+$variable = Hayttp::get($url)
+    ->send()
+    ->decoded();
 ```
+
 
 ### Stringify Requests and Responses
 
@@ -176,52 +290,6 @@ $responseString =
 // }\n
 ```
 
-### Take charge of the encryption
-
-You can control which cryptographical method is used via the `withEncryption` method.
-
-Thje possible options are: `any`, `sslv3`, `tls`, `tlsv1.0`, `tlsv1.1`,`tlsv1.2`,
-
-```php
-Hayttp::post($url)
-    ->withCryptoMethod('tlsv1.2')
-    ->send();
-```
-
-
-If you prefer constants, you can use the following constants on `Moccalotto\Hayttp\Contracts\Request`:
-
-```php
-
-namespace Moccalotto\Hayttp\Contracts;
-
-interface Request {
-    const CRYPTO_ANY = 'any';
-    const CRYPTO_SSLV3 = 'sslv3';
-    const CRYPTO_TLS = 'tls';
-    const CRYPTO_TLS_1_0 = 'tlsv1.0';
-    const CRYPTO_TLS_1_1 = 'tlsv1.1';
-    const CRYPTO_TLS_1_2 = 'tlsv1.2';
-}
-```
-
-### Change the engine
-
-Hayttp uses the internal PHP http [stream wrapper](http://php.net/manual/wrappers.http.php).
-
-We also provide support for curl. The only real difference from the user's point of view is
-the execution meta data available. Curl has a lot of timing information that can be used for benchmarking.
-
-To access that metadata, use the `response()` method on the response.
-
-
-Below is an example of using the CurlEngine provided out of the box:
-
-```php
-use Moccalotto\Hayttp\Engines\CurlEngine;
-
-$request = Hayttp::get($url)->withEngine(new CurlEngine());
-```
 
 
 ### Metadata
