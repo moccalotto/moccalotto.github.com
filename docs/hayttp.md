@@ -123,3 +123,55 @@ Decode the respose, inferring the data type from the Content-Type header:
 ```php
 $variable = Hayttp::get($url)->send()->decoded();
 ```
+
+### Stringify Requests and Responses
+
+Requests and Responses are not just objects. They can be turned into strings for logging purposes.
+When stringifying a Request or Response, it will turn into an actual http message as you would expect
+to see it if using telnet (or openssl s_client, etc.).
+
+Turning a request into a string:
+
+```php
+$requestStr =
+    (string) Hayttp::get(http://mydomain.dev/my-path)
+    ->withHeader('X-Foo-Bar', 'Baz');
+
+// GET /my-path HTTP/1.0\x0D
+// Host: mydomain.dev\x0D
+// User-agent: Hayttp\x0D
+// X-Foo-Bar: Baz\x0D
+```
+
+Turning a response into a string:
+
+```php
+$responseString =
+    (string) Hayttp::get(http://mydomain.dev/my-path)
+    ->withHeader('X-Foo-Bar', 'Baz')
+    ->send();
+
+// HTTP/1.1 200 OK\x0D
+// Server: nginx\x0D
+// Date: Fri, 01 Jan 2000 12:00:00 GMT\x0D
+// Content-Type: application/json\x0D
+// Content-Length: 250\x0D
+// Connection: close\x0D
+// Access-Control-Allow-Origin: *\x0D
+// Access-Control-Allow-Credentials: true\x0D
+// \x0D
+// {\n
+//   "args": {}, \n
+//   "data": "", \n
+//   "files": {}, \n
+//   "form": {}, \n
+//   "headers": {\n
+//     "Host": "mydomain.dev", \n
+//     "User-Agent": "Hayttp", \n
+//     "X-Foo-Bar": "Baz"\n
+//   }, \n
+//   "json": null, \n
+//   "origin": "123.12.34.56", \n
+//   "url": "https://mydomain.dev/post"\n
+// }\n
+```
