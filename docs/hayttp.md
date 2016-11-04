@@ -175,3 +175,120 @@ $responseString =
 //   "url": "https://mydomain.dev/post"\n
 // }\n
 ```
+
+### Take charge of the encryption
+
+You can control which cryptographical method is used via the `withEncryption` method.
+
+Thje possible options are: `any`, `sslv3`, `tls`, `tlsv1.0`, `tlsv1.1`,`tlsv1.2`,
+
+```php
+Hayttp::post($url)
+    ->withCryptoMethod('tlsv1.2')
+    ->send();
+```
+
+
+If you prefer constants, you can use the following constants on `Moccalotto\Hayttp\Contracts\Request`:
+
+```php
+
+namespace Moccalotto\Hayttp\Contracts;
+
+interface Request {
+    const CRYPTO_ANY = 'any';
+    const CRYPTO_SSLV3 = 'sslv3';
+    const CRYPTO_TLS = 'tls';
+    const CRYPTO_TLS_1_0 = 'tlsv1.0';
+    const CRYPTO_TLS_1_1 = 'tlsv1.1';
+    const CRYPTO_TLS_1_2 = 'tlsv1.2';
+}
+```
+
+### Change the engine
+
+Hayttp uses the internal PHP http [stream wrapper](http://php.net/manual/wrappers.http.php).
+
+We also provide support for curl. The only real difference from the user's point of view is
+the execution meta data available. Curl has a lot of timing information that can be used for benchmarking.
+
+To access that metadata, use the `response()` method on the response.
+
+
+Below is an example of using the CurlEngine provided out of the box:
+
+```php
+use Moccalotto\Hayttp\Engines\CurlEngine;
+
+$request = Hayttp::get($url)->withEngine(new CurlEngine());
+```
+
+
+### Metadata
+
+When executing a request, the engine records some metadata and stores it on the response.
+This data can be accessed via the metadata method.
+
+The metadata is completely engine-specific;
+the `CurlEngine` is great for benchmarking and the `NativeEngine`
+is great for determining exactly which crypto method was used.
+
+Metadata for `Moccalotto\Hayttp\Engines\NativeEngine`:
+
+```php
+[
+    // crypto info only available for https requests.
+     "crypto" => [
+       "protocol" => "TLSv1.2",
+       "cipher_name" => "ECDHE-RSA-AES256-GCM-SHA384",
+       "cipher_bits" => 256,
+       "cipher_version" => "TLSv1/SSLv3",
+     ],
+     "timed_out" => false,
+     "blocked" => true,
+     "eof" => true,
+     "wrapper_data" => [
+     /* all http headers are stored here */
+     ],
+     "wrapper_type" => "http",
+     "stream_type" => "tcp_socket/ssl",
+     "mode" => "r",
+     "unread_bytes" => 0,
+     "seekable" => false,
+     "uri" => "https://mysite.dev",
+ ]
+```
+
+Metadata for `Moccalotto\Hayttp\Engines\CurlEngine`:
+
+```php
+[
+     "url" => "https://mysite.dev",
+     "content_type" => "application/json",
+     "http_code" => 200,
+     "header_size" => 215,
+     "request_size" => 159,
+     "filetime" => -1,
+     "ssl_verify_result" => 0,
+     "redirect_count" => 0,
+     "total_time" => 0.586272,
+     "namelookup_time" => 0.034034,
+     "connect_time" => 0.130231,
+     "pretransfer_time" => 0.48859,
+     "size_upload" => 0.0,
+     "size_download" => 357.0,
+     "speed_download" => 608.0,
+     "speed_upload" => 0.0,
+     "download_content_length" => 357.0,
+     "upload_content_length" => 0.0,
+     "starttransfer_time" => 0.586214,
+     "redirect_time" => 0.0,
+     "redirect_url" => "",
+     "primary_ip" => "123.1.2.3",
+     "certinfo" => [],
+     "primary_port" => 443,
+     "local_ip" => "1.2.3.4",
+     "local_port" => 54294,
+]
+```
+
