@@ -44,7 +44,7 @@ $response = Hayttp::get($url)->send();
 Hayttp is essentially a factory that can create and initialize `Request` objects.
 It has methods for each of the 7 RESTful HTTP methods.
 
-Making GET Requests: 
+Making GET Requests:
 
 ```php
 $response = Hayttp::get($url)->send();
@@ -134,7 +134,7 @@ Turning a request into a string:
 
 ```php
 $requestStr =
-    (string) Hayttp::get(http://mydomain.dev/my-path)
+    (string) Hayttp::get('http://mydomain.dev/my-path')
     ->withHeader('X-Foo-Bar', 'Baz');
 
 // GET /my-path HTTP/1.0\x0D
@@ -147,7 +147,7 @@ Turning a response into a string:
 
 ```php
 $responseString =
-    (string) Hayttp::get(http://mydomain.dev/my-path)
+    (string) Hayttp::get('http://mydomain.dev/my-path')
     ->withHeader('X-Foo-Bar', 'Baz')
     ->send();
 
