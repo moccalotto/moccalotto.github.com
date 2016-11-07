@@ -1,5 +1,8 @@
 ---
 layout: default
+title: Hayttp
+excerpt: Make http api requests using a fluent and intuitive syntax.
+tags: [http, api, curl, rest, http client, php]
 ---
 
 # Hayttp

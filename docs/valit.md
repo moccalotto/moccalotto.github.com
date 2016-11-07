@@ -1,5 +1,8 @@
 ---
 layout: default
+title: Valit
+excerpt: Validate variables using a fluent syntax. Easily assert that variables pass certain critera. Re-use the same validators for many variables.
+tags: [validate, assert, ensure, check, php]
 ---
 
 # Valit
