@@ -1,15 +1,13 @@
-# Site settings
-title: "Kim Ravn Hansen"
+title: "Moccalotto"
 email: "moccalotto@gmail.com"
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
+description: Shiny, happy code libraries.
+keywords: PHP, HTTP, Validation, API
+author: Kim Ravn Hansen
+baseurl: ""
 url: "https://moccalotto.github.com" # the base hostname & protocol for your site
 twitter_username: moccalotto
 github_username:  moccalotto
 version: "$Id$"
 
-# Build settings
-markdown: kramdown
+gems:
+    - jekyll-seo-tag
