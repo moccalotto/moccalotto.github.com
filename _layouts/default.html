@@ -7,18 +7,15 @@
         <meta name="google-site-verification" content="N9G6F46qFYJm1zHtuHEa8AdIIInPS8R6EDjRhOZu2Cg" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="copyright" content=" Copyright &copy; 2015, Kim Ravn Hansen">
-        <meta name="description" content="{{ site.description }}">
-        <meta name="keywords" content="Personal page of Kim Ravn Hansen">
-        <meta name="author" content="Kim Ravn Hansen">
+        <meta name="copyright" content=" Copyright &copy; 2016, {{ site.author }}">
+        <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %} {{ site.keywords }}{% endif %}">
+        <meta name="author" content="{{ site.author }}">
+        <link ref="author" href="{{ site.url }}">
+        {% seo %}
 
-
-        <title>{{ site.title }}</title>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900">
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
-        <link rel="canonical" href="TODO" />
-        <link ref="author" href="TODO">
+        <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     </head>
 
     <body>
@@ -30,7 +27,6 @@
                 </div>
             </div>
         </article>
-
 
         <!-- Well. Even a site "without any javascript at all" needs some tracking, right? :-) -->
         <script>

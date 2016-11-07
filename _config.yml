@@ -10,4 +10,4 @@ github_username:  moccalotto
 version: "$Id$"
 
 gems:
-    - jekyll-seo-tag
+  - jekyll-seo-tag
