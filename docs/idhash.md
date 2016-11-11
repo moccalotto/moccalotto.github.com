@@ -16,7 +16,11 @@ tags: [base62, base64, hashid]
 
 # IdHash
 
-Validate variables using a fluent syntax.
+A reversible (integer) ID obfuscator
+
+Create hashes like the ones used by imgur, pastebin, youtube, etc.
+
+By default, hashes contain only the 62 url-safe characters.
 
 ## Installation
 
