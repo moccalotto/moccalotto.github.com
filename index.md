@@ -42,3 +42,19 @@ $jsonResponse = Hayttp::post($url)
 [Packagist](https://packagist.org/packages/moccalotto/hayttp)
 |
 [Github](https://github.com/moccalotto/hayttp)
+
+## IdHash
+
+Convert natural numbers (ids, etc.) into (short) strings and back again - just like [YouTube](https://www.google.com/search?q=youtube+ids)
+
+```php
+$hashedId = IdHash::with($key)->intToHash(42);
+
+$internalId = IdHash::with($key)->intToHash($hashedId);
+```
+
+[Documentation]({{ '/docs/idhash' | page }})
+|
+[Packagist](https://packagist.org/packages/moccalotto/idhash)
+|
+[Github](https://github.com/moccalotto/idhash)
