@@ -45,7 +45,7 @@ $jsonResponse = Hayttp::post($url)
 
 ## IdHash
 
-Convert natural numbers (ids, etc.) into (short) strings and back again - just like [YouTube](https://www.google.com/search?q=youtube+ids)
+Convert natural numbers (ids, etc.) into (short) strings and back again - just like youtube, pastebin, imgur, etc.
 
 ```php
 $hashedId = IdHash::with($key)->intToHash(42);
