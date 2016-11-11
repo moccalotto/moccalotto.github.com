@@ -196,7 +196,7 @@ Hayttp::post($url)
 Hayttp uses the internal PHP http [stream wrapper](http://php.net/manual/wrappers.http.php).
 
 We also provide support for curl. The only real difference from the user's point of view is
-the execution meta data available. Curl has a lot of timing information that can be used for benchmarking.
+the execution metadata available. Curl has a lot of timing information that can be used for benchmarking.
 
 To access that metadata, use the `response()` method on the response.
 
