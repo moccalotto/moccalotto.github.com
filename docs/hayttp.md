@@ -81,7 +81,7 @@ The `sendsXml` method is called with a SimpleXmlElement argument:
 ```php
 $simpleXmlElement = new SimpleXmlElement($xmlString);
 
-$response = Hayttp::post($url)
+$response = Hayttp::put($url)
     ->expectsXml()
     ->sendsXml($simpleXmlElement)
     ->send();
