@@ -191,3 +191,39 @@ class Rot13Key implements Key
     }
 }
 ```
+
+### Tips, tricks & Hacks
+
+Below are some fun hacking you can do with this lib.
+
+#### Turning any number into binary
+
+```php
+$binStr = IdHash::with('01')->intTohash(bcpow(2, 100));
+
+// output:
+// 1000000000000000000000000000000000000000000000000000000000000000
+```
+
+#### Turning any number into hex
+
+```php
+$hexStr = IdHash::with('0123456789abcdef')
+    ->intTohash(bcsub(bcpow(2, 64), 1));
+
+// output:
+// ffffffffffffffff
+```
+
+#### ASCII to number
+
+```php
+// create a string with all 255 characters in order.
+$keyspace = implode('', array_map('chr', range(0, 255)));
+
+// use that keyspace to "decode" a string.
+$decimalStr = IdHash::with($keyspace)->hashToInt('Some string of d00m');
+
+// output:
+// 1860668540414984267147396314824037121035087981
+```
