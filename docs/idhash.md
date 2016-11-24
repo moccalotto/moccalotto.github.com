@@ -227,3 +227,18 @@ $decimalStr = IdHash::with($keyspace)->hashToInt('Some string of d00m');
 // output:
 // 1860668540414984267147396314824037121035087981
 ```
+
+#### Combining the features: ASCII to hex
+
+```php
+// setup the input and output keyspaces
+$inputSpace = implode('', array_map('chr', range(0, 255)));
+$outputSpace = '0123456789abcdef';
+
+$hex = IdHash::with($outputSpace)->intToHash(
+    IdHash::with($inputSpace)->hashToInt('Some string of d00m')
+);
+
+// output:
+// 536f6d6520737472696e67206f66206430306d
+```
