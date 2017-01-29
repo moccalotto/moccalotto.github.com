@@ -4,7 +4,7 @@ description: Shiny, happy code libraries.
 keywords: PHP, HTTP, Validation, API
 author: Kim Ravn Hansen
 baseurl: ""
-url: "https://moccalotto.github.com" # the base hostname & protocol for your site
+url: "https://moccalotto.github.io/" # the base hostname & protocol for your site
 twitter_username: moccalotto
 github_username:  moccalotto
 version: "$Id$"
