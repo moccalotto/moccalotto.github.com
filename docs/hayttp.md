@@ -307,7 +307,11 @@ $responseString =
 ### Metadata
 
 When executing a request, the engine records some metadata and stores it on the response.
-This data can be accessed via the metadata method.
+This data can be accessed via the `$response->metadata()` method like so:
+
+```php
+$metadata = Hayttp::get($url)->send()->metadata();
+```
 
 The metadata is completely engine-specific;
 the `CurlEngine` is great for benchmarking and the `NativeEngine`
