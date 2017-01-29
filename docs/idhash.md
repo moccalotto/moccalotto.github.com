@@ -98,9 +98,8 @@ This meanas that the numbers created can be quite large. So large that they migh
 integer.
 
 This means you shoud not do math operations on these numbers unless you are certain that their size is smaller than 2^63.
-Otherwise they may be converted into floats, and that way madness lies.
-
-Also you should not `sprintf('%d')` these numbers, as it may yield wierd results if the numbers are larger than 2^63.
+Otherwise they may be converted into floats, and that way madness lies. Not that note: you should not `sprintf('%d')`
+these numbers, as it may yield wierd results if the numbers are larger than 2^63.
 
 ### Generating a random key
 
