@@ -51,7 +51,7 @@
     },
     {
         "name": "checkDateParsable",
-        "description": "Check if $value is a string containing valid xml.",
+        "description": "Check if $value is a string containing a parseable date.",
         "aliases": [
             "isParsableDate",
             "parsableDate",
@@ -158,6 +158,14 @@
         "aliases": [
             "is",
             "equals"
+        ],
+        "paramlist": "$against"
+    },
+    {
+        "name": "checkIsOneOf",
+        "description": "Check that $value is equal to (==) one of the values in $against.",
+        "aliases": [
+            "isOneOf"
         ],
         "paramlist": "$against"
     },
@@ -615,5 +623,85 @@
             "keyExists"
         ],
         "paramlist": "$key"
+    },
+    {
+        "name": "checkObjectOrClass",
+        "description": "Check if is object or class.",
+        "aliases": [
+            "isObjectOrClass",
+            "objectOrClass"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkClassName",
+        "description": "Check if is class name.",
+        "aliases": [
+            "isClassName",
+            "isClass",
+            "className"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkInterfaceName",
+        "description": "Check if value is the name of an interface.",
+        "aliases": [
+            "isInterfaceName",
+            "isInterface",
+            "interfaceName"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkTraitName",
+        "description": "Check if value is the fqcn of a trait.",
+        "aliases": [
+            "isTraitName",
+            "isTrait",
+            "traitName"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkInstanceOf",
+        "description": "Check if $value is an instance of $fqcn.",
+        "aliases": [
+            "isInstanceOf"
+        ],
+        "paramlist": "$fqcn"
+    },
+    {
+        "name": "checkImplements",
+        "description": "Check if value implements the $fqcn interface.",
+        "aliases": [
+            "isImplementing",
+            "implements"
+        ],
+        "paramlist": "$fqcn"
+    },
+    {
+        "name": "checkHasMethod",
+        "description": "Check if value is an object or class that has the given method.",
+        "aliases": [
+            "hasMethod"
+        ],
+        "paramlist": "$methodName"
+    },
+    {
+        "name": "checkHasProperty",
+        "description": "Check if value is an object or class that has the given propert.",
+        "aliases": [
+            "hasProperty"
+        ],
+        "paramlist": "$property"
+    },
+    {
+        "name": "checkHasTrait",
+        "description": "Check if value is an object or class that uses the given trait.",
+        "aliases": [
+            "hasTrait"
+        ],
+        "paramlist": "$traitName"
     }
 ]
