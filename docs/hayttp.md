@@ -145,11 +145,7 @@ Hayttp::post($url)
         'X-Foo-Bar' => 'Baz',
     ])
     ->userAgent('API-Requester Service')
-        'fieldName[]',
-         file_get_contents('myimg.gif'),
-         'r.gif',
-         'image/gif'
-     )->send();
+    ->send();
 ```
 
 
