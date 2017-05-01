@@ -165,7 +165,8 @@
         "name": "checkIsOneOf",
         "description": "Check that $value is equal to (==) one of the values in $against.",
         "aliases": [
-            "isOneOf"
+            "isOneOf",
+            "oneOf"
         ],
         "paramlist": "$against"
     },
@@ -210,7 +211,8 @@
         "description": "Check that $value is identical to false.",
         "aliases": [
             "hasType",
-            "isType"
+            "isType",
+            "typeof"
         ],
         "paramlist": "$type"
     },
@@ -228,7 +230,9 @@
         "description": "Check that $value is a boolean.",
         "aliases": [
             "isBool",
-            "isBoolean"
+            "isBoolean",
+            "bool",
+            "boolean"
         ],
         "paramlist": ""
     },
@@ -236,7 +240,8 @@
         "name": "checkArray",
         "description": "Check that $value is an array.",
         "aliases": [
-            "isArray"
+            "isArray",
+            "array"
         ],
         "paramlist": ""
     },
@@ -245,7 +250,9 @@
         "description": "Check that $value is a float.",
         "aliases": [
             "isFloat",
-            "isDouble"
+            "isDouble",
+            "float",
+            "double"
         ],
         "paramlist": ""
     },
@@ -254,7 +261,9 @@
         "description": "Check that $value is a float.",
         "aliases": [
             "isInt",
-            "isInteger"
+            "isInteger",
+            "int",
+            "integer"
         ],
         "paramlist": ""
     },
@@ -262,7 +271,8 @@
         "name": "checkString",
         "description": "Check that $value is a float.",
         "aliases": [
-            "isString"
+            "isString",
+            "string"
         ],
         "paramlist": ""
     },
@@ -270,7 +280,8 @@
         "name": "checkObject",
         "description": "Check that $value is a float.",
         "aliases": [
-            "isObject"
+            "isObject",
+            "object"
         ],
         "paramlist": ""
     },
@@ -278,7 +289,8 @@
         "name": "checkNull",
         "description": "Check that $value is null.",
         "aliases": [
-            "isNull"
+            "isNull",
+            "null"
         ],
         "paramlist": ""
     },
@@ -295,7 +307,8 @@
         "name": "checkResource",
         "description": "Check that $value is a resource.",
         "aliases": [
-            "isResource"
+            "isResource",
+            "resource"
         ],
         "paramlist": ""
     },
@@ -304,7 +317,8 @@
         "description": "Check that $value is a resource of the given type.",
         "aliases": [
             "isResourceOfType",
-            "resourceType"
+            "resourceType",
+            "hasResourceType"
         ],
         "paramlist": "$type"
     },
@@ -312,7 +326,8 @@
         "name": "checkCallable",
         "description": "Check that $value is callable.",
         "aliases": [
-            "isCallable"
+            "isCallable",
+            "callable"
         ],
         "paramlist": ""
     },
@@ -483,6 +498,7 @@
         "description": "Check if $value contains a syntax-valid email address.",
         "aliases": [
             "isEmail",
+            "email",
             "isEmailAddress",
             "emailAddress"
         ],
@@ -564,6 +580,26 @@
         "paramlist": "$contains"
     },
     {
+        "name": "checkShorterThan",
+        "description": "Check if $value is a string that is shorter than $length",
+        "aliases": [
+            "shorterThan",
+            "stringShorterThan",
+            "isShorterThan"
+        ],
+        "paramlist": "$length"
+    },
+    {
+        "name": "checkLongerThan",
+        "description": "Check if $value is a string that is longer than $length",
+        "aliases": [
+            "longerThan",
+            "stringLongerThan",
+            "isLongerThan"
+        ],
+        "paramlist": "$length"
+    },
+    {
         "name": "checkArrayAccess",
         "description": "Check that $value can be accessed as an array.",
         "aliases": [
@@ -639,7 +675,8 @@
         "aliases": [
             "isClassName",
             "isClass",
-            "className"
+            "className",
+            "isOfClass"
         ],
         "paramlist": ""
     },
