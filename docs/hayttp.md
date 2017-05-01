@@ -144,7 +144,7 @@ Hayttp::post($url)
         'X-My-Request-Id' => uniqid(),
         'X-Foo-Bar' => 'Baz',
     ])
-    ->userAgent('API-Requester Service')
+    ->withUserAgent('API-Requester Service')
     ->send();
 ```
 
