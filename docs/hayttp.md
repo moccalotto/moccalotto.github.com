@@ -68,11 +68,14 @@ A more interesting POST example.
 $response = Hayttp::post($url)
     ->expectsJson()
     ->sendsJson([
-        'this' => 'array',
-        'will' => 'be',
+        'this' => 'associative',
+        'array' => 'will',
+        'be' => 'converted',
         'converted' => 'to',
-        'json' => 'weee!',
-    ]);
+        'a' => 'json',
+        'object' => 'weee!',
+    ])
+    ->send();
 ```
 
 A PUT request with an XML body.
