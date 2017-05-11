@@ -62,7 +62,7 @@
     },
     {
         "name": "checkDateAfter",
-        "description": "Check if $value is a date after $against",
+        "description": "Check if $value is a date after $against.",
         "aliases": [
             "isDateAfter",
             "occursAfter",
@@ -74,7 +74,7 @@
     },
     {
         "name": "checkDateBefore",
-        "description": "Check if $value is a date after $against",
+        "description": "Check if $value is a date after $against.",
         "aliases": [
             "isDateBefore",
             "occursBefore",
@@ -86,7 +86,7 @@
     },
     {
         "name": "checkInThePast",
-        "description": "Check if $value is a date in the past",
+        "description": "Check if $value is a date in the past.",
         "aliases": [
             "dateInThePast",
             "isDateInThePast"
@@ -95,7 +95,7 @@
     },
     {
         "name": "checkInTheFuture",
-        "description": "Check if $value is a date in the past",
+        "description": "Check if $value is a date in the past.",
         "aliases": [
             "dateInTheFuture",
             "isDateInTheFuture"
@@ -104,7 +104,7 @@
     },
     {
         "name": "checkAtMidnight",
-        "description": "Check if $value is a date where the time-component is 00:00:00",
+        "description": "Check if $value is a date where the time-component is 00:00:00.",
         "aliases": [
             "dateTimeAtMidnight",
             "isDateTimeAtMidnight",
@@ -581,7 +581,7 @@
     },
     {
         "name": "checkShorterThan",
-        "description": "Check if $value is a string that is shorter than $length",
+        "description": "Check if $value is a string that is shorter than $length.",
         "aliases": [
             "shorterThan",
             "stringShorterThan",
@@ -591,11 +591,20 @@
     },
     {
         "name": "checkLongerThan",
-        "description": "Check if $value is a string that is longer than $length",
+        "description": "Check if $value is a string that is longer than $length.",
         "aliases": [
             "longerThan",
             "stringLongerThan",
             "isLongerThan"
+        ],
+        "paramlist": "$length"
+    },
+    {
+        "name": "checkLength",
+        "description": "Check if $value is a string that has the length $length.",
+        "aliases": [
+            "hasLength",
+            "length"
         ],
         "paramlist": "$length"
     },
@@ -633,7 +642,7 @@
     },
     {
         "name": "checkNotEmpty",
-        "description": "Check that $value is a non-empty array or Countable",
+        "description": "Check that $value is a non-empty array or Countable.",
         "aliases": [
             "isNotEmptyArray",
             "notEmptyArray",
@@ -653,7 +662,7 @@
     },
     {
         "name": "checkKeyExists",
-        "description": "Check that $value is an array or ArrayAccess that has the given $key",
+        "description": "Check that $value is an array or ArrayAccess that has the given $key.",
         "aliases": [
             "hasKey",
             "keyExists"
