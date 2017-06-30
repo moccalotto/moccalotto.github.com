@@ -155,7 +155,7 @@ Hayttp::post($url)
 
 You can control which cryptographical method is used via the `withEncryption` method.
 
-Thje possible options are: `any`, `sslv3`, `tls`, `tlsv1.0`, `tlsv1.1`,`tlsv1.2`,
+Thje possible options are: `any`, `sslv3`, `tls`, `tlsv1.0`, `tlsv1.1`, `tlsv1.2`,
 
 ```php
 Hayttp::post($url)
