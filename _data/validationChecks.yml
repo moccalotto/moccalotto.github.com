@@ -142,6 +142,51 @@
         "paramlist": "$version"
     },
     {
+        "name": "checkUidV1",
+        "description": "Check if $value is a version 1 uuid",
+        "aliases": [
+            "uuidV1",
+            "isUuidV1"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkUidV2",
+        "description": "Check if $value is a version 2 uuid",
+        "aliases": [
+            "uuidV2",
+            "isUuidV2"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkUidV3",
+        "description": "Check if $value is a version 3 uuid",
+        "aliases": [
+            "uuidV3",
+            "isUuidV3"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkUidV4",
+        "description": "Check if $value is a version 4 uuid",
+        "aliases": [
+            "uuidV4",
+            "isUuidV4"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkUidV5",
+        "description": "Check if $value is a version 5 uuid",
+        "aliases": [
+            "uuidV5",
+            "isUuidV5"
+        ],
+        "paramlist": ""
+    },
+    {
         "name": "checkIdenticalTo",
         "description": "Check that $value === $against.",
         "aliases": [
@@ -595,7 +640,8 @@
         "aliases": [
             "longerThan",
             "stringLongerThan",
-            "isLongerThan"
+            "isLongerThan",
+            "isStringLongerThan"
         ],
         "paramlist": "$length"
     },
@@ -648,6 +694,15 @@
             "notEmptyArray",
             "isNotEmpty",
             "notEmpty"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkEmpty",
+        "description": "Check that $value is an empty array or Countable.",
+        "aliases": [
+            "isEmpty",
+            "isEmptyArray"
         ],
         "paramlist": ""
     },

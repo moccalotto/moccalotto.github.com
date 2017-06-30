@@ -141,7 +141,7 @@ Hayttp::post($url)
 ### Fine-tune the request
 ```php
 Hayttp::post($url)
-    ->timeout(2.5) // 2.5 second timeout
+    ->withTimeout(2.5) // 2.5 second timeout
     ->withHeaders([
         'X-My-Request-Id' => uniqid(),
         'X-Foo-Bar' => 'Baz',

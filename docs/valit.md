@@ -21,7 +21,7 @@ To add this package as a local, per-project dependency to your project, simply a
 ```json
 {
     "require": {
-        "moccalotto/valit": "~0.6"
+        "moccalotto/valit": "~0.7"
     }
 }
 ```
