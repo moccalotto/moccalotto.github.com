@@ -261,10 +261,10 @@ $requestStr =
     (string) Hayttp::get('http://mydomain.dev/my-path')
     ->withHeader('X-Foo-Bar', 'Baz');
 
-// GET /my-path HTTP/1.0\x0D
-// Host: mydomain.dev\x0D
-// User-agent: Hayttp\x0D
-// X-Foo-Bar: Baz\x0D
+// GET /my-path HTTP/1.0\r\n
+// Host: mydomain.dev\r\n
+// User-agent: Hayttp\r\n
+// X-Foo-Bar: Baz\r\n
 ```
 
 Turning a response into a string:
@@ -275,15 +275,15 @@ $responseString =
     ->withHeader('X-Foo-Bar', 'Baz')
     ->send();
 
-// HTTP/1.1 200 OK\x0D
-// Server: nginx\x0D
-// Date: Fri, 01 Jan 2000 12:00:00 GMT\x0D
-// Content-Type: application/json\x0D
-// Content-Length: 250\x0D
-// Connection: close\x0D
-// Access-Control-Allow-Origin: *\x0D
-// Access-Control-Allow-Credentials: true\x0D
-// \x0D
+// HTTP/1.1 200 OK\r\n
+// Server: nginx\r\n
+// Date: Fri, 01 Jan 2000 12:00:00 GMT\r\n
+// Content-Type: application/json\r\n
+// Content-Length: 250\r\n
+// Connection: close\r\n
+// Access-Control-Allow-Origin: *\r\n
+// Access-Control-Allow-Credentials: true\r\n
+// \r\n
 // {\n
 //   "args": {}, \n
 //   "data": "", \n
