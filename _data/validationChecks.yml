@@ -1,5 +1,22 @@
 [
     {
+        "name": "checkPassesCallback",
+        "description": "Check if $value passes a validation via a callback that returns a boolean.",
+        "aliases": [
+            "passesCallback"
+        ],
+        "paramlist": "$message, $callback"
+    },
+    {
+        "name": "checkPassesChecker",
+        "description": "Chec if $value passes a custom checker",
+        "aliases": [
+            "passesCustom",
+            "passesChecker"
+        ],
+        "paramlist": "$checker"
+    },
+    {
         "name": "checkXmlString",
         "description": "Check if $value is a string containing valid xml.",
         "aliases": [
@@ -804,5 +821,32 @@
             "hasTrait"
         ],
         "paramlist": "$traitName"
+    },
+    {
+        "name": "checkHostname",
+        "description": "Check if $value is a valid host name.",
+        "aliases": [
+            "isHostname",
+            "hostname"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkIpAddress",
+        "description": "Check if $value is a valid ipv4 or ipv6 address",
+        "aliases": [
+            "isIpAdrress",
+            "ipAddress"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkUrl",
+        "description": "Check if $value is a complete and absolute web url",
+        "aliases": [
+            "url",
+            "isUrl"
+        ],
+        "paramlist": "$schemes"
     }
 ]

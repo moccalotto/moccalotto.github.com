@@ -33,7 +33,7 @@ To add this package as a local, per-project dependency to your project, simply a
 ```json
 {
     "require": {
-        "moccalotto/hayttp": "~0.8"
+        "moccalotto/hayttp": "~0.9"
     }
 }
 ```
@@ -67,14 +67,13 @@ A more interesting POST example.
 ```php
 $response = Hayttp::post($url)
     ->expectsJson()
-    ->sendsJson([
+    ->sendJson([
         'this' => 'associative',
         'array' => 'will',
         'be' => 'converted',
         'to' => 'a',
         'json' => 'object',
-    ])
-    ->send();
+    ]);
 ```
 
 A PUT request with an XML body.
@@ -85,8 +84,7 @@ $simpleXmlElement = new SimpleXmlElement($xmlString);
 
 $response = Hayttp::put($url)
     ->expectsXml()
-    ->sendsXml($simpleXmlElement)
-    ->send();
+    ->sendXml($simpleXmlElement);
 ```
 
 A DELETE request with an XML body.
@@ -95,8 +93,7 @@ The `sendsXml` method is called with a string argument:
 ```php
 $response = Hayttp::delete($url)
     ->expectsXml()
-    ->sendsXml($xmlString)
-    ->send();
+    ->sendXml($xmlString);
 ```
 
 ### Send blobs and files
@@ -111,7 +108,7 @@ Hayttp::post($url)
         'formFieldName',    // name of form field
         json_encode($data), // the blob data
         'application/json'  // the mime type of the data (optional)
-    )->send()
+    )->send();
 ```
 
 Sending a single file:
@@ -123,7 +120,7 @@ Hayttp::post($url)
         '/path/to/file',
         'nameOfFileWhenPosted.txt',
         'text/plain'
-    )->send()
+    )->send();
 ```
 
 Sending a custom multipart field
@@ -150,16 +147,31 @@ Hayttp::post($url)
     ->send();
 ```
 
+The order in which you call the request modifiers is irrelevant as long as you modify the request before calling `send`.
+
+```php
+Hayttp::withTimeout(2.5)
+    ->withHeaders([
+        'X-My-Request-Id' => uniqid(),
+        'X-Foo-Bar' => 'Baz',
+    ])
+    ->withUserAgent('API-Requester Service')
+    ->post($url)
+    ->send();
+```
+
+
+
 
 ### Take charge of the encryption
 
 You can control which cryptographical method is used via the `withEncryption` method.
 
-Thje possible options are: `any`, `sslv3`, `tls`, `tlsv1.0`, `tlsv1.1`,`tlsv1.2`,
+Thje possible options are: `any`, `sslv3`, `tls`, `tlsv1.0`, `tlsv1.1`, `tlsv1.2`,
 
 ```php
-Hayttp::post($url)
-    ->withCryptoMethod('tlsv1.2')
+Hayttp::withCryptoMethod('tlsv1.2')
+    ->post($url)
     ->send();
 ```
 
@@ -167,7 +179,6 @@ Hayttp::post($url)
 If you prefer constants, you can use the following constants on `Moccalotto\Hayttp\Contracts\Request`:
 
 ```php
-
 namespace Moccalotto\Hayttp\Contracts;
 
 interface Request {
@@ -247,6 +258,17 @@ $variable = Hayttp::get($url)
     ->decoded();
 ```
 
+You can also enforce a given response type, using the `ensureXxx` methods.
+
+These methods assert that the response must have a given content type.
+If the content does not match the asserted type, a `Moccalotto\Hayttp\Exceptions\ResponseException` is thrown.
+
+```php
+$simpleXmlElement = Hayttp::get($url)
+    ->ensureXml()   // if response type is not application/xml, a ResponseException is thrown.
+    ->send()
+    ->decoded();
+```
 
 ### Stringify Requests and Responses
 
@@ -257,8 +279,7 @@ to see it if using telnet (or openssl s_client, etc.).
 Turning a request into a string:
 
 ```php
-$requestStr =
-    (string) Hayttp::get('http://mydomain.dev/my-path')
+(string) Hayttp::get('http://mydomain.dev/my-path')
     ->withHeader('X-Foo-Bar', 'Baz');
 
 // GET /my-path HTTP/1.0\r\n
@@ -270,8 +291,7 @@ $requestStr =
 Turning a response into a string:
 
 ```php
-$responseString =
-    (string) Hayttp::get('http://mydomain.dev/my-path')
+(string) Hayttp::get('http://mydomain.dev/my-path')
     ->withHeader('X-Foo-Bar', 'Baz')
     ->send();
 
@@ -373,4 +393,3 @@ Metadata for `Moccalotto\Hayttp\Engines\CurlEngine`:
      "local_port" => 54294,
 ]
 ```
-
