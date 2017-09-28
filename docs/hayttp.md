@@ -33,7 +33,7 @@ To add this package as a local, per-project dependency to your project, simply a
 ```json
 {
     "require": {
-        "moccalotto/hayttp": "~0.9"
+        "moccalotto/hayttp": "~1.0"
     }
 }
 ```
@@ -47,7 +47,7 @@ composer require moccalotto/hayttp
 ## Usage
 
 ```php
-use Moccalotto\Hayttp\Hayttp;
+use Hayttp\Hayttp;
 
 $response = Hayttp::get($url)->send();
 ```
@@ -176,10 +176,10 @@ Hayttp::withCryptoMethod('tlsv1.2')
 ```
 
 
-If you prefer constants, you can use the following constants on `Moccalotto\Hayttp\Contracts\Request`:
+If you prefer constants, you can use the following constants on `Hayttp\Contracts\Request`:
 
 ```php
-namespace Moccalotto\Hayttp\Contracts;
+namespace Hayttp\Contracts;
 
 interface Request {
     const CRYPTO_ANY = 'any';
@@ -213,7 +213,7 @@ To access that metadata, use the `response()` method on the response.
 Below is an example of using the CurlEngine provided out of the box:
 
 ```php
-use Moccalotto\Hayttp\Engines\CurlEngine;
+use Hayttp\Engines\CurlEngine;
 
 $request = Hayttp::get($url)->withEngine(new CurlEngine());
 ```
@@ -261,7 +261,7 @@ $variable = Hayttp::get($url)
 You can also enforce a given response type, using the `ensureXxx` methods.
 
 These methods assert that the response must have a given content type.
-If the content does not match the asserted type, a `Moccalotto\Hayttp\Exceptions\ResponseException` is thrown.
+If the content does not match the asserted type, a `Hayttp\Exceptions\ResponseException` is thrown.
 
 ```php
 $simpleXmlElement = Hayttp::get($url)
@@ -335,7 +335,7 @@ The metadata is completely engine-specific;
 the `CurlEngine` is great for benchmarking and the `NativeEngine`
 is great for determining exactly which crypto method was used.
 
-Metadata for `Moccalotto\Hayttp\Engines\NativeEngine`:
+Metadata for `Hayttp\Engines\NativeEngine`:
 
 ```php
 [
@@ -361,7 +361,7 @@ Metadata for `Moccalotto\Hayttp\Engines\NativeEngine`:
  ]
 ```
 
-Metadata for `Moccalotto\Hayttp\Engines\CurlEngine`:
+Metadata for `Hayttp\Engines\CurlEngine`:
 
 ```php
 [
