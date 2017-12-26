@@ -1,24 +1,27 @@
 [
     {
         "name": "checkPassesCallback",
-        "description": "Check if $value passes a validation via a callback that returns a boolean.",
+        "headline": "Check if $value passes a validation via a callback that returns a boolean",
+        "description": "",
         "aliases": [
             "passesCallback"
         ],
-        "paramlist": "$message, $callback"
+        "paramlist": "string $message, callable $callback"
     },
     {
         "name": "checkPassesChecker",
-        "description": "Chec if $value passes a custom checker",
+        "headline": "Chec if $value passes a custom checker",
+        "description": "",
         "aliases": [
             "passesCustom",
             "passesChecker"
         ],
-        "paramlist": "$checker"
+        "paramlist": "\\Valit\\Contracts\\CustomChecker $checker"
     },
     {
         "name": "checkXmlString",
-        "description": "Check if $value is a string containing valid xml.",
+        "headline": "Check if $value is a string containing valid xml",
+        "description": "",
         "aliases": [
             "isValidXml",
             "validXml"
@@ -27,59 +30,66 @@
     },
     {
         "name": "checkMatchesXmlAdvanced",
-        "description": "Check that $value and $against are semantically the same.",
+        "headline": "Check that $value and $against are semantically the same",
+        "description": "",
         "aliases": [
             "matchesXmlAdvanced"
         ],
-        "paramlist": "$against, $skipWhite, $ignoreCase"
+        "paramlist": "string|SimpleXMLElement $against, bool $skipWhite, bool $ignoreCase"
     },
     {
         "name": "checkMatchesXmlWithWhiteSpace",
-        "description": "Check that $value matches $against, enforcing whitespace similarity as well.",
+        "headline": "Check that $value matches $against, enforcing whitespace similarity as well",
+        "description": "",
         "aliases": [
             "matchesXmlWithWhiteSpace"
         ],
-        "paramlist": "$against"
+        "paramlist": "string|SimpleXMLElement $against"
     },
     {
         "name": "checkMatchesXmlWithCase",
-        "description": "Check that $value matches $against, enforcing case similarity as well.",
+        "headline": "Check that $value matches $against, enforcing case similarity as well",
+        "description": "",
         "aliases": [
             "matchesXmlWithCase"
         ],
-        "paramlist": "$against"
+        "paramlist": "string|SimpleXMLElement $against"
     },
     {
         "name": "checkMatchesXmlStrict",
-        "description": "Check that $value matches $against, enforcing whitespace and case similarities as well.",
+        "headline": "Check that $value matches $against, enforcing whitespace and case similarities as well",
+        "description": "",
         "aliases": [
             "matchesXmlWithWhiteSpaceAndCase",
             "matchesXmlStrict"
         ],
-        "paramlist": "$against"
+        "paramlist": "string|SimpleXMLElement $against"
     },
     {
         "name": "checkMatchesXml",
-        "description": "Check that $value matches $against, ignoring differences in case and whitespace.",
+        "headline": "Check that $value matches $against, ignoring differences in case and whitespace",
+        "description": "",
         "aliases": [
             "matchesXml"
         ],
-        "paramlist": "$against"
+        "paramlist": "string|SimpleXMLElement $against"
     },
     {
         "name": "checkDateParsable",
-        "description": "Check if $value is a string containing a parseable date.",
+        "headline": "Check if $value is a string containing a parseable date",
+        "description": "",
         "aliases": [
             "isParsableDate",
             "parsableDate",
             "isDateString",
             "dateString"
         ],
-        "paramlist": "$format"
+        "paramlist": "[string $format = null]"
     },
     {
         "name": "checkDateAfter",
-        "description": "Check if $value is a date after $against.",
+        "headline": "Check if $value is a date after $against",
+        "description": "",
         "aliases": [
             "isDateAfter",
             "occursAfter",
@@ -87,11 +97,12 @@
             "laterThan",
             "isLaterThan"
         ],
-        "paramlist": "$against"
+        "paramlist": "DateTimeInterface|string $against"
     },
     {
         "name": "checkDateBefore",
-        "description": "Check if $value is a date after $against.",
+        "headline": "Check if $value is a date after $against",
+        "description": "",
         "aliases": [
             "isDateBefore",
             "occursBefore",
@@ -99,11 +110,12 @@
             "earlierThan",
             "isEarlierThan"
         ],
-        "paramlist": "$against"
+        "paramlist": "DateTimeInterface $against"
     },
     {
         "name": "checkInThePast",
-        "description": "Check if $value is a date in the past.",
+        "headline": "Check if $value is a date in the past",
+        "description": "",
         "aliases": [
             "dateInThePast",
             "isDateInThePast"
@@ -112,7 +124,8 @@
     },
     {
         "name": "checkInTheFuture",
-        "description": "Check if $value is a date in the past.",
+        "headline": "Check if $value is a date in the past",
+        "description": "",
         "aliases": [
             "dateInTheFuture",
             "isDateInTheFuture"
@@ -121,7 +134,8 @@
     },
     {
         "name": "checkAtMidnight",
-        "description": "Check if $value is a date where the time-component is 00:00:00.",
+        "headline": "Check if $value is a date where the time-component is 00:00:00",
+        "description": "",
         "aliases": [
             "dateTimeAtMidnight",
             "isDateTimeAtMidnight",
@@ -131,8 +145,65 @@
         "paramlist": ""
     },
     {
+        "name": "checkAtNoon",
+        "headline": "Check if $value is a date where the time-component is 12:00:00",
+        "description": "",
+        "aliases": [
+            "dateTimeAtNoon",
+            "isDateTimeAtNoon"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkSameDateAs",
+        "headline": "Check if $value is a datetime where the date-component is\nthe same as the date-component of $against",
+        "description": "",
+        "aliases": [
+            "sameDateAs",
+            "isSameDateAs",
+            "sameDayAs",
+            "isSameDayAs"
+        ],
+        "paramlist": "string|DateTimeInterface $against"
+    },
+    {
+        "name": "checkSameDayOfWeek",
+        "headline": "Check if $value is a datetime where the weekday-component is\nthe same as the weekday-component of $against",
+        "description": "",
+        "aliases": [
+            "sameDayOfWeek",
+            "isSameDayOfWeek",
+            "isDayOfWeek",
+            "dayOfWeek"
+        ],
+        "paramlist": "string|DateTimeInterface $against"
+    },
+    {
+        "name": "checkDayOfMonth",
+        "headline": "Check if $value is a datetime where the day of month is $against",
+        "description": "The first day of the month is the 1st, i.e. days are 1-indexed.",
+        "aliases": [
+            "isDayOfMonth",
+            "dayOfMonth"
+        ],
+        "paramlist": "int $against"
+    },
+    {
+        "name": "checkBirthday",
+        "headline": "Check if $value is a datetime where the day-month-component is\nthe same as the day-month-component of $against",
+        "description": "In other words, are the two dates \"birthday-equivalent\" of each other.\n\nFor instance:\n '1987-12-01 23:30:00' is birthday equivalent of '1950-12-01 11:32:34'\n because they both occur in on december 1st.",
+        "aliases": [
+            "isBirthdayEquivalentOf",
+            "birthdatEquivalentOf",
+            "sameDayAndMonth",
+            "isSameDayAndMonth"
+        ],
+        "paramlist": "string|DateTimeInterface $against"
+    },
+    {
         "name": "checkIsJson",
-        "description": "Check that $value is valid json.",
+        "headline": "Check that $value is valid json",
+        "description": "",
         "aliases": [
             "isValidJson",
             "validJson",
@@ -142,7 +213,8 @@
     },
     {
         "name": "checkIsUuid",
-        "description": "Check if $value is a uuid.",
+        "headline": "Check if $value is a uuid",
+        "description": "",
         "aliases": [
             "isUuid",
             "uuid"
@@ -151,16 +223,18 @@
     },
     {
         "name": "checkUuidVersion",
-        "description": "Check if $value is a uuid.",
+        "headline": "Check if $value is a uuid",
+        "description": "",
         "aliases": [
             "isUuidVersion",
             "uuidVersion"
         ],
-        "paramlist": "$version"
+        "paramlist": "mixed $version"
     },
     {
         "name": "checkUidV1",
-        "description": "Check if $value is a version 1 uuid",
+        "headline": "Check if $value is a version 1 uuid",
+        "description": "",
         "aliases": [
             "uuidV1",
             "isUuidV1"
@@ -169,7 +243,8 @@
     },
     {
         "name": "checkUidV2",
-        "description": "Check if $value is a version 2 uuid",
+        "headline": "Check if $value is a version 2 uuid",
+        "description": "",
         "aliases": [
             "uuidV2",
             "isUuidV2"
@@ -178,7 +253,8 @@
     },
     {
         "name": "checkUidV3",
-        "description": "Check if $value is a version 3 uuid",
+        "headline": "Check if $value is a version 3 uuid",
+        "description": "",
         "aliases": [
             "uuidV3",
             "isUuidV3"
@@ -187,7 +263,8 @@
     },
     {
         "name": "checkUidV4",
-        "description": "Check if $value is a version 4 uuid",
+        "headline": "Check if $value is a version 4 uuid",
+        "description": "",
         "aliases": [
             "uuidV4",
             "isUuidV4"
@@ -196,7 +273,8 @@
     },
     {
         "name": "checkUidV5",
-        "description": "Check if $value is a version 5 uuid",
+        "headline": "Check if $value is a version 5 uuid",
+        "description": "",
         "aliases": [
             "uuidV5",
             "isUuidV5"
@@ -205,36 +283,40 @@
     },
     {
         "name": "checkIdenticalTo",
-        "description": "Check that $value === $against.",
+        "headline": "Check that $value === $against",
+        "description": "",
         "aliases": [
             "isIdenticalTo",
             "identicalTo",
             "sameAs",
             "isSameAs"
         ],
-        "paramlist": "$against"
+        "paramlist": "mixed $against"
     },
     {
         "name": "checkEquals",
-        "description": "Check that $value == $against (loose comparison).",
+        "headline": "Check that $value == $against (loose comparison)",
+        "description": "",
         "aliases": [
             "is",
             "equals"
         ],
-        "paramlist": "$against"
+        "paramlist": "mixed $against"
     },
     {
         "name": "checkIsOneOf",
-        "description": "Check that $value is equal to (==) one of the values in $against.",
+        "headline": "Check that $value is equal to (==) one of the values in $against",
+        "description": "",
         "aliases": [
             "isOneOf",
             "oneOf"
         ],
-        "paramlist": "$against"
+        "paramlist": "array $against"
     },
     {
         "name": "checkIsTruthy",
-        "description": "Check that $value is truthy.",
+        "headline": "Check that $value is truthy",
+        "description": "",
         "aliases": [
             "isTruthy",
             "truthy"
@@ -243,7 +325,8 @@
     },
     {
         "name": "checkIsFalsy",
-        "description": "Check that $value is falsy.",
+        "headline": "Check that $value is falsy",
+        "description": "",
         "aliases": [
             "isFalsy",
             "falsy"
@@ -252,7 +335,8 @@
     },
     {
         "name": "checkIsTrue",
-        "description": "Check that $value is identical to true.",
+        "headline": "Check that $value is identical to true",
+        "description": "",
         "aliases": [
             "isTrue",
             "true"
@@ -261,7 +345,8 @@
     },
     {
         "name": "checkIsFalse",
-        "description": "Check that $value is identical to false.",
+        "headline": "Check that $value is identical to false",
+        "description": "",
         "aliases": [
             "isFalse",
             "false"
@@ -270,17 +355,19 @@
     },
     {
         "name": "checkHasType",
-        "description": "Check that $value is identical to false.",
+        "headline": "Check that $value is identical to false",
+        "description": "",
         "aliases": [
             "hasType",
             "isType",
             "typeof"
         ],
-        "paramlist": "$type"
+        "paramlist": "string $type"
     },
     {
         "name": "checkScalar",
-        "description": "Check that $value is scalar.",
+        "headline": "Check that $value is scalar",
+        "description": "",
         "aliases": [
             "isScalar",
             "scalar"
@@ -289,7 +376,8 @@
     },
     {
         "name": "checkBool",
-        "description": "Check that $value is a boolean.",
+        "headline": "Check that $value is a boolean",
+        "description": "",
         "aliases": [
             "isBool",
             "isBoolean",
@@ -300,7 +388,8 @@
     },
     {
         "name": "checkArray",
-        "description": "Check that $value is an array.",
+        "headline": "Check that $value is an array",
+        "description": "",
         "aliases": [
             "isArray",
             "array"
@@ -309,7 +398,8 @@
     },
     {
         "name": "checkFloat",
-        "description": "Check that $value is a float.",
+        "headline": "Check that $value is a float",
+        "description": "",
         "aliases": [
             "isFloat",
             "isDouble",
@@ -320,7 +410,8 @@
     },
     {
         "name": "checkInteger",
-        "description": "Check that $value is a float.",
+        "headline": "Check that $value is a float",
+        "description": "",
         "aliases": [
             "isInt",
             "isInteger",
@@ -331,7 +422,8 @@
     },
     {
         "name": "checkString",
-        "description": "Check that $value is a float.",
+        "headline": "Check that $value is a float",
+        "description": "",
         "aliases": [
             "isString",
             "string"
@@ -340,7 +432,8 @@
     },
     {
         "name": "checkObject",
-        "description": "Check that $value is a float.",
+        "headline": "Check that $value is a float",
+        "description": "",
         "aliases": [
             "isObject",
             "object"
@@ -349,7 +442,8 @@
     },
     {
         "name": "checkNull",
-        "description": "Check that $value is null.",
+        "headline": "Check that $value is null",
+        "description": "",
         "aliases": [
             "isNull",
             "null"
@@ -358,7 +452,8 @@
     },
     {
         "name": "checkNotNull",
-        "description": "Check that $value is null.",
+        "headline": "Check that $value is null",
+        "description": "",
         "aliases": [
             "isNotNull",
             "notNull"
@@ -367,7 +462,8 @@
     },
     {
         "name": "checkResource",
-        "description": "Check that $value is a resource.",
+        "headline": "Check that $value is a resource",
+        "description": "",
         "aliases": [
             "isResource",
             "resource"
@@ -376,17 +472,19 @@
     },
     {
         "name": "checkResourceType",
-        "description": "Check that $value is a resource of the given type.",
+        "headline": "Check that $value is a resource of the given type",
+        "description": "",
         "aliases": [
             "isResourceOfType",
             "resourceType",
             "hasResourceType"
         ],
-        "paramlist": "$type"
+        "paramlist": "string $type"
     },
     {
         "name": "checkCallable",
-        "description": "Check that $value is callable.",
+        "headline": "Check that $value is callable",
+        "description": "",
         "aliases": [
             "isCallable",
             "callable"
@@ -395,7 +493,8 @@
     },
     {
         "name": "checkNumeric",
-        "description": "Check that $value is numeric.",
+        "headline": "Check that $value is numeric",
+        "description": "",
         "aliases": [
             "numeric",
             "isNumeric"
@@ -404,7 +503,8 @@
     },
     {
         "name": "checkRealNumber",
-        "description": "Check that $value is a real number.",
+        "headline": "Check that $value is a real number",
+        "description": "",
         "aliases": [
             "realNumber",
             "isRealNumber"
@@ -413,7 +513,8 @@
     },
     {
         "name": "checkNaturalNumber",
-        "description": "Check that $value is a natural number.",
+        "headline": "Check that $value is a natural number",
+        "description": "",
         "aliases": [
             "isNaturalNumber",
             "naturalNumber",
@@ -424,27 +525,30 @@
     },
     {
         "name": "checkGreaterThan",
-        "description": "Check if $value > $against.",
+        "headline": "Check if $value > $against",
+        "description": "",
         "aliases": [
             "greaterThan",
             "isGreaterThan",
             "gt"
         ],
-        "paramlist": "$against"
+        "paramlist": "int|float $against"
     },
     {
         "name": "checkGreaterThanOrEqual",
-        "description": "Check if $value >= $against.",
+        "headline": "Check if $value >= $against",
+        "description": "",
         "aliases": [
             "greaterThanOrEqual",
             "isGreaterThanOrEqual",
             "gte"
         ],
-        "paramlist": "$against"
+        "paramlist": "int|float $against"
     },
     {
         "name": "checkLessThan",
-        "description": "Check if $value < $against.",
+        "headline": "Check if $value < $against",
+        "description": "",
         "aliases": [
             "lessThan",
             "isLessThan",
@@ -452,11 +556,12 @@
             "isLowerThan",
             "lt"
         ],
-        "paramlist": "$against"
+        "paramlist": "int|float $against"
     },
     {
         "name": "checkLessThanOrEqual",
-        "description": "Check if $value <= $against.",
+        "headline": "Check if $value <= $against",
+        "description": "",
         "aliases": [
             "lessThanOrEqual",
             "isLessThanOrEqual",
@@ -464,22 +569,24 @@
             "isLowerThanOrEqual",
             "lte"
         ],
-        "paramlist": "$against"
+        "paramlist": "int|float $against"
     },
     {
         "name": "checkFloatEqual",
-        "description": "Check if $value is extremely close to $against.",
+        "headline": "Check if $value is extremely close to $against",
+        "description": "",
         "aliases": [
             "closeTo",
             "isCloseTo",
             "floatEquals",
             "isFloatEqualTo"
         ],
-        "paramlist": "$against, $epsilon"
+        "paramlist": "int|float $against, [float $epsilon = 1.0e-5]"
     },
     {
         "name": "checkOdd",
-        "description": "Check that $value is an odd integer.",
+        "headline": "Check that $value is an odd integer",
+        "description": "",
         "aliases": [
             "odd",
             "isOdd"
@@ -488,7 +595,8 @@
     },
     {
         "name": "checkEven",
-        "description": "Check that $value is an even integer.",
+        "headline": "Check that $value is an even integer",
+        "description": "",
         "aliases": [
             "even",
             "isEven"
@@ -497,7 +605,8 @@
     },
     {
         "name": "checkPositive",
-        "description": "Check if $value is positive.",
+        "headline": "Check if $value is positive",
+        "description": "",
         "aliases": [
             "positive",
             "isPositive"
@@ -506,7 +615,8 @@
     },
     {
         "name": "checkNegative",
-        "description": "Check if $value is negative.",
+        "headline": "Check if $value is negative",
+        "description": "",
         "aliases": [
             "negative",
             "isNegative"
@@ -515,7 +625,8 @@
     },
     {
         "name": "checkPrimeRelativeTo",
-        "description": "Check if $value is prime relative to $against.",
+        "headline": "Check if $value is prime relative to $against",
+        "description": "",
         "aliases": [
             "isPrimeRelativeTo",
             "primeRelativeTo",
@@ -524,21 +635,23 @@
             "isCoprimeTo",
             "coprimeTo"
         ],
-        "paramlist": "$against"
+        "paramlist": "int $against"
     },
     {
         "name": "checkDivisibleBy",
-        "description": "Check if $value is prime relative to $against.",
+        "headline": "Check if $value is prime relative to $against",
+        "description": "",
         "aliases": [
             "isDivisibleBy",
             "divisibleBy",
             "dividesBy"
         ],
-        "paramlist": "$against"
+        "paramlist": "int $against"
     },
     {
         "name": "checkHexString",
-        "description": "Check if $value contains only hexidecimal characters.",
+        "headline": "Check if $value contains only hexidecimal characters",
+        "description": "",
         "aliases": [
             "isHexString",
             "hexString",
@@ -548,7 +661,8 @@
     },
     {
         "name": "checkDecimalString",
-        "description": "Check if $value contains only decimal characters.",
+        "headline": "Check if $value contains only decimal characters",
+        "description": "",
         "aliases": [
             "decimalString",
             "isDecimalString"
@@ -556,8 +670,33 @@
         "paramlist": ""
     },
     {
+        "name": "checkCurrencyCode",
+        "headline": "Check if $value is a valid alphabetical currency code string",
+        "description": "",
+        "aliases": [
+            "currencyCode",
+            "isCurrencyCode",
+            "isAlphaCurrencyCode",
+            "alphaCurrencyCode"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkCurrencyNumber",
+        "headline": "Check if $value",
+        "description": "",
+        "aliases": [
+            "numericCurrencyCode",
+            "currencyNumber",
+            "isNumericCurrencyCode",
+            "isCurrencyNumber"
+        ],
+        "paramlist": ""
+    },
+    {
         "name": "checkEmail",
-        "description": "Check if $value contains a syntax-valid email address.",
+        "headline": "Check if $value contains a syntax-valid email address",
+        "description": "",
         "aliases": [
             "isEmail",
             "email",
@@ -568,7 +707,8 @@
     },
     {
         "name": "checkUppercase",
-        "description": "Check if $value is only uppercase characters.",
+        "headline": "Check if $value is only uppercase characters",
+        "description": "",
         "aliases": [
             "isUppercase",
             "uppercase"
@@ -577,7 +717,8 @@
     },
     {
         "name": "checkLowercase",
-        "description": "Check if $value is only lowercase characters.",
+        "headline": "Check if $value is only lowercase characters",
+        "description": "",
         "aliases": [
             "isLowercase",
             "lowercase"
@@ -586,7 +727,8 @@
     },
     {
         "name": "checkAlphaNumeric",
-        "description": "Check if $value contains only alpha-numeric characters.",
+        "headline": "Check if $value contains only alpha-numeric characters",
+        "description": "",
         "aliases": [
             "isAlphaNumeric",
             "alphaNumeric",
@@ -597,16 +739,18 @@
     },
     {
         "name": "checkMatchesRegex",
-        "description": "Check if $value matches a given regular regex.",
+        "headline": "Check if $value matches a given regular regex",
+        "description": "",
         "aliases": [
             "matches",
             "matchesRegex"
         ],
-        "paramlist": "$pattern"
+        "paramlist": "string $pattern"
     },
     {
         "name": "checkStringable",
-        "description": "Check if a given value can be converted to a string in a meaningful way.",
+        "headline": "Check if a given value can be converted to a string in a meaningful way",
+        "description": "",
         "aliases": [
             "stringable",
             "isStringable",
@@ -617,63 +761,70 @@
     },
     {
         "name": "checkStartsWith",
-        "description": "Check if $value starts with a given string.",
+        "headline": "Check if $value starts with a given string",
+        "description": "",
         "aliases": [
             "startsWith",
             "beginsWith"
         ],
-        "paramlist": "$startsWith"
+        "paramlist": "string $startsWith"
     },
     {
         "name": "checkEndsWith",
-        "description": "Check if $value ends with a given string.",
+        "headline": "Check if $value ends with a given string",
+        "description": "",
         "aliases": [
             "endsWith"
         ],
-        "paramlist": "$endsWith"
+        "paramlist": "string $endsWith"
     },
     {
         "name": "checkContainsString",
-        "description": "Check if $value contains a given string.",
+        "headline": "Check if $value contains a given string",
+        "description": "",
         "aliases": [
             "containsString",
             "containsTheString"
         ],
-        "paramlist": "$contains"
+        "paramlist": "string $contains"
     },
     {
         "name": "checkShorterThan",
-        "description": "Check if $value is a string that is shorter than $length.",
+        "headline": "Check if $value is a string that is shorter than $length",
+        "description": "",
         "aliases": [
             "shorterThan",
             "stringShorterThan",
             "isShorterThan"
         ],
-        "paramlist": "$length"
+        "paramlist": "int $length"
     },
     {
         "name": "checkLongerThan",
-        "description": "Check if $value is a string that is longer than $length.",
+        "headline": "Check if $value is a string that is longer than $length",
+        "description": "",
         "aliases": [
             "longerThan",
             "stringLongerThan",
             "isLongerThan",
             "isStringLongerThan"
         ],
-        "paramlist": "$length"
+        "paramlist": "int $length"
     },
     {
         "name": "checkLength",
-        "description": "Check if $value is a string that has the length $length.",
+        "headline": "Check if $value is a string that has the length $length",
+        "description": "",
         "aliases": [
             "hasLength",
             "length"
         ],
-        "paramlist": "$length"
+        "paramlist": "int $length"
     },
     {
         "name": "checkArrayAccess",
-        "description": "Check that $value can be accessed as an array.",
+        "headline": "Check that $value can be accessed as an array",
+        "description": "",
         "aliases": [
             "hasArrayAccess",
             "arrayAccessible"
@@ -682,7 +833,8 @@
     },
     {
         "name": "checkAssociative",
-        "description": "Check that $value is an associative array - i.e. that it contains no integer-keys.",
+        "headline": "Check that $value is an associative array - i",
+        "description": "e. that it contains no integer-keys.",
         "aliases": [
             "isAssociative",
             "associative",
@@ -693,7 +845,8 @@
     },
     {
         "name": "checkNumericIndex",
-        "description": "Check that $value is a conventional array - i.e. that it contains only integer-keys.",
+        "headline": "Check that $value is a conventional array - i",
+        "description": "e. that it contains only integer-keys.",
         "aliases": [
             "hasNumericIndex",
             "isConventionalArray",
@@ -705,7 +858,8 @@
     },
     {
         "name": "checkNotEmpty",
-        "description": "Check that $value is a non-empty array or Countable.",
+        "headline": "Check that $value is a non-empty array or Countable",
+        "description": "",
         "aliases": [
             "isNotEmptyArray",
             "notEmptyArray",
@@ -716,7 +870,8 @@
     },
     {
         "name": "checkEmpty",
-        "description": "Check that $value is an empty array or Countable.",
+        "headline": "Check that $value is an empty array or Countable",
+        "description": "",
         "aliases": [
             "isEmpty",
             "isEmptyArray"
@@ -725,7 +880,8 @@
     },
     {
         "name": "checkUniqueValues",
-        "description": "Check that $value is an array with unique values.",
+        "headline": "Check that $value is an array with unique values",
+        "description": "",
         "aliases": [
             "hasUniqueValues",
             "uniqueValues"
@@ -734,16 +890,18 @@
     },
     {
         "name": "checkKeyExists",
-        "description": "Check that $value is an array or ArrayAccess that has the given $key.",
+        "headline": "Check that $value is an array or ArrayAccess that has the given $key",
+        "description": "",
         "aliases": [
             "hasKey",
             "keyExists"
         ],
-        "paramlist": "$key"
+        "paramlist": "string|int $key"
     },
     {
         "name": "checkObjectOrClass",
-        "description": "Check if is object or class.",
+        "headline": "Check if is object or class",
+        "description": "",
         "aliases": [
             "isObjectOrClass",
             "objectOrClass"
@@ -752,7 +910,8 @@
     },
     {
         "name": "checkClassName",
-        "description": "Check if is class name.",
+        "headline": "Check if is class name",
+        "description": "",
         "aliases": [
             "isClassName",
             "isClass",
@@ -763,7 +922,8 @@
     },
     {
         "name": "checkInterfaceName",
-        "description": "Check if value is the name of an interface.",
+        "headline": "Check if value is the name of an interface",
+        "description": "",
         "aliases": [
             "isInterfaceName",
             "isInterface",
@@ -773,7 +933,8 @@
     },
     {
         "name": "checkTraitName",
-        "description": "Check if value is the fqcn of a trait.",
+        "headline": "Check if value is the fqcn of a trait",
+        "description": "",
         "aliases": [
             "isTraitName",
             "isTrait",
@@ -783,48 +944,54 @@
     },
     {
         "name": "checkInstanceOf",
-        "description": "Check if $value is an instance of $fqcn.",
+        "headline": "Check if $value is an instance of $fqcn",
+        "description": "",
         "aliases": [
             "isInstanceOf"
         ],
-        "paramlist": "$fqcn"
+        "paramlist": "string $fqcn"
     },
     {
         "name": "checkImplements",
-        "description": "Check if value implements the $fqcn interface.",
+        "headline": "Check if value implements the $fqcn interface",
+        "description": "",
         "aliases": [
             "isImplementing",
             "implements"
         ],
-        "paramlist": "$fqcn"
+        "paramlist": "mixed $fqcn"
     },
     {
         "name": "checkHasMethod",
-        "description": "Check if value is an object or class that has the given method.",
+        "headline": "Check if value is an object or class that has the given method",
+        "description": "",
         "aliases": [
             "hasMethod"
         ],
-        "paramlist": "$methodName"
+        "paramlist": "string $methodName"
     },
     {
         "name": "checkHasProperty",
-        "description": "Check if value is an object or class that has the given propert.",
+        "headline": "Check if value is an object or class that has the given propert",
+        "description": "",
         "aliases": [
             "hasProperty"
         ],
-        "paramlist": "$property"
+        "paramlist": "string $property"
     },
     {
         "name": "checkHasTrait",
-        "description": "Check if value is an object or class that uses the given trait.",
+        "headline": "Check if value is an object or class that uses the given trait",
+        "description": "",
         "aliases": [
             "hasTrait"
         ],
-        "paramlist": "$traitName"
+        "paramlist": "string $traitName"
     },
     {
         "name": "checkHostname",
-        "description": "Check if $value is a valid host name.",
+        "headline": "Check if $value is a valid host name",
+        "description": "",
         "aliases": [
             "isHostname",
             "hostname"
@@ -833,7 +1000,8 @@
     },
     {
         "name": "checkIpAddress",
-        "description": "Check if $value is a valid ipv4 or ipv6 address",
+        "headline": "Check if $value is a valid ipv4 or ipv6 address",
+        "description": "",
         "aliases": [
             "isIpAdrress",
             "ipAddress"
@@ -842,11 +1010,236 @@
     },
     {
         "name": "checkUrl",
-        "description": "Check if $value is a complete and absolute web url",
+        "headline": "Check if $value is a complete and absolute web url",
+        "description": "",
         "aliases": [
             "url",
             "isUrl"
         ],
-        "paramlist": "$schemes"
+        "paramlist": "[string|string[] $schemes = [\"https\",\"http\"]]"
+    },
+    {
+        "name": "checkLogic",
+        "headline": "Check that $logic is successful",
+        "description": "",
+        "aliases": [
+            "isSuccessfulLogic",
+            "logic",
+            "passesLogic"
+        ],
+        "paramlist": "Valit\\Contracts\\Logic $logic, [bool $withValue = true]"
+    },
+    {
+        "name": "checkPassesOneOf",
+        "headline": "Check that one (and only one) of the given branches succeed if given $value",
+        "description": "",
+        "aliases": [
+            "passesOneOf",
+            "logicOneOf"
+        ],
+        "paramlist": "array $branches, [Valit\\Manager $manager = null], [bool $withValue = true]"
+    },
+    {
+        "name": "checkPassesAnyOf",
+        "headline": "Check that at least one of the given branches succeed if given $value",
+        "description": "",
+        "aliases": [
+            "passesAnyOf",
+            "logicAnyOf"
+        ],
+        "paramlist": "array $branches, [Valit\\Manager $manager = null], [bool $withValue = true]"
+    },
+    {
+        "name": "checkPassesAllOf",
+        "headline": "Check that all of the given branches succeed if given $value",
+        "description": "",
+        "aliases": [
+            "passesAllOf",
+            "passesAll",
+            "logicAllOf"
+        ],
+        "paramlist": "array $branches, [Valit\\Manager $manager = null], [bool $withValue = true]"
+    },
+    {
+        "name": "checkPassesNoneOf",
+        "headline": "Check that none of the given branches succeed if given $value",
+        "description": "",
+        "aliases": [
+            "passesNoneOf",
+            "passesNone",
+            "logicNoneOf",
+            "failsAllOf"
+        ],
+        "paramlist": "array $branches, [Valit\\Manager $manager = null], [bool $withValue = true]"
+    },
+    {
+        "name": "checkDoesNotPass",
+        "headline": "Check that the given scenario does not succeed if given $value",
+        "description": "",
+        "aliases": [
+            "doesNotPass",
+            "not",
+            "fails",
+            "invert"
+        ],
+        "paramlist": "array $scenario, [Valit\\Manager $manager = null], [bool $withValue = true]"
+    },
+    {
+        "name": "checkFileExists",
+        "headline": "Check if $value is an existing file",
+        "description": "",
+        "aliases": [
+            "fileExists",
+            "isFile"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkDirExists",
+        "headline": "Check if $value is an existing directory",
+        "description": "",
+        "aliases": [
+            "dirExists",
+            "directoryExists",
+            "isDir",
+            "isDirectory"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkIsWritable",
+        "headline": "Check if $value is exists on the filesystem and is writable",
+        "description": "",
+        "aliases": [
+            "writable",
+            "isWritable"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkIsReadable",
+        "headline": "Check if $value is exists on the filesystem and is readable",
+        "description": "",
+        "aliases": [
+            "readable",
+            "isReadable"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkExecutable",
+        "headline": "Check if $value is an executable filesystem path",
+        "description": "",
+        "aliases": [
+            "isExecutable",
+            "executable"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkLink",
+        "headline": "Check if $value is a filesystem link",
+        "description": "",
+        "aliases": [
+            "isLink",
+            "link"
+        ],
+        "paramlist": ""
+    },
+    {
+        "name": "checkLargerThan",
+        "headline": "Check if $value is a filename and that the file is larger than $size",
+        "description": "",
+        "aliases": [
+            "fileLargerThan",
+            "isFileLargerThan",
+            "fileSizeGreaterThan"
+        ],
+        "paramlist": "string|int $size"
+    },
+    {
+        "name": "checkSmallerThan",
+        "headline": "Check if $value is a filename and that the file is smaller than $size",
+        "description": "",
+        "aliases": [
+            "fileSmallerThan",
+            "isFileSmallerThan",
+            "fileSizeLessThan"
+        ],
+        "paramlist": "string|int $size"
+    },
+    {
+        "name": "checkFileTime",
+        "headline": "Check if $value is a file, that the timestamp denoted by $timeFunc compares\nto $against given the $compareFunc",
+        "description": "Examples:\n```php\n// Example 1\nCheck::that($file)->isFileWhereTime(\n    'created',\n    'at',\n    '1987-01-01 00:00:00'\n);\n\n// Example 2\nCheck::that($file)->fileWhereTime(\n    'modified',\n    'beforeOrAt',\n    '1987-01-01 00:00:00'\n);\n\n// Example 3\nCheck::that($file)->fileWhereTime(\n    'accessed',\n    'after',\n    '5 minutes ago'\n);\n```\n---",
+        "aliases": [
+            "fileWhereTime",
+            "isFileWhereTime"
+        ],
+        "paramlist": "string $timeFunc, string $compareFunc, mixed $date"
+    },
+    {
+        "name": "checkCreatedAfter",
+        "headline": "Check if $value is a file that was created after $date",
+        "description": "",
+        "aliases": [
+            "fileNewerThan",
+            "isFileNewerThan",
+            "fileCreatedAfter",
+            "isFileCreatedAfter"
+        ],
+        "paramlist": "mixed $date"
+    },
+    {
+        "name": "checkCreatedBefore",
+        "headline": "Check if $value is a file that was created before $date",
+        "description": "",
+        "aliases": [
+            "fileOlderThan",
+            "isFileOlderThan",
+            "fileCreatedBefore",
+            "isFileCreatedBefore"
+        ],
+        "paramlist": "mixed $date"
+    },
+    {
+        "name": "checkModifiedAfter",
+        "headline": "Check if $value is a file that was modified after $date",
+        "description": "",
+        "aliases": [
+            "fileModifiedAfter",
+            "isFileModifiedAfter"
+        ],
+        "paramlist": "mixed $date"
+    },
+    {
+        "name": "checkModifiedBefore",
+        "headline": "Check if $value is a file that was modified before $date",
+        "description": "",
+        "aliases": [
+            "fileModifiedBefore",
+            "isFileModifiedBefore"
+        ],
+        "paramlist": "mixed $date"
+    },
+    {
+        "name": "checkAccessedAfter",
+        "headline": "Check if $value is a file that was accessed after $date",
+        "description": "",
+        "aliases": [
+            "fileAccessedAfter",
+            "isFileAccessedAfter"
+        ],
+        "paramlist": "mixed $date"
+    },
+    {
+        "name": "checkAccessedBefore",
+        "headline": "Check if $value is a file that was accessed before $date",
+        "description": "",
+        "aliases": [
+            "fileAccessedBefore",
+            "isFileAccessedBefore"
+        ],
+        "paramlist": "mixed $date"
     }
 ]

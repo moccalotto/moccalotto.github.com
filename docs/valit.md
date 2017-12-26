@@ -21,7 +21,7 @@ To add this package as a local, per-project dependency to your project, simply a
 ```json
 {
     "require": {
-        "moccalotto/valit": "~0.7"
+        "moccalotto/valit": "~1.0",
     }
 }
 ```
@@ -35,28 +35,13 @@ composer require moccalotto/valit
 ## Usage
 
 ```php
+use Valit\Check;
+
 Ensure::that($age)
     ->isNumeric()
     ->isGreaterThanOrEqual(18)
     ->isLowerThanOrEqual(75);
 ```
-
-### Facades
-
-The `Check` and `Ensure` classes are the a so-called facade classes.
-In short they make it easier for you to use the Valit library.
-
-```php
-use Moccalotto\Valit\Facades\Check;
-use Moccalotto\Valit\Facades\Ensure;
-```
-
-The `Ensure` class allows you to make checks with fluent API,
-throwing an exception as soon as a check doesn't pass.
-
-The `Check` class allows you to make checks that do not throw exceptions.
-This means all checks are processed and that you can get a pretty rendered
-list of errors.
 
 ### Validity
 You can determine if a variable passes all your criteria by using the
@@ -73,6 +58,8 @@ $valid = Check::that($x)
     ->isGreaterThanOrEqual(42)  // Success
     ->isLessThan(100)           // Success
     ->valid();                  // true
+
+var_dump($valid);               // bool(true)
 ```
 
 ### Error Messages
@@ -126,23 +113,26 @@ Array
 
 ### Ensuring
 If you want to assert that all checks must pass, you can
-use the `Moccalotto\Valit\Ensure` facade.
+use the `Ensure` facade.
 
 If a single check fails, we throw a
-`Moccalotto\Valit\ValidationException` that contains the
-error message for that check.
+`Valit\Exceptions\InvalidValueException` that contains the
+error message for the first failed check.
 
 
 ```php
+use Valit\Ensure;
+use Valit\Exceptions\InvalidValueException;
+
 $email = 'Doctor.Hansen@Example.com';
 
 try {
     Ensure::that($x)
         ->as('Email')
         ->isEmail()             // Success
-        ->isLowercase()         // Throws ValidationException
+        ->isLowercase()         // Throws InvalidValueException
         ->endsWith('.co.uk');   // Not run
-} catch (ValidationException $e) {
+} catch (InvalidValueException $e) {
     var_dump($e->getMessage());
     /*
         string(42) "Email must be a syntax-valid email address"
@@ -155,7 +145,7 @@ If you want to assert that all checks pass, and you want
 info about all tests, you can use the Check facade in
 combination with the `orThrowException` method.
 
-The thrown `ValidationException` will contain a list of
+The thrown `InvalidValueException` will contain a list of
 all the error messages. These can be accessed via the
 `errorMessages` method like so:
 
@@ -164,18 +154,18 @@ $age = '42.3';
 
 try {
     Check::that($age)
-        ->as('age')
+        ->as('your age')
         ->isNaturalNumber()     // Fail
         ->isGreaterThan(18)     // Success
         ->isLowerThan(30)       // Fail
         ->orThrowException();
-} catch (ValidationException $e) {
+} catch (InvalidValueException $e) {
     print_r($e->errorMessages());
     /*
         Array
         (
-            [0] => age must be a natural number
-            [1] => age must be less than 30
+            [0] => your age must be a natural number
+            [1] => your age must be less than 30
         )
      */
 }
@@ -188,17 +178,98 @@ You can easily test an entire array, for instance posted fields or a json respon
 in a structured and well defined way like the example below:
 
 ```php
-$checks = Check::container($input)->passes([
-    'name'      => 'required & string & shorterThan(100)',
-    'email'     => 'required & email & shorterThan(255)',
-    'address'   => ['required', 'string'],
-    'age'       => ['greaterThanOrEqual' => [18], 'lowerThan(70)'],
+use Valit\Check;
 
-    'orderLines'                => 'required & conventionalArray',
-    'orderLines/*'              => 'required & associative',
-    'orderLines/*/productId'    => 'required & uuid',
-    'orderLines/*/count'        => 'required & integer & greaterThan(0)',
-    'orderLines/*/comments'     => 'string & shorterThan(1024)',
+$assertions =  [
+    'name'      => 'string & shorterThan(100)',
+    'email'     => 'email & shorterThan(256)',
+    'address'   => 'string & shorterThan(256)',
+    'city'      => 'string & shorterThan(256)',
+    'region'    => 'optional & string & shorterThan(256)',
+    'country'   => 'string & hasLength(2) & isUppercase',
+    'age'       => 'int & greaterThan(17) & lessThan(100)',
+];
+
+// The »region« field is not present in the container.
+// It's ok because it is marked as optional.
+$container = [
+    'name' => 'Kim Hansen',
+    'email' => 'foo@example.com',
+    'address' => 'Mt Everest Street 1337',
+    'city' => 'Metropolis',
+    'country' => 'DK',
+    'age' => 35,
+
+];
+
+
+$checks = Check::container($container)->passes($assertions);
+
+var_dump($checks->valid()); // bool(true)
+```
+
+#### You can also use a fluent syntax to define filters
+```php
+use Valit\Check;
+use Valit\Value;
+
+$varCharSize = 256;
+$textFieldSize = 65536;
+
+$assertions =  [
+    'name'      => Value::isString()->shorterThan($varCharSize),
+    'email'     => Value::isEmail()->shorterThan($varCharSize),
+    'age'       => Value::greaterThanOrEqual(18)->lowerThan(70),
+
+    'orderLines'            => Value::isConventionalArray(),
+    'orderLines/*'          => Value::isAssociativeArray(),
+    'orderLines/*/id'       => Value::isUuid(),
+    'orderLines/*/count'    => Value::isInt()->greaterThan(0)->lessThan(100),
+    'orderLines/*/comments' => Value::isString()->shorterThan($textFieldSize),
+];
+
+$container = [
+    'name' => 'Kim Hansen',
+    'email' => 'foo@example.com',
+    'address' => 'Mt Everest Street 1337',
+    'age' => 65,
+
+    'orderLines' => [
+        [
+            'id' => '053e54ab-ead9-49e3-bb5b-af550cb0c20e',
+            'count' => 1,
+            'comments' => 'I love this product',
+        ],
+        [
+            'id' => 'd9e918a8-e32a-4ccb-b929-4bd273c6f06f',
+            'count' => 2,
+            'comments' => 'I also love this product',
+        ],
+    ],
+];
+
+
+$checks = Check::container($container)->passes($assertions);
+
+var_dump($checks->valid()); // bool(true)
+```
+
+
+
+#### Accessing errors is simple
+
+```php
+$checks = Check::container($input)->passes([
+    'name'      => 'string & shorterThan(100)',
+    'email'     => 'email & shorterThan(255)',
+    'address'   => 'string',
+    'age'       => 'greaterThanOrEqual(18) & lowerThan(70)',
+
+    'orderLines'            => 'required & conventionalArray',
+    'orderLines/*'          => 'required & associative',
+    'orderLines/*/id'       => 'required & uuid',
+    'orderLines/*/count'    => 'required & integer & greaterThan(0)',
+    'orderLines/*/comments' => 'string & shorterThan(1024)',
 ]);
 
 if ($checks->hasErrors()) {
@@ -216,7 +287,7 @@ if ($checks->hasErrors()) {
                     [0] => Field must be an associative array
                 )
 
-            [orderLines/0/productId] => Array
+            [orderLines/0/id] => Array
                 (
                     [0] => Field must be a valid UUID
                 )
@@ -234,36 +305,14 @@ You can get the error messages for a single field like so:
 // get the errors associated with the top level field 'age'.
 $errors = $checks->errorMessagesByPath('age');
 
-// get the errors for the productId of the first orderLine.
-$errors = $checks->errorMessagesByPath('orderLines/0/productId');
+// get the errors for the product id of the first orderLine.
+$errors = $checks->errorMessagesByPath('orderLines/0/id');
 
 // get the error associated with the second orderLine
 $errors = $checks->errorMessagesByPath('orderLines/1');
 ```
 
-### Array assertions
-
-As with single variable tests, you can assert that an array must pass
-a set of filters via the `Ensure` facade like so:
-
-```php
-// Throw an exception if $responseData does not adhere to all the criteria:
-Ensure::container($responseData)->passes([
-    'statusCode' => 'required & integer & greaterThanOrEqual(0) & lowerThanOrEqual(1000)',
-    'message' => 'required & string',
-    'payload' => 'required & isArray',
-    'payload/paymentAddress/name' => 'required & string & shorterThan(100)',
-    'payload/paymentAddress/email' => 'required & email & shorterThan(255)',
-    'payload/paymentAddress/address' => 'required & string & shorterThan(255)',
-    'payload/paymentAddress/country' => 'required & string & isUpperCase & hasLength(2)'
-    'payload/billingAddress/name' => 'required & string & shorterThan(100)',
-    'payload/billingAddress/email' => 'required & email & shorterThan(255)',
-    'payload/billingAddress/address' => 'required & string & shorterThan(255)',
-    'payload/billingAddress/country' => 'required & string & isUpperCase & hasLength(2)'
-]);
-```
-
-### Checks
+## Checks
 
 Below is a list of all available checks.
 
@@ -271,14 +320,22 @@ Below is a list of all available checks.
 <br>
 <br>
 
-<table>
 {% for check in site.data.validationChecks %}
-    <tr>
-        <h4>{{ check.description }}</h4>
-        {% for alias in check.aliases %}
-            <pre><code class="language-php">{{ alias }}({{ check.paramlist }})</code></pre>
-        {% endfor %}
-        <br>
-    </tr>
+<div>
+    <h4>
+        {% if check.headline %}
+            {{ check.headline }}
+        {% else %}
+            {{ check.name }}
+        {% endif %}
+    </h4>
+
+    {% if check.description %}
+        {{ check.description | markdownify }}
+    {% endif %}
+    {% for alias in check.aliases %}
+        <pre><code class="language-php">{{ alias }}({{ check.paramlist }})</code></pre>
+    {% endfor %}
+    <br>
+</div>
 {% endfor %}
-</table>

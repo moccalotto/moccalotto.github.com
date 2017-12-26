@@ -11,4 +11,3 @@ version: "$Id$"
 
 gems:
   - jekyll-seo-tag
-  - jekyll-sitemap
