@@ -131,7 +131,7 @@ try {
         ->as('Email')
         ->isEmail()             // Success
         ->isLowercase()         // Throws InvalidValueException
-        ->endsWith('.co.uk');   // Not run
+        ->endsWith('.co.uk');   // Not executed
 } catch (InvalidValueException $e) {
     var_dump($e->getMessage());
     /*
@@ -150,6 +150,9 @@ all the error messages. These can be accessed via the
 `errorMessages` method like so:
 
 ```php
+use Valit\Check;
+use Valit\Exceptions\InvalidValueException;
+
 $age = '42.3';
 
 try {
@@ -259,7 +262,7 @@ var_dump($checks->valid()); // bool(true)
 #### Accessing errors is simple
 
 ```php
-$checks = Check::container($input)->passes([
+$checks = Check::container($someDataWithErrors)->passes([
     'name'      => 'string & shorterThan(100)',
     'email'     => 'email & shorterThan(255)',
     'address'   => 'string',
@@ -269,7 +272,7 @@ $checks = Check::container($input)->passes([
     'orderLines/*'          => 'required & associative',
     'orderLines/*/id'       => 'required & uuid',
     'orderLines/*/count'    => 'required & integer & greaterThan(0)',
-    'orderLines/*/comments' => 'string & shorterThan(1024)',
+    'orderLines/*/comments' => 'string & shorterThan(65536)',
 ]);
 
 if ($checks->hasErrors()) {
@@ -282,16 +285,15 @@ if ($checks->hasErrors()) {
                     [0] => Field must be less than 70
                 )
 
-            [orderLines/1] => Array
-                (
-                    [0] => Field must be an associative array
-                )
-
             [orderLines/0/id] => Array
                 (
                     [0] => Field must be a valid UUID
                 )
 
+            [orderLines/1] => Array
+                (
+                    [0] => Field must be an associative array
+                )
         )
      */
 }
