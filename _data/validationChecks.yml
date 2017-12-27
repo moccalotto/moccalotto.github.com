@@ -164,7 +164,7 @@
             "sameDayAs",
             "isSameDayAs"
         ],
-        "paramlist": "string|DateTimeInterface $against"
+        "paramlist": "mixed $against"
     },
     {
         "name": "checkSameDayOfWeek",
@@ -176,7 +176,7 @@
             "isDayOfWeek",
             "dayOfWeek"
         ],
-        "paramlist": "string|DateTimeInterface $against"
+        "paramlist": "mixed $against"
     },
     {
         "name": "checkDayOfMonth",
@@ -186,11 +186,11 @@
             "isDayOfMonth",
             "dayOfMonth"
         ],
-        "paramlist": "int $against"
+        "paramlist": "int $dayOfMonth"
     },
     {
         "name": "checkBirthday",
-        "headline": "Check if $value is a datetime where the day-month-component is\nthe same as the day-month-component of $against",
+        "headline": "Check if $value is a datetime where the day-month-component is\nthe same as the day-month-component of $otherDate",
         "description": "In other words, are the two dates \"birthday-equivalent\" of each other.\n\nFor instance:\n '1987-12-01 23:30:00' is birthday equivalent of '1950-12-01 11:32:34'\n because they both occur in on december 1st.",
         "aliases": [
             "isBirthdayEquivalentOf",
@@ -198,7 +198,7 @@
             "sameDayAndMonth",
             "isSameDayAndMonth"
         ],
-        "paramlist": "string|DateTimeInterface $against"
+        "paramlist": "mixed $otherDate"
     },
     {
         "name": "checkIsJson",
