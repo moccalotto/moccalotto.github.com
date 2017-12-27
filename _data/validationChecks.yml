@@ -16,7 +16,7 @@
             "passesCustom",
             "passesChecker"
         ],
-        "paramlist": "\\Valit\\Contracts\\CustomChecker $checker"
+        "paramlist": "Valit\\Contracts\\CustomChecker $checker"
     },
     {
         "name": "checkXmlString",
@@ -77,19 +77,19 @@
     {
         "name": "checkDateParsable",
         "headline": "Check if $value is a string containing a parseable date",
-        "description": "",
+        "description": "The `$format` parameter can be null or a string.\nIf it is null, we will attempt to parse the $value as a DateTime via\nPHPs built-in inference. If `$format` is a string, it will be used\nto define the format of the $value.\nSee <http://php.net/manual/datetime.createfromformat.php> for more info.",
         "aliases": [
             "isParsableDate",
             "parsableDate",
             "isDateString",
             "dateString"
         ],
-        "paramlist": "[string $format = null]"
+        "paramlist": "[string|null $format = null]"
     },
     {
         "name": "checkDateAfter",
         "headline": "Check if $value is a date after $against",
-        "description": "",
+        "description": "The `$against` parameter can be one of:\n- `DateTimeInterface`\n- `int` The value will be treated as a UNIX timestamp.\n- `float` The value will be treated as a UNIX timestamp with a sub-second component.\n- `string` The value will be converted to a `DateTime` if possible via PHPs native date time inference.",
         "aliases": [
             "isDateAfter",
             "occursAfter",
@@ -102,7 +102,7 @@
     {
         "name": "checkDateBefore",
         "headline": "Check if $value is a date after $against",
-        "description": "",
+        "description": "The `$against` parameter can be one of:\n- `DateTimeInterface`\n- `int` The value will be treated as a UNIX timestamp.\n- `float` The value will be treated as a UNIX timestamp with a sub-second component.\n- `string` The value will be converted to a `DateTime` if possible via PHPs native date time inference.",
         "aliases": [
             "isDateBefore",
             "occursBefore",
@@ -110,7 +110,7 @@
             "earlierThan",
             "isEarlierThan"
         ],
-        "paramlist": "DateTimeInterface $against"
+        "paramlist": "mixed $against"
     },
     {
         "name": "checkInThePast",
@@ -229,7 +229,7 @@
             "isUuidVersion",
             "uuidVersion"
         ],
-        "paramlist": "mixed $version"
+        "paramlist": "int $version"
     },
     {
         "name": "checkUidV1",
@@ -780,13 +780,13 @@
     },
     {
         "name": "checkContainsString",
-        "headline": "Check if $value contains a given string",
+        "headline": "Check if $value contains a given substring",
         "description": "",
         "aliases": [
             "containsString",
             "containsTheString"
         ],
-        "paramlist": "string $contains"
+        "paramlist": "string $substring"
     },
     {
         "name": "checkShorterThan",
