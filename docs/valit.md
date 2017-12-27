@@ -268,11 +268,11 @@ $checks = Check::container($someDataWithErrors)->passes([
     'address'   => 'string',
     'age'       => 'greaterThanOrEqual(18) & lowerThan(70)',
 
-    'orderLines'            => 'required & conventionalArray',
-    'orderLines/*'          => 'required & associative',
-    'orderLines/*/id'       => 'required & uuid',
-    'orderLines/*/count'    => 'required & integer & greaterThan(0)',
-    'orderLines/*/comments' => 'string & shorterThan(65536)',
+    'orderLines'            => 'conventionalArray',
+    'orderLines/*'          => 'associative',
+    'orderLines/*/id'       => 'uuid',
+    'orderLines/*/count'    => 'integer & greaterThan(0)',
+    'orderLines/*/comments' => 'optional & string & shorterThan(65536)',
 ]);
 
 if ($checks->hasErrors()) {
