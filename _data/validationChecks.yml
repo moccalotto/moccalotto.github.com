@@ -311,7 +311,7 @@
             "isOneOf",
             "oneOf"
         ],
-        "paramlist": "array $against"
+        "paramlist": "array|\\Traversable $possibleValues"
     },
     {
         "name": "checkIsTruthy",
@@ -826,8 +826,11 @@
         "headline": "Check that $value can be accessed as an array",
         "description": "",
         "aliases": [
+            "isArrayable",
+            "arrayable",
             "hasArrayAccess",
-            "arrayAccessible"
+            "arrayAccessible",
+            "isArrayAccessible"
         ],
         "paramlist": ""
     },
