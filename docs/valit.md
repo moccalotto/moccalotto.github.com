@@ -72,13 +72,17 @@ Ensure::that($array)->contains([
 ### Advanced Concepts
 
 * [Templates via the Value facade](/TODO)
-* [Control Structures](/TODO)
+* Control Structures:
     - [Introduction](/TODO)
     - [oneOf](/TODO)
     - [anyOf](/TODO)
     - [allOf](/TODO)
     - [noneOf](/TODO)
     - [not](/TODO)
+* Custom Check Providers:
+    - [Creating your own Check Provider](/TODO)
+    - [The annotation driver](/TODO)
+
 
 ## Checks
 
