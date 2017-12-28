@@ -64,7 +64,7 @@ Ensure::that($array)->contains([
 ]);
 ```
 
-* [Continer validation](/TODO)
+* [Container validation](/TODO)
 * [Fluent container validation syntax](/TODO)
 * [Container validation results results](/TODO)
 * [InvalidContainerException](/TODO)
