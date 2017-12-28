@@ -3,6 +3,10 @@ $color-text: #999;
 $color-header: #74c7d5;
 $color-link: #228Ca8;
 
+$color-grey:       #f5f2f0;             // not really grey, but whatever.
+$color-light-grey: $color-grey;
+$color-dark-grey:  darken($color-grey, 40%);
+
 @mixin header() {
     color: $color-header;
     margin-top:20px;
@@ -107,4 +111,27 @@ dd {
 
 .nowrap {
     white-space:nowrap;
+}
+
+
+table:not(.plain) {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    margin-bottom:2em;
+    width: 100%;
+    border:1px solid $color-dark-grey;
+
+    thead {
+        background-color: $color-dark-grey;
+        color: #fff;
+    }
+
+    tbody>tr:nth-child(odd) {
+        background-color:$color-light-grey;
+    }
+
+    th,td {
+        padding: .3rem 0.5rem;
+        white-space: nowrap;
+    }
 }

@@ -296,12 +296,12 @@
     {
         "name": "checkEquals",
         "headline": "Check that $value == $against (loose comparison)",
-        "description": "",
+        "description": "Examples:\n\n| $value     | $equals       | Valid     |\n|:-----------|:--------------|:----------|\n| true       | true          | yes       |\n| true       | 1             | yes       |\n| \"true\"     | 1             | no        |\n| \"true\"     | true          | yes       |\n| \"true\"     | \"foo\"         | no        |\n| \"1\"        | true          | yes       |\n| \"1\"        | 1             | yes       |\n| \"1\"        | \"foo\"         | no        |\n| \"0\"        | true          | no        |\n| \"0\"        | false         | yes       |\n| \"0\"        | 0             | yes       |",
         "aliases": [
             "is",
             "equals"
         ],
-        "paramlist": "mixed $against"
+        "paramlist": "mixed $equals"
     },
     {
         "name": "checkIsOneOf",
@@ -312,6 +312,16 @@
             "oneOf"
         ],
         "paramlist": "array|\\Traversable $possibleValues"
+    },
+    {
+        "name": "checkIsNotOneOf",
+        "headline": "Check that $value is NOT equal to (==) any of the values in $against",
+        "description": "",
+        "aliases": [
+            "isNotOneOf",
+            "notOneOf"
+        ],
+        "paramlist": "array|\\Traversable $unacceptableValues"
     },
     {
         "name": "checkIsTruthy",
