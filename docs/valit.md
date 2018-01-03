@@ -48,8 +48,8 @@ Ensure::that($age)
     ->isLowerThanOrEqual(75);
 ```
 
-* [Value validation](/TODO)
-* [Validation results](/TODO)
+* [Value validation](/docs/valit/sub/value-validation-intro)
+* [Validation results](/docs/valit/sub/value-validation-results)
 * [InvalidValueException](/TODO)
 
 You can validate a container (any iterable type) like this:
@@ -78,6 +78,7 @@ Ensure::that($array)->contains([
     - [anyOf](/TODO)
     - [allOf](/TODO)
     - [noneOf](/TODO)
+    - [allOrNone](/TODO)
     - [not](/TODO)
 * Custom Check Providers:
     - [Creating your own Check Provider](/TODO)
