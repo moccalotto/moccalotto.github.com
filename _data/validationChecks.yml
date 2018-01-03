@@ -832,6 +832,17 @@
         "paramlist": "int $length"
     },
     {
+        "name": "checkRelativeLength",
+        "headline": "Check if $value is a string where the length compares to $against using the $operator",
+        "description": "Examples:\n\n```php\n // length > 20\n Check::that($foo)->lengthIs('>', 20);\n\n // length <= 255\n Check::that($foo)->lengthIs('<=', 255);\n\n // alternative:\n Check::that($foo)->lengthIs('≤', 255);\n```",
+        "aliases": [
+            "lengthIs",
+            "stringWhereLength",
+            "isStringWhereLength"
+        ],
+        "paramlist": "string $operator, int $against"
+    },
+    {
         "name": "checkArrayAccess",
         "headline": "Check that $value can be accessed as an array",
         "description": "",

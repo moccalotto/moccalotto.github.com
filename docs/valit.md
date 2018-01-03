@@ -57,7 +57,7 @@ You can validate a container (any iterable type) like this:
 ### Container validation
 
 ```php
-Ensure::that($array)->contains([
+Ensure::that($postData)->contains([
     'username'    => 'string & shorterThan(256) & longerThan(2)',
     'password'    => 'string & shorterThan(256) & longerThan(4)',
     'remember_me' => 'optional & oneOf(["yes", "no"])',
