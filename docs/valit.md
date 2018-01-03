@@ -65,8 +65,8 @@ Ensure::that($postData)->contains([
 ```
 
 * [Container validation](/docs/valit/sub/container-intro)
-* [Fluent container validation syntax](/TODO)
-* [Container validation results results](/TODO)
+* [Fluent container validation syntax](/docs/valit/sub/fluent-container-validation)
+* [Container validation results](/TODO)
 * [InvalidContainerException](/TODO)
 
 ### Advanced Concepts
