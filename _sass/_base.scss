@@ -135,3 +135,12 @@ table:not(.plain) {
         white-space: nowrap;
     }
 }
+
+table.max100 {
+    width: 100%;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow: auto;
+}
