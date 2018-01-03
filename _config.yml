@@ -9,7 +9,7 @@ twitter_username: moccalotto
 github_username:  moccalotto
 version: "$Id$"
 
-gems:
+plugins:
   - jekyll-seo-tag
 
 collections:
