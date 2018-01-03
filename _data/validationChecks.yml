@@ -365,8 +365,8 @@
     },
     {
         "name": "checkHasType",
-        "headline": "Check that $value is identical to false",
-        "description": "$type can be a string with a type name such as:\n `'int'`, `'float'`, `'bool'`, `'array'` or even `'callable'`\nor it can be a fully qualified class name such as\n `'Valit\\Check'`\n\nIt can also be an array of the above types. If it is an\narray, then $value can be any of the given values.\nExample:\n `['int', 'DateTimeInterface']`\n\nIt can also be a string with many types separated by a pipe `|` characer.\nExample:\n `'int|float'`, `'string | DateTimeInterface'`\n\n Code examples:\n\n ```php\n // example 1\n Check::that($foo)->hasType('callable');\n\n // example 2\n Check::that($foo)->hasType('float | int');\n\n // example 3\n Check::that($foo)->hasType(['object', 'array'])\n\n // example 4\n Check::that($foo)->hasType('DateTime|DateTimeImmutable')\n ```\n---",
+        "headline": "Check that $value has a given type",
+        "description": "Possible types:\n\n| $type      | check                     |\n| ---------- | ------------------------- |\n| int        | `is_int()`                |\n| integer    | `is_int()`                |\n| bool       | `is_bool()`               |\n| boolean    | `is_bool()`               |\n| string     | `is_string()`             |\n| float      | `is_float()`              |\n| double     | `is_float()`              |\n| numeric    | `is_numeric()`            |\n| nan        | `is_nan()`                |\n| inf        | `is_inf()`                |\n| callable   | `is_callable()`           |\n| iterable   | `array`, `Traversable`    |\n| countable  | `array`, `Cointable`      |\n| arrayable  | `array`, `ArrayAccess`    |\n| [fqcn]     | `is_a()`                  |\n| ---------- | ------------------------- |\n\n Code examples:\n\n ```php\n // single type\n Check::that($foo)->hasType('callable');\n\n // multiple allowed types via the pipe character\n Check::that($foo)->hasType('float | int');\n\n // Check that $foo is an array of floats\n // or an array of integers.\n Check::that($foo)->hasType('float[] | int[]')\n\n // mixing classes, interfaces and basic types.\n Check::that($foo)->hasType('int|DateTime|DateTimeImmutable')\n\n // multiple types via array notation\n Check::that($foo)->hasType(['object', 'array'])\n ```\n---",
         "aliases": [
             "hasType",
             "isType",
@@ -1074,7 +1074,7 @@
         "paramlist": "array $branches, [Valit\\Manager $manager = null], [bool $withValue = true]"
     },
     {
-        "name": "checkPassesNoneOf",
+        "name": "checkPassesAllOrNone",
         "headline": "Check that none of the given branches succeed if given $value",
         "description": "",
         "aliases": [
