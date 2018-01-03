@@ -50,7 +50,7 @@ Ensure::that($age)
 
 * [Value validation](/docs/valit/sub/value-validation-intro)
 * [Validation results](/docs/valit/sub/value-validation-results)
-* [InvalidValueException](/TODO)
+* [InvalidValueException](/docs/valit/sub/invalid-value-exception)
 
 You can validate a container (any iterable type) like this:
 
