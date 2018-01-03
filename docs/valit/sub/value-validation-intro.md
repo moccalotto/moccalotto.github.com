@@ -4,7 +4,8 @@ title: Valit
 tags: [validate, assert, ensure, check, php]
 ---
 
-## Value Validation
+Value Validation
+================
 
 The `Ensure` facade is an interface to validate variables.
 
