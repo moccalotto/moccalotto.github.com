@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Moccalotto\Valit\ContainerValidationResult | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Moccalotto_Valit_ContainerValidationResult" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0 dev branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Moccalotto.html">Moccalotto</a></li><li class="backslash">\</li><li><a href="../../Moccalotto/Valit.html">Valit</a></li><li class="backslash">\</li><li>ContainerValidationResult</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ContainerValidationResult
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ContainerValidationResult</strong>        (<a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Result of validating a container.</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_results">
+                                        protected                                        <a href="../../Moccalotto/Valit/Fluent.html"><abbr title="Moccalotto\Valit\Fluent">Fluent</abbr></a>[]
+                </td>
+                <td>$results</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_alias">
+                                        protected                                        string
+                </td>
+                <td>$alias</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $results, $alias = &#039;Container&#039;)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasErrors">hasErrors</a>()
+        
+                                            <p>Did one or more tests fail?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_success">success</a>()
+        
+                                            <p>Did all tests pass?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_alias">alias</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_results">results</a>()
+        
+                                            <p>Return all results.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errors">errors</a>()
+        
+                                            <p>Return list of rendered errors.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderedResults">renderedResults</a>()
+        
+                                            <p>Get all results as rendered strings.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errorMessagesByPath">errorMessagesByPath</a>(string|array $path)
+        
+                                            <p>Get all the error messages for a given path.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Moccalotto\Valit\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orThrowException">orThrowException</a>()
+        
+                                            <p>Throw an exception if this container has any errors.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php#L35">line 35</a></div>
+        <code>                    
+    <strong>__construct</strong>(array $results, $alias = &#039;Container&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$alias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasErrors">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php#L46">line 46</a></div>
+        <code>                    bool
+    <strong>hasErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Did one or more tests fail?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_success">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php#L56">line 56</a></div>
+        <code>                    bool
+    <strong>success</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Did all tests pass?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_alias">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php#L61">line 61</a></div>
+        <code>                    
+    <strong>alias</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_results">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php#L71">line 71</a></div>
+        <code>                    array
+    <strong>results</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all results.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>associative array of [ path => [results] ]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errors">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php#L83">line 83</a></div>
+        <code>                    array
+    <strong>errors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return list of rendered errors.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>associative array of [ path => [errors] ]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderedResults">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php#L95">line 95</a></div>
+        <code>                    array
+    <strong>renderedResults</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all results as rendered strings.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>associative array of [ path => [message => success] ]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorMessagesByPath">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php#L109">line 109</a></div>
+        <code>                    array
+    <strong>errorMessagesByPath</strong>(string|array $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all the error messages for a given path.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>an array of rendered error messages</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orThrowException">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/ContainerValidationResult.php#L125">line 125</a></div>
+        <code>                    <abbr title="Moccalotto\Valit\$this">$this</abbr>
+    <strong>orThrowException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Throw an exception if this container has any errors.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Moccalotto\Valit\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Moccalotto/Valit/Exceptions/InvalidContainerException.html"><abbr title="Moccalotto\Valit\Exceptions\InvalidContainerException">InvalidContainerException</abbr></a></td>
+                <td>if this container validation result contains any errors</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

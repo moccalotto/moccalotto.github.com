@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Util\Val | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Util_Val" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0 dev branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../Valit/Util.html">Util</a></li><li class="backslash">\</li><li>Val</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Val
+                
+        </h1>
+    </div>
+
+    <p>abstract     class
+    <strong>Val</strong>        (<a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Utility class for converting variables.</p>                                </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_stringable">stringable</a>(mixed $value)
+        
+                                            <p>Can the given value be coerced into a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_numeric">numeric</a>(mixed $value)
+        
+                                            <p>Can the given value be coerced into a number?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_iterable">iterable</a>(mixed $value)
+        
+                                            <p>Can value be traversed (is it iterable) ?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_arrayable">arrayable</a>(mixed $value)
+        
+                                            <p>Can value be accessed as an array?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_countable">countable</a>(mixed $value)
+        
+                                            <p>Can we count the elements in $value?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_throwable">throwable</a>(mixed $value)
+        
+                                            <p>Can the value be thrown via the throw keyword?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toString">toString</a>(mixed $value, string|null $error = null)
+        
+                                            <p>Coerce a value to string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>(mixed $value, string|null $error = null)
+        
+                                            <p>Coerce a value to to an array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toInt">toInt</a>(mixed $value, string|null $error = null)
+        
+                                            <p>Convert a variable to an integer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toFloat">toFloat</a>(mixed $value, string $error = null)
+        
+                                            <p>Convert a variable to a float.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toBool">toBool</a>(mixed $value, string $error = null)
+        
+                                            <p>Convert a variable to a bool.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" href="http://php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toClosure">toClosure</a>(callable $callable)
+        
+                                            <p>Create a closure from a callable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>(mixed $value)
+        
+                                            <p>Count the elements in an array, a Countable or a Traversable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_format">format</a>(mixed $value, string $format)
+        
+                                            <p>Format a given value into a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_escape">escape</a>(mixed $value)
+        
+                                            <p>Format a value for being displayed as a string in an error message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formatCallback">formatCallback</a>(mixed $callback)
+        
+                                            <p>Get the callback as a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Valit\Util\$value">$value</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mustBe">mustBe</a>(mixed $value, string|string[] $types, string|<a target="_blank" href="http://php.net/Exception">Exception</a>|null $error = null)
+        
+                                            <p>Ensure that a value has a given type or class.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_is">is</a>(mixed $value, string|string[] $types)
+        
+                                            <p>Check if a value has a given type or class.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_arrayOf">arrayOf</a>(mixed $value, string $type)
+        
+                                            <p>Check if $value is an array of the given type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_map">map</a>(<abbr title="Valit\Util\iterable">iterable</abbr> $iterable, string|callable $callable)
+        
+                                            <p>Map an iterable variable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_stringable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L34">line 34</a></div>
+        <code>        static            bool
+    <strong>stringable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Can the given value be coerced into a string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_numeric">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L49">line 49</a></div>
+        <code>        static            bool
+    <strong>numeric</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Can the given value be coerced into a number?</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_iterable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L65">line 65</a></div>
+        <code>        static            bool
+    <strong>iterable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Can value be traversed (is it iterable) ?</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_arrayable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L78">line 78</a></div>
+        <code>        static            bool
+    <strong>arrayable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Can value be accessed as an array?</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L91">line 91</a></div>
+        <code>        static            bool
+    <strong>countable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Can we count the elements in $value?</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throwable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L104">line 104</a></div>
+        <code>        static            bool
+    <strong>throwable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Can the value be thrown via the throw keyword?</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toString">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L124">line 124</a></div>
+        <code>        static            string
+    <strong>toString</strong>(mixed $value, string|null $error = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Coerce a value to string.</p>                    <p>Throw an exception if not possible.</p>
+
+<p>Strings, integers, floats and objects with a __toString method can be coerced.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$error</td>
+                <td>Error message to throw if the value could not be converted</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>if $value could not be "nicely" converted to string</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L150">line 150</a></div>
+        <code>        static            string
+    <strong>toArray</strong>(mixed $value, string|null $error = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Coerce a value to to an array.</p>                    <p>Throw an exception if not possible.</p>
+
+<p>Arrays and instances of Traversable can be converted to array.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$error</td>
+                <td>Error message to throw if the value could not be converted</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>if $value could not be "nicely" converted to string</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toInt">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L176">line 176</a></div>
+        <code>        static            float
+    <strong>toInt</strong>(mixed $value, string|null $error = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert a variable to an integer.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to be converted.
+                          Intgegers are returned as-is.
+                          Floats without fractions are converted if: PHP_INT_MIN ≤ $value ≤ PHP_INT_MAX
+                          Strings are coerced to floats if possible.
+                          Objects with a __toString method will be treated as strings</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$error</td>
+                <td>Error message to throw if the value could not be converted</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toFloat">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L202">line 202</a></div>
+        <code>        static            float
+    <strong>toFloat</strong>(mixed $value, string $error = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert a variable to a float.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to be converted.
+                     Floats are returned as-is.
+                     Integers are converted to floats if possible without losss of resolution.
+                     Strings are coerced to floats if possible.
+                     Objects with a __toString method will be treated as strings</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$error</td>
+                <td>Error message to throw if the value could not be converted</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toBool">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L225">line 225</a></div>
+        <code>                    bool
+    <strong>toBool</strong>(mixed $value, string $error = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert a variable to a bool.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to be converted.
+                     booleans will be returned as-is.
+                     "true" will be converted to true.
+                     "false" will be converted to false.
+                     "1", "1.0", 1, 1.0 are converted to true.
+                     "0", "0.0", 0, 0.0 are converted to false.
+                     Objects with a __toString method be treated as strings</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$error</td>
+                <td>Error message to throw if the value could not be converted</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toClosure">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L257">line 257</a></div>
+        <code>        static            <a target="_blank" href="http://php.net/Closure">Closure</a>
+    <strong>toClosure</strong>(callable $callable)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a closure from a callable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L275">line 275</a></div>
+        <code>        static            int
+    <strong>count</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Count the elements in an array, a Countable or a Traversable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_format">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L301">line 301</a></div>
+        <code>        static            string
+    <strong>format</strong>(mixed $value, string $format)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format a given value into a string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/LogicException">LogicException</a></td>
+                <td>if $format is not known</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escape">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L357">line 357</a></div>
+        <code>        static            string
+    <strong>escape</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format a value for being displayed as a string in an error message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatCallback">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L396">line 396</a></div>
+        <code>        static            string
+    <strong>formatCallback</strong>(mixed $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the callback as a string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mustBe">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L434">line 434</a></div>
+        <code>        static            <abbr title="Valit\Util\$value">$value</abbr>
+    <strong>mustBe</strong>(mixed $value, string|string[] $types, string|<a target="_blank" href="http://php.net/Exception">Exception</a>|null $error = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that a value has a given type or class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to check</td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$types</td>
+                <td>Value must have at least one of the declared types</td>
+            </tr>
+                    <tr>
+                <td>string|<a target="_blank" href="http://php.net/Exception">Exception</a>|null</td>
+                <td>$error</td>
+                <td>Error message to throw if the value was not correct</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Util\$value">$value</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>if $value is not of the correct type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_is">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L490">line 490</a></div>
+        <code>        static            bool
+    <strong>is</strong>(mixed $value, string|string[] $types)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if a value has a given type or class.</p>                    <p>$types can be a string with a type name such as:
+ 'int', 'float', 'bool', 'array' or even pseudy
+ types such as 'callable', 'iterable', 'countable',
+ 'stringable' and 'arrayable'.</p>
+
+<p>It can also be a fully qualified class name such as
+ 'Valit\Check'</p>
+
+<p>It can also be an array of the above types. If it is an
+array, then $value can be any of the given values.
+Example:
+ ['int', 'DateTimeInterface']</p>
+
+<p>It can also be a string with many types separated by a pipe <code>|</code> characer.
+Example:
+ 'string|DateTimeInterface', 'int | float'</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to check</td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$types</td>
+                <td>Value must have at least one of the declared types</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>if $types is not a string or an array of strings</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_arrayOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L593">line 593</a></div>
+        <code>        static            bool
+    <strong>arrayOf</strong>(mixed $value, string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is an array of the given type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_map">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L635">line 635</a></div>
+        <code>        static            array
+    <strong>map</strong>(<abbr title="Valit\Util\iterable">iterable</abbr> $iterable, string|callable $callable)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Map an iterable variable.</p>                    <p>Example:</p>
+
+<pre><code class="php">// the two lines below are equivalent:
+$escaped = Val::map($array, '::escape');
+$escaped = Val::map($array, 'Valit\Util\Val::escape');
+
+$integers = Val::map($array, 'intval');  // php version
+$integers = Val::map($array, '::toInt'); // robust version
+</code></pre>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Valit\Util\iterable">iterable</abbr></td>
+                <td>$iterable</td>
+                <td>The array (or traversable) to be mapped.</td>
+            </tr>
+                    <tr>
+                <td>string|callable</td>
+                <td>$callable</td>
+                <td>A callable or a string starting with two colons.
+                                 If it is a string with two colons, it is actually
+                                 a short-hand for calling a static function in this class.
+                                 For instance, if $callable is '::escape' then
+                                 it is the same as if $callable was 'Valit\Util\Val::escape'.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Moccalotto\Valit\ContainerValidator | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Moccalotto_Valit_ContainerValidator" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0 dev branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Moccalotto.html">Moccalotto</a></li><li class="backslash">\</li><li><a href="../../Moccalotto/Valit.html">Valit</a></li><li class="backslash">\</li><li>ContainerValidator</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ContainerValidator
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ContainerValidator</strong>        (<a href="https://github.com/moccalotto/valit/blob/0.8.0/Users/krh/Code/valit/ContainerValidator.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Validate a container (variable with array access).</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_manager">
+                                                                                <a href="../../Moccalotto/Valit/Manager.html"><abbr title="Moccalotto\Valit\Manager">Manager</abbr></a>
+                </td>
+                <td>$manager</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_container">
+                                                                                array|object
+                </td>
+                <td>$container</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_flatContainer">
+                                                                                <abbr title="Moccalotto\Valit\FlattenedContainer">FlattenedContainer</abbr>
+                </td>
+                <td>$flatContainer</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_throwOnFailure">
+                                                                                bool
+                </td>
+                <td>$throwOnFailure</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../Moccalotto/Valit/Manager.html"><abbr title="Moccalotto\Valit\Manager">Manager</abbr></a> $manager, array|object $container, int $throwOnFailure)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Moccalotto/Valit/ContainerValidationResult.html"><abbr title="Moccalotto\Valit\ContainerValidationResult">ContainerValidationResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_passes">passes</a>(<a target="_blank" href="http://php.net/Traversable">Traversable</a>|array $containerFilters)
+        
+                                            <p>Check container against a number of filters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isTraversable">isTraversable</a>(mixed $value)
+        
+                                            <p>Check if we can traverse a given variable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_executeFilters">executeFilters</a>(string $fieldNameGlob, <a href="../../Moccalotto/Valit/Util/FilterSet.html"><abbr title="Moccalotto\Valit\Util\FilterSet">FilterSet</abbr></a> $filters)
+        
+                                            <p>Execute an array of filters on a number of values.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/0.8.0/Users/krh/Code/valit/ContainerValidator.php#L59">line 59</a></div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../Moccalotto/Valit/Manager.html"><abbr title="Moccalotto\Valit\Manager">Manager</abbr></a> $manager, array|object $container, int $throwOnFailure)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Moccalotto/Valit/Manager.html"><abbr title="Moccalotto\Valit\Manager">Manager</abbr></a></td>
+                <td>$manager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|object</td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$throwOnFailure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_passes">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/0.8.0/Users/krh/Code/valit/ContainerValidator.php#L74">line 74</a></div>
+        <code>                    <a href="../../Moccalotto/Valit/ContainerValidationResult.html"><abbr title="Moccalotto\Valit\ContainerValidationResult">ContainerValidationResult</abbr></a>
+    <strong>passes</strong>(<a target="_blank" href="http://php.net/Traversable">Traversable</a>|array $containerFilters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check container against a number of filters.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Traversable">Traversable</a>|array</td>
+                <td>$containerFilters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Moccalotto/Valit/ContainerValidationResult.html"><abbr title="Moccalotto\Valit\ContainerValidationResult">ContainerValidationResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTraversable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/0.8.0/Users/krh/Code/valit/ContainerValidator.php#L103">line 103</a></div>
+        <code>            protected        bool
+    <strong>isTraversable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if we can traverse a given variable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_executeFilters">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/0.8.0/Users/krh/Code/valit/ContainerValidator.php#L117">line 117</a></div>
+        <code>            protected        array
+    <strong>executeFilters</strong>(string $fieldNameGlob, <a href="../../Moccalotto/Valit/Util/FilterSet.html"><abbr title="Moccalotto\Valit\Util\FilterSet">FilterSet</abbr></a> $filters)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute an array of filters on a number of values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fieldNameGlob</td>
+                <td>A field name glob (such as "address" or "order.*.id")</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Moccalotto/Valit/Util/FilterSet.html"><abbr title="Moccalotto\Valit\Util\FilterSet">FilterSet</abbr></a></td>
+                <td>$filters</td>
+                <td>a normalized array of filters.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

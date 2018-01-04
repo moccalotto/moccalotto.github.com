@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Util\Date | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Util_Date" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0 dev branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../Valit/Util.html">Util</a></li><li class="backslash">\</li><li>Date</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Date
+                
+        </h1>
+    </div>
+
+    <p>abstract     class
+    <strong>Date</strong>        (<a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Date.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Provide functionality to parse dates that have been string-encoded.</p>            <p>Also allow faking the current time for test purposes.</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_mockedCurrentTime">
+                    static                    protected                                        <a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>
+                </td>
+                <td>$mockedCurrentTime</td>
+                <td class="last">The current time (if overridden).</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mockCurrentTime">mockCurrentTime</a>(<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a> $mockedCurrentTime = null)
+        
+                                            <p>In order to facilitate testing, we must be able to lock/mock the "now" datetime.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_now">now</a>()
+        
+                                            <p>Get the current DateTime.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fromUnixTimestamp">fromUnixTimestamp</a>(int|float $timestamp)
+        
+                                            <p>Create a DateTime from a unix timestamp.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parse">parse</a>(string|int|<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a> $candidate, string|null $format = null)
+        
+                                            <p>Convert the candidate value into a DateTime object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_canParse">canParse</a>(string|<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a> $candidate, string|null $format = null)
+        
+                                            <p>Is the candidate value can be treated as a date.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_compare">compare</a>(mixed $a, mixed $b)
+        
+                                            <p>Compare two datetimes in a PHP-version agnostic way.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_comparison">comparison</a>(string $comparison, mixed $a, mixed $b)
+        
+                                            <p>Compare two dates.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_mockCurrentTime">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Date.php#L40">line 40</a></div>
+        <code>        static            
+    <strong>mockCurrentTime</strong>(<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a> $mockedCurrentTime = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>In order to facilitate testing, we must be able to lock/mock the "now" datetime.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a></td>
+                <td>$mockedCurrentTime</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_now">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Date.php#L53">line 53</a></div>
+        <code>        static            <a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>
+    <strong>now</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current DateTime.</p>                    <p>If the DateTime that represents the current time. If it was overridden with the mockNow() method,
+we return that DateTime instead.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromUnixTimestamp">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Date.php#L67">line 67</a></div>
+        <code>        static            <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+    <strong>fromUnixTimestamp</strong>(int|float $timestamp)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a DateTime from a unix timestamp.</p>                    <p>Robust against negative timestamps and floating point timestamps.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|float</td>
+                <td>$timestamp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parse">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Date.php#L91">line 91</a></div>
+        <code>        static            <a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>
+    <strong>parse</strong>(string|int|<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a> $candidate, string|null $format = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the candidate value into a DateTime object.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int|<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a></td>
+                <td>$candidate</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>if $candidate is not string, int or DateTime, or if it could not be parsed</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canParse">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Date.php#L146">line 146</a></div>
+        <code>        static            bool
+    <strong>canParse</strong>(string|<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a> $candidate, string|null $format = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is the candidate value can be treated as a date.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a></td>
+                <td>$candidate</td>
+                <td>candidate date</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td>The format to use. see http://php.net/manual/en/class.datetime.php</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compare">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Date.php#L169">line 169</a></div>
+        <code>        static            float
+    <strong>compare</strong>(mixed $a, mixed $b)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compare two datetimes in a PHP-version agnostic way.</p>                    <p>PHP 5.* does not account for microseconds when comparing two datetimes.
+We therefore convert the datetimes into floating point timestamps
+and then compare them as normal floating point numbers.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$a</td>
+                <td>A parseable datetime</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$b</td>
+                <td>A parseable datetime</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td>the number of seconds between $a and $b</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_comparison">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Date.php#L188">line 188</a></div>
+        <code>        static            bool
+    <strong>comparison</strong>(string $comparison, mixed $a, mixed $b)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compare two dates.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$comparison</td>
+                <td>The comparison method; one of 'before', 'beforeOrAt', 'at', 'after', 'afterOrAt'</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$a</td>
+                <td>A parseable datetime</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$b</td>
+                <td>A parseable datetime</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>if $comparison is invalid or $a or $b could not be parsed</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Moccalotto\Valit\Manager | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Moccalotto_Valit_Manager" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0 dev branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Moccalotto.html">Moccalotto</a></li><li class="backslash">\</li><li><a href="../../Moccalotto/Valit.html">Valit</a></li><li class="backslash">\</li><li>Manager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Manager
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Manager</strong>        implements
+        <a href="../../Moccalotto/Valit/Contracts/CheckManager.html"><abbr title="Moccalotto\Valit\Contracts\CheckManager">CheckManager</abbr></a>        (<a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_instance">
+                    static                    protected                                        <a href="../../Moccalotto/Valit/Manager.html"><abbr title="Moccalotto\Valit\Manager">Manager</abbr></a>
+                </td>
+                <td>$instance</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultProviders">
+                    static                    protected                                        array
+                </td>
+                <td>$defaultProviders</td>
+                <td class="last">Default checkers to load when created through create() or instance().</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_checks">
+                                        protected                                        array
+                </td>
+                <td>$checks</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Moccalotto/Valit/Contracts/CheckManager.html"><abbr title="Moccalotto\Valit\Contracts\CheckManager">CheckManager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_instance">instance</a>()
+        
+                                            <p>Get the default (global) manager instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Moccalotto/Valit/Contracts/CheckManager.html"><abbr title="Moccalotto\Valit\Contracts\CheckManager">CheckManager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_create">create</a>(string[] $additionalCheckProviders = [])
+        
+                                            <p>Factory method.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $providers)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAsGlobal">setAsGlobal</a>()
+        
+                                            <p>Set this manager instance as the global one.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadProvider">loadProvider</a>(string $providerClass)
+        
+                                            <p>Load a provider and register all its checks.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checks">checks</a>()
+        
+                                            <p>Get all checks.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addProvider">addProvider</a>(<a href="../../Moccalotto/Valit/Contracts/CheckProvider.html"><abbr title="Moccalotto\Valit\Contracts\CheckProvider">CheckProvider</abbr></a> $provider)
+        
+                                            <p>Add the checks from a provider to the manager.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasCheck">hasCheck</a>(string $checkName)
+        
+                                            <p>Check if the manager can perform a given check.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_executeCheck">executeCheck</a>(string $checkName, mixed $value, array $args)
+        
+                                            <p>Execute a check.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_instance">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php#L58">line 58</a></div>
+        <code>        static            <a href="../../Moccalotto/Valit/Contracts/CheckManager.html"><abbr title="Moccalotto\Valit\Contracts\CheckManager">CheckManager</abbr></a>
+    <strong>instance</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default (global) manager instance.</p>                    <p>If no instance is configured, a new one is created via the create() factory method.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Moccalotto/Valit/Contracts/CheckManager.html"><abbr title="Moccalotto\Valit\Contracts\CheckManager">CheckManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>create</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php#L77">line 77</a></div>
+        <code>        static            <a href="../../Moccalotto/Valit/Contracts/CheckManager.html"><abbr title="Moccalotto\Valit\Contracts\CheckManager">CheckManager</abbr></a>
+    <strong>create</strong>(string[] $additionalCheckProviders = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory method.</p>                    <p>Create a Manager with all the default providers loaded
+as well as the providers defined in $additionalCheckProviders</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$additionalCheckProviders</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Moccalotto/Valit/Contracts/CheckManager.html"><abbr title="Moccalotto\Valit\Contracts\CheckManager">CheckManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php#L87">line 87</a></div>
+        <code>                    
+    <strong>__construct</strong>(array $providers)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$providers</td>
+                <td>array of provider FQCNs</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAsGlobal">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php#L99">line 99</a></div>
+        <code>                    
+    <strong>setAsGlobal</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set this manager instance as the global one.</p>                    <p>Whenever you call Manager::instance(), the global instance is returned.</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadProvider">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php#L109">line 109</a></div>
+        <code>            protected        
+    <strong>loadProvider</strong>(string $providerClass)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load a provider and register all its checks.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$providerClass</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checks">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php#L121">line 121</a></div>
+        <code>                    array
+    <strong>checks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all checks.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addProvider">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php#L146">line 146</a></div>
+        <code>                    
+    <strong>addProvider</strong>(<a href="../../Moccalotto/Valit/Contracts/CheckProvider.html"><abbr title="Moccalotto\Valit\Contracts\CheckProvider">CheckProvider</abbr></a> $provider)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the checks from a provider to the manager.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Moccalotto/Valit/Contracts/CheckProvider.html"><abbr title="Moccalotto\Valit\Contracts\CheckProvider">CheckProvider</abbr></a></td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasCheck">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php#L158">line 158</a></div>
+        <code>                    bool
+    <strong>hasCheck</strong>(string $checkName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if the manager can perform a given check.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$checkName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_executeCheck">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Manager.php#L172">line 172</a></div>
+        <code>                    <a href="../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>executeCheck</strong>(string $checkName, mixed $value, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute a check.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$checkName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

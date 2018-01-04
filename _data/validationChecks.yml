@@ -315,13 +315,13 @@
     },
     {
         "name": "checkIsNotOneOf",
-        "headline": "Check that $value is NOT equal to (==) any of the values in $against",
-        "description": "",
+        "headline": "Check that $value is NOT equal to (==) any of the values in $unacceptableValues",
+        "description": "See isOneOf() for examples.",
         "aliases": [
             "isNotOneOf",
             "notOneOf"
         ],
-        "paramlist": "array|\\Traversable $unacceptableValues"
+        "paramlist": "mixed[]|iterable $unacceptableValues"
     },
     {
         "name": "checkIsTruthy",
