@@ -305,13 +305,13 @@
     },
     {
         "name": "checkIsOneOf",
-        "headline": "Check that $value is equal to (==) one of the values in $against",
-        "description": "",
+        "headline": "Check that $value is equal to (==) one of the values in $allowedValues",
+        "description": "If you give multiple arguments to this function, each argument will\nbe treated as a possible option.\nIf you give only one argument to this function, then that argument must\nbe iterable (array or Traversable). The entries in that variable will\nbe treated as the options allowed.\n\nCode examples:\n\n```php\n// Check that $foo is either 'foo' or 'bar'\nCheck::that($foo)->isOneOf('foo', 'bar');\nCheck::that($foo)->isOneOf(['foo', 'bar']);\n\n// Check that $foo is either ['a', 'b'] or ['c', 'd']\nCheck::that($foo)->isOneOf(['a', 'b'], ['c', 'd']);\nCheck::that($foo)->isOneOf([ ['a', 'b'], ['c', 'd'] ]);\n```\n\n---",
         "aliases": [
             "isOneOf",
             "oneOf"
         ],
-        "paramlist": "array|\\Traversable $possibleValues"
+        "paramlist": "mixed[]|iterable $allowedValues"
     },
     {
         "name": "checkIsNotOneOf",

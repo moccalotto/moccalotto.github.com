@@ -18,8 +18,8 @@ use Valit\Ensure;
 
 $assertions =  [
     'username'      => 'stringWhereLength("≤", 255) & longerThan(2)',
-    'password'      => 'string & shorterThan(65536) & longerThan(4)',
-    'remember_me'   => 'optional & oneOf(["yes", "no"])',
+    'password'      => 'stringWhereLength("≤", 65535) & longerThan(4)',
+    'remember_me'   => 'optional & oneOf("yes", "no")',
     'csrf_token'    => 'hexString & hasLength(40)',
 ];
 
@@ -45,11 +45,11 @@ Array
     [0] => PASS: username must be present
     [1] => PASS: username must have the type(s) "string"
     [2] => PASS: username must be a string where length ≤ 255
-    [3] => PASS: username must be a string that is longer than 2 characters
+    [3] => PASS: username must be a string where length > 2
     [4] => PASS: password must be present
     [5] => PASS: password must have the type(s) "string"
-    [6] => PASS: password must be a string that is shorter than 65536 characters
-    [7] => PASS: password must be a string that is longer than 4 characters
+    [6] => PASS: password must be a string where length ≤ 65535
+    [7] => PASS: password must be a string where length > 4
     [8] => PASS: remember_me must be one of "yes", "no"
     [9] => PASS: csrf_token must be present
     [10] => PASS: csrf_token must contain only hexidecimal characters
