@@ -105,7 +105,7 @@
                     static                                                            <a href="../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a>
                 </td>
                 <td>$instance</td>
-                <td class="last"></td>
+                <td class="last">Internal.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -113,7 +113,7 @@
                     static                                                            array
                 </td>
                 <td>$defaultProviders</td>
-                <td class="last">Default checkers to load when created through create() or instance().</td>
+                <td class="last">Internal: Default checkers to load when created through create() or instance().</td>
                 <td></td>
             </tr>
                     <tr>
@@ -121,7 +121,7 @@
                                                                                 array
                 </td>
                 <td>$checks</td>
-                <td class="last"></td>
+                <td class="last">Internal.</td>
                 <td></td>
             </tr>
             </table>
@@ -228,7 +228,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_instance">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L69">line 69</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L67">line 67</a></div>
         <code>        static            <a href="../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a>
     <strong>instance</strong>()
         </code>
@@ -267,7 +267,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_create">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L88">line 88</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L86">line 86</a></div>
         <code>        static            <a href="../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a>
     <strong>create</strong>(string[] $additionalCheckProviders = [])
         </code>
@@ -308,7 +308,7 @@ as well as the providers defined in $additionalCheckProviders</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L98">line 98</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L96">line 96</a></div>
         <code>                    
     <strong>__construct</strong>(array $providers)
         </code>
@@ -339,7 +339,7 @@ as well as the providers defined in $additionalCheckProviders</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setGlobal">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L112">line 112</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L110">line 110</a></div>
         <code>                    <abbr title="Valit\$this">$this</abbr>
     <strong>setGlobal</strong>()
         </code>
@@ -369,7 +369,7 @@ as well as the providers defined in $additionalCheckProviders</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_checks">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L124">line 124</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L122">line 122</a></div>
         <code>                    array
     <strong>checks</strong>()
         </code>
@@ -399,7 +399,7 @@ as well as the providers defined in $additionalCheckProviders</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_addProvider">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L149">line 149</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L147">line 147</a></div>
         <code>                    
     <strong>addProvider</strong>(<a href="../Valit/Contracts/CheckProvider.html"><abbr title="Valit\Contracts\CheckProvider">CheckProvider</abbr></a> $provider)
         </code>
@@ -430,7 +430,7 @@ as well as the providers defined in $additionalCheckProviders</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_hasCheck">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L161">line 161</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L159">line 159</a></div>
         <code>                    bool
     <strong>hasCheck</strong>(string $checkName)
         </code>
@@ -470,7 +470,7 @@ as well as the providers defined in $additionalCheckProviders</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_executeCheck">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L175">line 175</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L173">line 173</a></div>
         <code>                    <a href="../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>executeCheck</strong>(string $checkName, mixed $value, array $args)
         </code>
@@ -520,7 +520,7 @@ as well as the providers defined in $additionalCheckProviders</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method___debugInfo">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L195">line 195</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Manager.php#L193">line 193</a></div>
         <code>                    array
     <strong>__debugInfo</strong>()
         </code>

@@ -139,6 +139,16 @@
                     <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_checkStrictArray">checkStrictArray</a>(mixed $value)
+        
+                                            <p>Check that $value is an array with a continuous 0-based index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_checkAssociative">checkAssociative</a>(mixed $value)
         
                                             <p>Check that $value is an associative array - i.e. that it contains no integer-keys.</p>                </div>
@@ -271,8 +281,48 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_checkStrictArray">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L50">line 50</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkStrictArray</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is an array with a continuous 0-based index.</p>                    <p>It is essentially the same as the <code>mixed[]</code> pseudo type.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_checkAssociative">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L48">line 48</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L66">line 66</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkAssociative</strong>(mixed $value)
         </code>
@@ -312,7 +362,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkNumericIndex">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L79">line 79</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L97">line 97</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkNumericIndex</strong>(mixed $value)
         </code>
@@ -352,7 +402,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkNotEmpty">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L110">line 110</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L128">line 128</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkNotEmpty</strong>(mixed $value)
         </code>
@@ -392,7 +442,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkEmpty">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L126">line 126</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L144">line 144</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkEmpty</strong>(mixed $value)
         </code>
@@ -432,7 +482,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkUniqueValues">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L142">line 142</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L160">line 160</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkUniqueValues</strong>(mixed $value)
         </code>
@@ -472,7 +522,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkKeyExists">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L159">line 159</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Providers/ArrayCheckProvider.php#L177">line 177</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkKeyExists</strong>(mixed $value, string|int $key)
         </code>

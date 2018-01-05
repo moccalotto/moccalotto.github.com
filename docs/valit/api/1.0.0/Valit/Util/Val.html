@@ -273,6 +273,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    static&nbsp;string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_explodeAndTrim">explodeAndTrim</a>(string $separator, string|string[] $types)
+        
+                                            <p>Normalize a string of separated words into an array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
@@ -286,9 +296,9 @@
                     static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_arrayOf">arrayOf</a>(mixed $value, string $type)
+                    <a href="#method_isArrayOf">isArrayOf</a>(mixed $value, string $type)
         
-                                            <p>Check if $value is an array of the given type.</p>                </div>
+                                            <p>Check if $value is an 0-indexed continuous array of the given type.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1082,8 +1092,53 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_explodeAndTrim">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L473">line 473</a></div>
+        <code>        static            string[]
+    <strong>explodeAndTrim</strong>(string $separator, string|string[] $types)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Normalize a string of separated words into an array.</p>                    <p>If $types is already an array, it will merely be trimmed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$types</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_is">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L490">line 490</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L513">line 513</a></div>
         <code>        static            bool
     <strong>is</strong>(mixed $value, string|string[] $types)
         </code>
@@ -1151,10 +1206,10 @@ Example:
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_arrayOf">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L593">line 593</a></div>
+                    <h3 id="method_isArrayOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L618">line 618</a></div>
         <code>        static            bool
-    <strong>arrayOf</strong>(mixed $value, string $type)
+    <strong>isArrayOf</strong>(mixed $value, string $type)
         </code>
     </h3>
     <div class="details">
@@ -1162,7 +1217,8 @@ Example:
     
 
                     <div class="method-description">
-                                    <p>Check if $value is an array of the given type.</p>                                                </div>
+                                    <p>Check if $value is an 0-indexed continuous array of the given type.</p>                    <p>All keys from 0 to count($value) must exist.
+All values must be of type $type.</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -1197,7 +1253,7 @@ Example:
             </div>
                     <div class="method-item">
                     <h3 id="method_map">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L635">line 635</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Util/Val.php#L662">line 662</a></div>
         <code>        static            array
     <strong>map</strong>(<abbr title="Valit\Util\iterable">iterable</abbr> $iterable, string|callable $callable)
         </code>

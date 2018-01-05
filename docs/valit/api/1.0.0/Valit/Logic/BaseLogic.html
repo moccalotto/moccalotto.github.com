@@ -104,7 +104,7 @@
                                                                                 <a href="../../Valit/Logic/Executor.html"><abbr title="Valit\Logic\Executor">Executor</abbr></a>
                 </td>
                 <td>$executor</td>
-                <td class="last"></td>
+                <td class="last">Internal.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -112,7 +112,7 @@
                                                                                 <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>|null
                 </td>
                 <td>$cachedResult</td>
-                <td class="last">The result generated when execute() was called last.</td>
+                <td class="last">Intenral: The result generated when execute() was called last.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -120,7 +120,7 @@
                                                                                 bool
                 </td>
                 <td>$hasValue</td>
-                <td class="last">The $hasValue when execute() was called last.</td>
+                <td class="last">Internal: The $hasValue when execute() was called last.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -224,8 +224,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_makeResult">makeResult</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Internal: create the result.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -236,7 +235,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L54">line 54</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L50">line 50</a></div>
         <code>                    
     <strong>__construct</strong>(<a href="../../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a> $manager, <a target="_blank" href="http://php.net/Traversable">Traversable</a>|array $scenarios)
         </code>
@@ -272,7 +271,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_requires">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L66">line 66</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L62">line 62</a></div>
         <code>                    string
     <strong>requires</strong>()
         </code>
@@ -302,7 +301,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_execute">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L79">line 79</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L75">line 75</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>execute</strong>($hasValue = false, $value = null)
         </code>
@@ -347,7 +346,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_success">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L105">line 105</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L101">line 101</a></div>
         <code>                    bool
     <strong>success</strong>()
         </code>
@@ -377,7 +376,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_withValue">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L121">line 121</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L117">line 117</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>withValue</strong>(mixed $value)
         </code>
@@ -417,7 +416,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_whereValueIs">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L133">line 133</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L129">line 129</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>whereValueIs</strong>(mixed $value)
         </code>
@@ -457,7 +456,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_withoutValue">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L143">line 143</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L139">line 139</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>withoutValue</strong>()
         </code>
@@ -487,7 +486,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___debugInfo">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L153">line 153</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L149">line 149</a></div>
         <code>                    array
     <strong>__debugInfo</strong>()
         </code>
@@ -517,7 +516,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_makeResult">
-        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L170">line 170</a></div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/1.0.0/Users/krh/Code/valit/Logic/BaseLogic.php#L166">line 166</a></div>
         <code>    abstract                <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>makeResult</strong>()
         </code>
@@ -526,6 +525,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Internal: create the result.</p>                                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
