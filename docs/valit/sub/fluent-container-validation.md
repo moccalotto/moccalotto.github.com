@@ -22,10 +22,12 @@ $usernameMinLength = 3;
 $passwordMinLength = 6;
 
 $assertions =  [
-    'username'    => Value::lengthIs('>=', $usernameMinLength)
-                          ->lengthIs('<=', $usernameMaxLength),
-    'password'    => Value::lengthIs('>=', $passwordMinLength)
-                          ->lengthIs('<=', $passwordMaxLength),
+    'username'    => Value::isString()
+                          ->whereLength('>=', $usernameMinLength)
+                          ->whereLength('<=', $usernameMaxLength),
+    'password'    => Value::isString()
+                          ->whereLength('>=', $passwordMinLength)
+                          ->whereLength('<=', $passwordMaxLength),
     'remember_me' => Value::isOptional()
                           ->isOneOf($rememberMeOptions),
     'csrf_token'  => Value::hasLength($sha1Length)
