@@ -15,18 +15,7 @@ Validate variables using a fluent syntax.
 
 ## Installation
 
-To add this package as a local, per-project dependency to your project, simply add a dependency on
- `moccalotto/valit` to your project's `composer.json` file like so:
-
-```json
-{
-    "require": {
-        "moccalotto/valit": "~1.0",
-    }
-}
-```
-
-Alternatively execute the following command in your shell.
+Install via composer like so:
 
 ```bash
 composer require moccalotto/valit
