@@ -21,6 +21,8 @@ Ensure::that($age)
 
 [Documentation]({{ '/docs/valit' | page }})
 |
+[Api-Docs]({{ '/docs/valit/api/master' | page }})
+|
 [Packagist](https://packagist.org/packages/moccalotto/valit)
 |
 [Github](https://github.com/moccalotto/valit)
