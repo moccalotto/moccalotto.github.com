@@ -30,7 +30,8 @@ $assertions =  [
                           ->whereLength('<=', $passwordMaxLength),
     'remember_me' => Value::isOptional()
                           ->isOneOf($rememberMeOptions),
-    'csrf_token'  => Value::hasLength($sha1Length)
+    'csrf_token'  => Value::string()
+                          ->withLength($sha1Length)
                           ->isHex(),
 ];
 
