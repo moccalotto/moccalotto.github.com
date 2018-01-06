@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Check | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/sami.css">
+        <script src="../js/jquery-1.11.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/typeahead.min.js"></script>
+        <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Check" data-root-path="../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../1.0.0/index.html" data-version="1.0.0">1.0.0 dev branch</option>
+                                            <option value="../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                                            <li><a href="../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../Valit.html">Valit</a></li><li class="backslash">\</li><li>Check</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Check
+                
+        </h1>
+    </div>
+
+    <p>abstract     class
+    <strong>Check</strong>        (<a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Facade for checking values and containers without throwing exceptions.</p>                                </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_that">that</a>(mixed $value)
+        
+                                            <p>Check that a single variable passes certain criteria.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Assertion/AssertionBag.html"><abbr title="Valit\Assertion\AssertionBag">AssertionBag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_value">value</a>()
+        
+                                            <p>Create an AssertionBag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Logic/OneOf.html"><abbr title="Valit\Logic\OneOf">OneOf</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_oneOf">oneOf</a>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        
+                                            <p>Check that exactly one of the given scenarios
+succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Logic/AllOf.html"><abbr title="Valit\Logic\AllOf">AllOf</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allOf">allOf</a>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        
+                                            <p>Check that exactly all of the given scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Logic/AnyOf.html"><abbr title="Valit\Logic\AnyOf">AnyOf</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_anyOf">anyOf</a>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        
+                                            <p>Check that one of more of the given scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Logic/NoneOf.html"><abbr title="Valit\Logic\NoneOf">NoneOf</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_noneOf">noneOf</a>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        
+                                            <p>Check that none of of the given scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Logic/AllOrNone.html"><abbr title="Valit\Logic\AllOrNone">AllOrNone</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allOrNone">allOrNone</a>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        
+                                            <p>Check that all or none of of the given scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Logic/NoneOf.html"><abbr title="Valit\Logic\NoneOf">NoneOf</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_notAnyOf">notAnyOf</a>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        
+                                            <p>Alias of noneOf().</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Logic/Not.html"><abbr title="Valit\Logic\Not">Not</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_not">not</a>(mixed $scenario)
+        
+                                            <p>Check that the given scenario does not succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Assertion/AssertionBag.html"><abbr title="Valit\Assertion\AssertionBag">AssertionBag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___callStatic">__callStatic</a>(string $methodName, mixed[] $args)
+        
+                                            <p>Short hand to creating an AssertionBag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_that">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L31">line 31</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>that</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that a single variable passes certain criteria.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>the value to check</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>A instance that has been configured to not
+                       throw any exceptions. You must inspect the ValueValidator
+                       object (for instance via the success() method) to
+                       find out if all checks passed</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_value">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L41">line 41</a></div>
+        <code>        static            <a href="../Valit/Assertion/AssertionBag.html"><abbr title="Valit\Assertion\AssertionBag">AssertionBag</abbr></a>
+    <strong>value</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an AssertionBag.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Assertion/AssertionBag.html"><abbr title="Valit\Assertion\AssertionBag">AssertionBag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_oneOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L54">line 54</a></div>
+        <code>        static            <a href="../Valit/Logic/OneOf.html"><abbr title="Valit\Logic\OneOf">OneOf</abbr></a>
+    <strong>oneOf</strong>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that exactly one of the given scenarios
+succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Logic/OneOf.html"><abbr title="Valit\Logic\OneOf">OneOf</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L69">line 69</a></div>
+        <code>        static            <a href="../Valit/Logic/AllOf.html"><abbr title="Valit\Logic\AllOf">AllOf</abbr></a>
+    <strong>allOf</strong>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that exactly all of the given scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Logic/AllOf.html"><abbr title="Valit\Logic\AllOf">AllOf</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_anyOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L84">line 84</a></div>
+        <code>        static            <a href="../Valit/Logic/AnyOf.html"><abbr title="Valit\Logic\AnyOf">AnyOf</abbr></a>
+    <strong>anyOf</strong>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that one of more of the given scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Logic/AnyOf.html"><abbr title="Valit\Logic\AnyOf">AnyOf</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_noneOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L99">line 99</a></div>
+        <code>        static            <a href="../Valit/Logic/NoneOf.html"><abbr title="Valit\Logic\NoneOf">NoneOf</abbr></a>
+    <strong>noneOf</strong>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that none of of the given scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Logic/NoneOf.html"><abbr title="Valit\Logic\NoneOf">NoneOf</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allOrNone">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L114">line 114</a></div>
+        <code>        static            <a href="../Valit/Logic/AllOrNone.html"><abbr title="Valit\Logic\AllOrNone">AllOrNone</abbr></a>
+    <strong>allOrNone</strong>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that all or none of of the given scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Logic/AllOrNone.html"><abbr title="Valit\Logic\AllOrNone">AllOrNone</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_notAnyOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L131">line 131</a></div>
+        <code>        static            <a href="../Valit/Logic/NoneOf.html"><abbr title="Valit\Logic\NoneOf">NoneOf</abbr></a>
+    <strong>notAnyOf</strong>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Alias of noneOf().</p>                    <p>Check that none of of the given scenarios succeed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Logic/NoneOf.html"><abbr title="Valit\Logic\NoneOf">NoneOf</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_not">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L143">line 143</a></div>
+        <code>        static            <a href="../Valit/Logic/Not.html"><abbr title="Valit\Logic\Not">Not</abbr></a>
+    <strong>not</strong>(mixed $scenario)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that the given scenario does not succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$scenario</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Logic/Not.html"><abbr title="Valit\Logic\Not">Not</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Check.php#L159">line 159</a></div>
+        <code>        static            <a href="../Valit/Assertion/AssertionBag.html"><abbr title="Valit\Assertion\AssertionBag">AssertionBag</abbr></a>
+    <strong>__callStatic</strong>(string $methodName, mixed[] $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Short hand to creating an AssertionBag.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed[]</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Assertion/AssertionBag.html"><abbr title="Valit\Assertion\AssertionBag">AssertionBag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
