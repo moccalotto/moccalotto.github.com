@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Providers\DateCheckProvider | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Providers_DateCheckProvider" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0 dev branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../Valit/Providers.html">Providers</a></li><li class="backslash">\</li><li>DateCheckProvider</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            DateCheckProvider
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>DateCheckProvider</strong>        implements
+        <a href="../../Valit/Contracts/CheckProvider.html"><abbr title="Valit\Contracts\CheckProvider">CheckProvider</abbr></a>        (<a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Check dates for validity.</p>            <p>Check that date strings are parsable into DateTimes with expected results.
+Check that dates-times are within certain ranges.</p>                    </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Valit/Traits/ProvideViaReflection.html"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_provides">provides</a>()
+        
+                                            <p>Return all the checks provided by this checkprovider.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDateParsable">checkDateParsable</a>(mixed $value, string|null $format = null)
+        
+                                            <p>Check if $value is a string containing a parseable date.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDateAfter">checkDateAfter</a>(mixed $value, <a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>|string $against)
+        
+                                            <p>Check if $value is a date after $against.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDateBefore">checkDateBefore</a>(mixed $value, mixed $against)
+        
+                                            <p>Check if $value is a date after $against.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkInThePast">checkInThePast</a>(mixed $value)
+        
+                                            <p>Check if $value is a date in the past.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkInTheFuture">checkInTheFuture</a>(mixed $value)
+        
+                                            <p>Check if $value is a date in the past.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkAtMidnight">checkAtMidnight</a>(mixed $value)
+        
+                                            <p>Check if $value is a date where the time-component is 00:00:00.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkAtNoon">checkAtNoon</a>(mixed $value)
+        
+                                            <p>Check if $value is a date where the time-component is 12:00:00.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkSameDateAs">checkSameDateAs</a>(mixed $value, mixed $against)
+        
+                                            <p>Check if $value is a datetime where the date-component is
+the same as the date-component of $against.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkSameDayOfWeek">checkSameDayOfWeek</a>(mixed $value, mixed $against)
+        
+                                            <p>Check if $value is a datetime where the weekday-component is
+the same as the weekday-component of $against.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDayOfMonth">checkDayOfMonth</a>(mixed $value, int $dayOfMonth)
+        
+                                            <p>Check if $value is a datetime where the day of month is $against.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkBirthday">checkBirthday</a>(mixed $value, mixed $otherDate)
+        
+                                            <p>Check if $value is a datetime where the day-month-component is
+the same as the day-month-component of $otherDate.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_provides">
+        <div class="location">in <a href="../../Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Traits/ProvideViaReflection.php#L64">line 64</a></div>
+        <code>                    array
+    <strong>provides</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all the checks provided by this checkprovider.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Associative array of [checkName => checkClosure]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDateParsable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L49">line 49</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkDateParsable</strong>(mixed $value, string|null $format = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a string containing a parseable date.</p>                    <p>The <code>$format</code> parameter can be null or a string.
+If it is null, we will attempt to parse the $value as a DateTime via
+PHPs built-in inference. If <code>$format</code> is a string, it will be used
+to define the format of the $value.
+See <a href="http://php.net/manual/datetime.createfromformat.php">http://php.net/manual/datetime.createfromformat.php</a> for more info.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>DateTime::createFromFormat()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDateAfter">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L73">line 73</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkDateAfter</strong>(mixed $value, <a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>|string $against)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a date after $against.</p>                    <p>The <code>$against</code> parameter can be one of:
+- <code>DateTimeInterface</code>
+- <code>int</code> The value will be treated as a UNIX timestamp.
+- <code>float</code> The value will be treated as a UNIX timestamp with a sub-second component.
+- <code>string</code> The value will be converted to a <code>DateTime</code> if possible via PHPs native date time inference.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>|string</td>
+                <td>$against</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDateBefore">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L99">line 99</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkDateBefore</strong>(mixed $value, mixed $against)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a date after $against.</p>                    <p>The <code>$against</code> parameter can be one of:
+- <code>DateTimeInterface</code>
+- <code>int</code> The value will be treated as a UNIX timestamp.
+- <code>float</code> The value will be treated as a UNIX timestamp with a sub-second component.
+- <code>string</code> The value will be converted to a <code>DateTime</code> if possible via PHPs native date time inference.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$against</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkInThePast">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L118">line 118</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkInThePast</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a date in the past.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkInTheFuture">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L135">line 135</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkInTheFuture</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a date in the past.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkAtMidnight">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L152">line 152</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkAtMidnight</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a date where the time-component is 00:00:00.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkAtNoon">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L169">line 169</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkAtNoon</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a date where the time-component is 12:00:00.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkSameDateAs">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L188">line 188</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkSameDateAs</strong>(mixed $value, mixed $against)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a datetime where the date-component is
+the same as the date-component of $against.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$against</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkSameDayOfWeek">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L209">line 209</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkSameDayOfWeek</strong>(mixed $value, mixed $against)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a datetime where the weekday-component is
+the same as the weekday-component of $against.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$against</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDayOfMonth">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L228">line 228</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkDayOfMonth</strong>(mixed $value, int $dayOfMonth)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a datetime where the day of month is $against.</p>                    <p>The first day of the month is the 1st, i.e. days are 1-indexed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$dayOfMonth</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkBirthday">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Providers/DateCheckProvider.php#L258">line 258</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkBirthday</strong>(mixed $value, mixed $otherDate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a datetime where the day-month-component is
+the same as the day-month-component of $otherDate.</p>                    <p>In other words, are the two dates "birthday-equivalent" of each other.</p>
+
+<p>For instance:
+ '1987-12-01 23:30:00' is birthday equivalent of '1950-12-01 11:32:34'
+ because they both occur in on december 1st.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$otherDate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -366,7 +366,7 @@
     {
         "name": "checkHasType",
         "headline": "Check that $value has a given type",
-        "description": "Possible types:\n\n| $type          | Validation                                    |\n|:-------------- |:-------------------------                     |\n| `null`         | `is_null()`                                   |\n| `object`       | `is_object()`                                 |\n| `int`          | `is_int()`                                    |\n| `integer`      | `is_int()`                                    |\n| `bool`         | `is_bool()`                                   |\n| `boolean`      | `is_bool()`                                   |\n| `string`       | `is_string()`                                 |\n| `float`        | `is_float()`                                  |\n| `double`       | `is_float()`                                  |\n| `numeric`      | `is_numeric()`                                |\n| `nan`          | `is_nan()`                                    |\n| `inf`          | `is_inf()`                                    |\n| `callable`     | `is_callable()`                               |\n| `iterable`     | `is_array() || is_a($value, 'Traversable')`   |\n| `countable`    | `is_array() || is_a($value, 'Cointable')`     |\n| `arrayable`    | `is_array() || is_a($value, 'ArrayAccess')`   |\n| `container`    | `iterable`, `countable` and `arrayable`       |\n| `stringable`   | scalar or object with a`__toString()` method  |\n| _class name_   | `is_a()`                                      |\n| _foo[]_        | array of _foo_                                |\n\nCode examples:\n\n```php\n// single type\nCheck::that($foo)->hasType('callable');\n\n// multiple allowed types via the pipe character\nCheck::that($foo)->hasType('float | int');\n\n// check that $foo is an array of floats\n// or an array of integers\nCheck::that($foo)->hasType('float[] | int[]')\n\n// mixing classes, interfaces and basic types.\nCheck::that($foo)->hasType('int|DateTime|DateTimeImmutable')\n\n// multiple types via array notation\nCheck::that($foo)->hasType(['object', 'array'])\n```\n\n---",
+        "description": "Possible types:\n\n| $type          | Validation                                    |\n|:-------------- |:-------------------------                     |\n| `null`         | `is_null()`                                   |\n| `object`       | `is_object()`                                 |\n| `int`          | `is_int()`                                    |\n| `integer`      | `is_int()`                                    |\n| `bool`         | `is_bool()`                                   |\n| `boolean`      | `is_bool()`                                   |\n| `string`       | `is_string()`                                 |\n| `float`        | `is_float()`                                  |\n| `double`       | `is_float()`                                  |\n| `numeric`      | `is_numeric()`                                |\n| `nan`          | `is_nan()`                                    |\n| `inf`          | `is_inf()`                                    |\n| `callable`     | `is_callable()`                               |\n| `intable`      | `stringable` that can be converted to an int  |\n| `iterable`     | `is_array() || is_a($value, 'Traversable')`   |\n| `countable`    | `is_array() || is_a($value, 'Cointable')`     |\n| `arrayable`    | `is_array() || is_a($value, 'ArrayAccess')`   |\n| `container`    | `iterable`, `countable` and `arrayable`       |\n| `stringable`   | scalar or object with a`__toString()` method  |\n| _class name_   | `is_a()`                                      |\n| _foo[]_        | array of _foo_                                |\n\nCode examples:\n\n```php\n// single type\nCheck::that($foo)->hasType('callable');\n\n// multiple allowed types via the pipe character\nCheck::that($foo)->hasType('float | int');\n\n// check that $foo is an array of floats\n// or an array of integers\nCheck::that($foo)->hasType('float[] | int[]')\n\n// mixing classes, interfaces and basic types.\nCheck::that($foo)->hasType('int|DateTime|DateTimeImmutable')\n\n// multiple types via array notation\nCheck::that($foo)->hasType(['object', 'array'])\n\n// a strict array with 0-based numeric index\nVal::mustBe($value, 'mixed[]');\n\n// a strict array of strict arrays\nVal::mustBe($value, 'mixed[][]');\n```\n\n---",
         "aliases": [
             "hasType",
             "isType",
@@ -822,25 +822,18 @@
         "paramlist": "int $length"
     },
     {
-        "name": "checkLength",
-        "headline": "Check if $value is a string that has the length $length",
-        "description": "",
-        "aliases": [
-            "hasLength",
-            "length"
-        ],
-        "paramlist": "int $length"
-    },
-    {
         "name": "checkRelativeLength",
         "headline": "Check if $value is a string where the length compares to $against using the $operator",
-        "description": "Examples:\n\n```php\n// length > 20\nCheck::that($foo)->lengthIs('>', 20);\n\n// length <= 255\nCheck::that($foo)->lengthIs('<=', 255);\n\n// alternative:\nCheck::that($foo)->lengthIs('≤', 255);\n```",
+        "description": "Examples:\n\n```php\n// length > 20\nCheck::that($foo)->lengthIs('>', 20);\n\n// length <= 255\nCheck::that($foo)->lengthIs('<=', 255);\n\n// alternative:\nCheck::that($foo)->lengthIs('≤', 255);\n\n// check length = 40\nCheck::that($foo)->lengthIs('=', 40);\nCheck::that($foo)->lengthIs(40);     // alt. syntax\n```",
         "aliases": [
-            "lengthIs",
             "stringWhereLength",
-            "isStringWhereLength"
+            "isStringWhereLength",
+            "whereLength",
+            "length",
+            "hasLength",
+            "withLength"
         ],
-        "paramlist": "string $operator, int $against"
+        "paramlist": "string $operator, [int $against = null]"
     },
     {
         "name": "checkArrayAccess",

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Validators\ContainerValidator | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Validators_ContainerValidator" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0 dev branch</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../Valit/Validators.html">Validators</a></li><li class="backslash">\</li><li>ContainerValidator</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ContainerValidator
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ContainerValidator</strong>        extends <a href="../../Valit/Result/ContainerResultBag.html"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a>        (<a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Validators/ContainerValidator.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Validate a container (variable with array access).</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_results">
+                                                                                <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+                </td>
+                <td>$results</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#property_results"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_varName">
+                                                                                string
+                </td>
+                <td>$varName</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#property_varName"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_manager">
+                                                                                <a href="../../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a>
+                </td>
+                <td>$manager</td>
+                <td class="last">Internal.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_container">
+                                                                                array|object
+                </td>
+                <td>$container</td>
+                <td class="last">Internal.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_flatContainer">
+                                                                                <a href="../../Valit/Util/FlatContainer.html"><abbr title="Valit\Util\FlatContainer">FlatContainer</abbr></a>
+                </td>
+                <td>$flatContainer</td>
+                <td class="last">Internal.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_throwOnFailure">
+                                                                                bool
+                </td>
+                <td>$throwOnFailure</td>
+                <td class="last">Internal.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a> $manager, array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $container, bool $throwOnFailure)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Result\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_alias">alias</a>(string $varName)
+        
+                                            <p>Set the variable name alias.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_alias"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Result\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAssertionResultBag">addAssertionResultBag</a>(string $path, <a href="../../Valit/Result/AssertionResultBag.html"><abbr title="Valit\Result\AssertionResultBag">AssertionResultBag</abbr></a> $valueValidator)
+        
+                                            <p>Add a result.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_addAssertionResultBag"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasErrors">hasErrors</a>()
+        
+                                            <p>Did one or more tests fail?</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_hasErrors"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_success">success</a>()
+        
+                                            <p>Did all tests pass?</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_success"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_results">results</a>(string|null $path = null)
+        
+                                            <p>Return all results.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_results"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errors">errors</a>(string|null $path = null)
+        
+                                            <p>Return list of rendered errors.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_errors"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errorMessages">errorMessages</a>()
+        
+                                            <p>Get all the error messages for a given path.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_errorMessages"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errorMessagesByPath">errorMessagesByPath</a>(string|array $path)
+        
+                                            <p>Get all the error messages for a given path.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_errorMessagesByPath"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusMessages">statusMessages</a>()
+        
+                                            <p>Get all status messages.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_statusMessages"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusMessagesByPath">statusMessagesByPath</a>(string|null $path)
+        
+                                            <p>Get all the status messages for a given path.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_statusMessagesByPath"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Result\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orThrowException">orThrowException</a>()
+        
+                                            <p>Throw an exception if this container has any errors.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Result/ContainerResultBag.html#method_orThrowException"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/ContainerResultBag.html"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_passes">passes</a>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $containerAssertionMap)
+        
+                                            <p>Check container against a number of assertions.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_executeAndAdd">executeAndAdd</a>(string $fieldNameGlob, <a href="../../Valit/Assertion/AssertionBag.html"><abbr title="Valit\Assertion\AssertionBag">AssertionBag</abbr></a> $assertions)
+        
+                                            <p>Execute an array of assertions on a number of values.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $methodName, array $args)
+        
+                                            <p>Magic method for setting the alias of the container.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Validators/ContainerValidator.php#L67">line 67</a></div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a> $manager, array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $container, bool $throwOnFailure)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a></td>
+                <td>$manager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$throwOnFailure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_alias">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_alias"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L50">line 50</a></div>
+        <code>                    <abbr title="Valit\Result\$this">$this</abbr>
+    <strong>alias</strong>(string $varName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the variable name alias.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$varName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Result\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addAssertionResultBag">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_addAssertionResultBag"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L65">line 65</a></div>
+        <code>                    <abbr title="Valit\Result\$this">$this</abbr>
+    <strong>addAssertionResultBag</strong>(string $path, <a href="../../Valit/Result/AssertionResultBag.html"><abbr title="Valit\Result\AssertionResultBag">AssertionResultBag</abbr></a> $valueValidator)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a result.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>The path to the variable that passed/failed the tests</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Valit/Result/AssertionResultBag.html"><abbr title="Valit\Result\AssertionResultBag">AssertionResultBag</abbr></a></td>
+                <td>$valueValidator</td>
+                <td>The validator that performed the assertions on the variable</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Result\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasErrors">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_hasErrors"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L79">line 79</a></div>
+        <code>                    bool
+    <strong>hasErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Did one or more tests fail?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_success">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_success"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L89">line 89</a></div>
+        <code>                    bool
+    <strong>success</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Did all tests pass?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_results">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_results"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L101">line 101</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+    <strong>results</strong>(string|null $path = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all results.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$path</td>
+                <td>If you want to filter by path, set this arg</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errors">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_errors"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L122">line 122</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+    <strong>errors</strong>(string|null $path = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return list of rendered errors.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$path</td>
+                <td>Use this parameter if you only want to get the errors for a given path</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorMessages">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_errorMessages"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L139">line 139</a></div>
+        <code>                    string[]
+    <strong>errorMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all the error messages for a given path.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td>an array of rendered error messages</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorMessagesByPath">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_errorMessagesByPath"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L156">line 156</a></div>
+        <code>                    string[]
+    <strong>errorMessagesByPath</strong>(string|array $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all the error messages for a given path.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td>an array of rendered error messages</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusMessages">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_statusMessages"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L173">line 173</a></div>
+        <code>                    string[]
+    <strong>statusMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all status messages.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusMessagesByPath">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_statusMessagesByPath"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L194">line 194</a></div>
+        <code>                    string[]
+    <strong>statusMessagesByPath</strong>(string|null $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all the status messages for a given path.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$path</td>
+                <td>Use this parameter if you only want to get the errors for a given path</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orThrowException">
+        <div class="location">in <a href="../../Valit/Result/ContainerResultBag.html#method_orThrowException"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Result/ContainerResultBag.php#L215">line 215</a></div>
+        <code>                    <abbr title="Valit\Result\$this">$this</abbr>
+    <strong>orThrowException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Throw an exception if this container has any errors.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Result\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Valit/Exceptions/InvalidContainerException.html"><abbr title="Valit\Exceptions\InvalidContainerException">InvalidContainerException</abbr></a></td>
+                <td>if this container validation result contains any errors</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_passes">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Validators/ContainerValidator.php#L83">line 83</a></div>
+        <code>                    <a href="../../Valit/Result/ContainerResultBag.html"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a>
+    <strong>passes</strong>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $containerAssertionMap)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check container against a number of assertions.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$containerAssertionMap</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/ContainerResultBag.html"><abbr title="Valit\Result\ContainerResultBag">ContainerResultBag</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_executeAndAdd">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Validators/ContainerValidator.php#L105">line 105</a></div>
+        <code>            protected        
+    <strong>executeAndAdd</strong>(string $fieldNameGlob, <a href="../../Valit/Assertion/AssertionBag.html"><abbr title="Valit\Assertion\AssertionBag">AssertionBag</abbr></a> $assertions)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute an array of assertions on a number of values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fieldNameGlob</td>
+                <td>A field name glob (such as "address" or "order.*.id")</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Valit/Assertion/AssertionBag.html"><abbr title="Valit\Assertion\AssertionBag">AssertionBag</abbr></a></td>
+                <td>$assertions</td>
+                <td>A normalized array of assertions</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Users/krh/Code/valit/Validators/ContainerValidator.php#L142">line 142</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $methodName, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Magic method for setting the alias of the container.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td>if the $methodName is invalid</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
