@@ -73,6 +73,7 @@ Ensure::that($postData)->contains([
     - [allOf](/TODO)
     - [noneOf](/TODO)
     - [allOrNone](/TODO)
+    - [ifThen](/TODO)
     - [not](/TODO)
 * Custom Check Providers:
     - [Creating your own Check Provider](/TODO)
