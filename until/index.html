@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            color: white;
+            background-color: black;
+            width: 100%;
+        }
+        #timy {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="timy">FÆSS</div>
+    <script>
+    const targetTime = new Date('2018-08-11T03:55:00.00Z');
+console.log(targetTime);
+
+function durationString(d1, d2, pattern) {
+    let _seconds = Math.round((d2 - d1) / 1000);
+    if (_seconds < 0) {
+        _seconds = - _seconds;
+    }
+    if (pattern == undefined) {
+        pattern = '%D days, %H hours, %M minutes';
+    }
+    let days = Math.floor(_seconds / 86400);
+    _seconds -= days * 86400;
+
+    let hours = Math.floor(_seconds / 3600);
+    _seconds -= hours * 3600;
+
+    let minutes = Math.floor(_seconds / 60);
+    _seconds -= minutes * 60;
+
+    let seconds = Math.floor(_seconds);
+
+    const dd = String(days).padStart(2, '0');
+    const hh = String(hours).padStart(2, '0');
+    const mm = String(minutes).padStart(2, '0');
+    const ss = String(seconds).padStart(2, '0');
+
+    return pattern
+        .replace('%D', dd)
+        .replace('%H', hh)
+        .replace('%M', mm)
+        .replace('%S', ss)
+        .replace('%d', days)
+        .replace('%h', hours)
+        .replace('%s', minutes)
+        .replace('%m', seconds)
+        .replace('%%', '%')
+}
+const el = document.querySelector('#timy');
+
+setInterval(function () {
+    el.innerText = durationString(new Date(), targetTime, "%d days, %h hours, %m minutes and %s seconds");
+}, 250);
+    </script>
+</body>
+</html>
