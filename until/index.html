@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <style>
         body {
-            color: white;
+            color: #74c7d5;
             background-color: black;
             width: 100%;
-            font-size: 200%;
+            font-size: 30px;
+            font-weight:300;
+            font-family: "Lato", sans-serif;
+            letter-spacing: 0.02em;
         }
         #timy {
             display: flex;
+            text-align:center;
             align-items: center;
             justify-content: center;
             height:100vh;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900">
 </head>
 <body>
     <div id="timy"></div>
@@ -60,7 +65,7 @@ function durationString(d1, d2, pattern) {
 const el = document.querySelector('#timy');
 
 setInterval(function () {
-    el.innerText = durationString(new Date(), targetTime, "%d days, %h hours, %m minutes and %s seconds");
+    el.innerText = durationString(new Date(), targetTime, "%d days\n%h hours\n%m minutes\n%s seconds");
 }, 250);
     </script>
 </body>
