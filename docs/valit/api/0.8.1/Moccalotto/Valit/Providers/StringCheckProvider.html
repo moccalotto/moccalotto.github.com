@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Moccalotto\Valit\Providers\StringCheckProvider | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Moccalotto_Valit_Providers_StringCheckProvider" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../2.0.0-alpha/index.html" data-version="2.0.0-alpha">2.0.0-alpha</option>
+                                            <option value="../../../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../../../1.0.2/index.html" data-version="1.0.2">1.0.2</option>
+                                            <option value="../../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../../0.8.1/index.html" data-version="0.8.1">0.8.1</option>
+                                            <option value="../../../../2.0.0-alpha/index.html" data-version="2.0.0-alpha">2.0.0 dev branch</option>
+                                            <option value="../../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Moccalotto.html">Moccalotto</a></li><li class="backslash">\</li><li><a href="../../../Moccalotto/Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../../Moccalotto/Valit/Providers.html">Providers</a></li><li class="backslash">\</li><li>StringCheckProvider</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            StringCheckProvider
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>StringCheckProvider</strong>        implements
+        <a href="../../../Moccalotto/Valit/Contracts/CheckProvider.html"><abbr title="Moccalotto\Valit\Contracts\CheckProvider">CheckProvider</abbr></a>
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Moccalotto/Valit/Traits/ProvideViaReflection.html"><abbr title="Moccalotto\Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Iterator">Iterator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checksFor">checksFor</a>(<a target="_blank" href="http://php.net/ReflectionMethod">ReflectionMethod</a> $reflectionMethod)
+        
+                                            <p>Get the checks for a given method.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Moccalotto/Valit/Traits/ProvideViaReflection.html#method_checksFor"><abbr title="Moccalotto\Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_provides">provides</a>()
+        
+                                            <p>Return all the checks provided by this checkprovider.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Moccalotto/Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Moccalotto\Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkHexString">checkHexString</a>(mixed $value)
+        
+                                            <p>Check if $value contains only hexidecimal characters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDecimalString">checkDecimalString</a>(mixed $value)
+        
+                                            <p>Check if $value contains only decimal characters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkCurrencyCode">checkCurrencyCode</a>(mixed $value)
+        
+                                            <p>Check if $value is a valid alphabetical currency code string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkCurrencyNumber">checkCurrencyNumber</a>(mixed $value)
+        
+                                            <p>Check if $value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkEmail">checkEmail</a>(mixed $value)
+        
+                                            <p>Check if $value contains a syntax-valid email address.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkUppercase">checkUppercase</a>(mixed $value)
+        
+                                            <p>Check if $value is only uppercase characters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkLowercase">checkLowercase</a>(mixed $value)
+        
+                                            <p>Check if $value is only lowercase characters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkAlphaNumeric">checkAlphaNumeric</a>(mixed $value)
+        
+                                            <p>Check if $value contains only alpha-numeric characters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkMatchesRegex">checkMatchesRegex</a>(mixed $value, string $pattern)
+        
+                                            <p>Check if $value matches a given regular regex.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkStringable">checkStringable</a>(mixed $value)
+        
+                                            <p>Check if a given value can be converted to a string in a meaningful way.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkStartsWith">checkStartsWith</a>(mixed $value, string $startsWith)
+        
+                                            <p>Check if $value starts with a given string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkEndsWith">checkEndsWith</a>($value, $endsWith)
+        
+                                            <p>Check if $value ends with a given string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkContainsString">checkContainsString</a>($value, $contains)
+        
+                                            <p>Check if $value contains a given string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkShorterThan">checkShorterThan</a>(mixed $value, int $length)
+        
+                                            <p>Check if $value is a string that is shorter than $length.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkLongerThan">checkLongerThan</a>(mixed $value, int $length)
+        
+                                            <p>Check if $value is a string that is longer than $length.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkLength">checkLength</a>(mixed $value, int $length)
+        
+                                            <p>Check if $value is a string that has the length $length.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_checksFor">
+        <div class="location">in <a href="../../../Moccalotto/Valit/Traits/ProvideViaReflection.html#method_checksFor"><abbr title="Moccalotto\Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a> at         line 27</div>
+        <code>            protected        <a target="_blank" href="http://php.net/Iterator">Iterator</a>
+    <strong>checksFor</strong>(<a target="_blank" href="http://php.net/ReflectionMethod">ReflectionMethod</a> $reflectionMethod)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the checks for a given method.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/ReflectionMethod">ReflectionMethod</a></td>
+                <td>$reflectionMethod</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Iterator">Iterator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_provides">
+        <div class="location">in <a href="../../../Moccalotto/Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Moccalotto\Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a> at         line 64</div>
+        <code>                    array
+    <strong>provides</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all the checks provided by this checkprovider.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Associative array of [checkName => checkClosure]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkHexString">
+        <div class="location">at         line 31</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkHexString</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value contains only hexidecimal characters.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDecimalString">
+        <div class="location">at         line 47</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkDecimalString</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value contains only decimal characters.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkCurrencyCode">
+        <div class="location">at         line 65</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkCurrencyCode</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a valid alphabetical currency code string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>{https://en.wikipedia.org/wiki/ISO_4217}</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkCurrencyNumber">
+        <div class="location">at         line 83</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkCurrencyNumber</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>{https://en.wikipedia.org/wiki/ISO_4217#Currency_numbers}</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkEmail">
+        <div class="location">at         line 99</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkEmail</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value contains a syntax-valid email address.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkUppercase">
+        <div class="location">at         line 115</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkUppercase</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is only uppercase characters.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkLowercase">
+        <div class="location">at         line 131</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkLowercase</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is only lowercase characters.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkAlphaNumeric">
+        <div class="location">at         line 147</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkAlphaNumeric</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value contains only alpha-numeric characters.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkMatchesRegex">
+        <div class="location">at         line 164</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkMatchesRegex</strong>(mixed $value, string $pattern)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value matches a given regular regex.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pattern</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkStringable">
+        <div class="location">at         line 188</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkStringable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if a given value can be converted to a string in a meaningful way.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkStartsWith">
+        <div class="location">at         line 206</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkStartsWith</strong>(mixed $value, string $startsWith)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value starts with a given string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$startsWith</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkEndsWith">
+        <div class="location">at         line 228</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkEndsWith</strong>($value, $endsWith)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value ends with a given string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$endsWith</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkContainsString">
+        <div class="location">at         line 250</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkContainsString</strong>($value, $contains)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value contains a given string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$contains</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkShorterThan">
+        <div class="location">at         line 272</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkShorterThan</strong>(mixed $value, int $length)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a string that is shorter than $length.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkLongerThan">
+        <div class="location">at         line 293</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkLongerThan</strong>(mixed $value, int $length)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a string that is longer than $length.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkLength">
+        <div class="location">at         line 314</div>
+        <code>                    <a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a>
+    <strong>checkLength</strong>(mixed $value, int $length)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a string that has the length $length.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Moccalotto/Valit/Result.html"><abbr title="Moccalotto\Valit\Result">Result</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

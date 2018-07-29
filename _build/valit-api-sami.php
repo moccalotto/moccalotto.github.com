@@ -15,9 +15,10 @@ $iterator = Finder::create()
 ;
 
 $versions = GitVersionCollection::create($valitDir)
+    ->addFromTags('2.*')
     ->addFromTags('1.*')
     ->addFromTags('0.8.*')
-    ->add('1.0.0', '1.0.0 dev branch')
+    ->add('2.0.0-alpha', '2.0.0 dev branch')
     ->add('master', 'master dev branch')
 ;
 

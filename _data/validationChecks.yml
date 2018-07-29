@@ -311,7 +311,7 @@
             "isOneOf",
             "oneOf"
         ],
-        "paramlist": "mixed[]|iterable $allowedValues"
+        "paramlist": "mixed[] $allowedValues"
     },
     {
         "name": "checkIsNotOneOf",
@@ -321,7 +321,7 @@
             "isNotOneOf",
             "notOneOf"
         ],
-        "paramlist": "mixed[]|iterable $unacceptableValues"
+        "paramlist": "mixed[] $unacceptableValues"
     },
     {
         "name": "checkIsTruthy",
@@ -833,7 +833,18 @@
             "hasLength",
             "withLength"
         ],
-        "paramlist": "string $operator, [int $against = null]"
+        "paramlist": "string|int $operator, [int $against = null]"
+    },
+    {
+        "name": "checkLengthInRange",
+        "headline": "Check if $value is a string where the length is between $min and $max",
+        "description": "",
+        "aliases": [
+            "lengthBetween",
+            "lengthInRange",
+            "lengthMinMax"
+        ],
+        "paramlist": "int $min, int $max"
     },
     {
         "name": "checkArrayAccess",
@@ -1088,7 +1099,7 @@
         "paramlist": "array $branches, [Valit\\Manager $manager = null], [bool $withValue = true]"
     },
     {
-        "name": "checkPassesAllOrNone",
+        "name": "checkPassesNoneOf",
         "headline": "Check that none of the given branches succeed if given $value",
         "description": "",
         "aliases": [
@@ -1096,6 +1107,16 @@
             "passesNone",
             "logicNoneOf",
             "failsAllOf"
+        ],
+        "paramlist": "array $branches, [Valit\\Manager $manager = null], [bool $withValue = true]"
+    },
+    {
+        "name": "checkPassesAllOrNone",
+        "headline": "Check that none of the given branches succeed if given $value",
+        "description": "",
+        "aliases": [
+            "passesAllOrNone",
+            "logicAllOrNone"
         ],
         "paramlist": "array $branches, [Valit\\Manager $manager = null], [bool $withValue = true]"
     },
@@ -1109,7 +1130,20 @@
             "fails",
             "invert"
         ],
-        "paramlist": "array $scenario, [Valit\\Manager $manager = null], [bool $withValue = true]"
+        "paramlist": "mixed $scenario, [Valit\\Manager $manager = null], [bool $withValue = true]"
+    },
+    {
+        "name": "checkConditional",
+        "headline": "Check conditional if-then-else clause",
+        "description": "if the given $condition evaluates to true,\nthe $then must also evaluate to true,\notherwise the $else condition must evaluate to true.\n\nExamples of checking that if a person must be 18 years or\nolder in order to buy tobacco or alcohol.\n\n```php\nEnsure::that($product)\n      ->condition($age < 18, 'isNotOneOf(\"tobacco\", \"alcohol\")');\n\nEnsure::that($product)->if(\n    Value::isOneOf('tobacco', 'alcohol'),\n    $age >= 18\n);\n\nEnsure::ifThen(\n    $age < 18,\n    Check::that($product)->isNotOneOf('tobacco', 'alcohol')\n);\n\nEnsure::condition(\n    Check::that($age)->isLowerThan(18),\n    Check::that($product)->isNotOneOf('tobacco', 'alcohol')\n);\n\nEnsure::that($product)->if(\n    'isOneOf(\"tobacco\", \"alcohol\")',\n    $age >= 18\n);\n```",
+        "aliases": [
+            "if",
+            "condition",
+            "passesConditional",
+            "ifThen",
+            "ifThenElse"
+        ],
+        "paramlist": "mixed $condition, mixed $then, [mixed $else = true], [Manager $manager = null], [bool $withValue = true]"
     },
     {
         "name": "checkFileExists",
