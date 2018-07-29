@@ -1,0 +1,3966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Hayttp\Request | Hayttp API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/sami.css">
+        <script src="../js/jquery-1.11.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/typeahead.min.js"></script>
+        <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Hayttp_Request" data-root-path="../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Hayttp API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                                            <li><a href="../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../Hayttp.html">Hayttp</a></li><li class="backslash">\</li><li>Request</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Request
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Request</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>HTTP Request class.</p>                                </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Hayttp/Traits/Common/Extendable.html"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Make a class dynamically extendable.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Hayttp/Traits/Common/DebugInfo.html"><abbr title="Hayttp\Traits\Common\DebugInfo">DebugInfo</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Add __debugInfo support.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Hayttp/Traits/Request/CanSend.html"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Hayttp/Traits/Request/Accessors.html"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>CRYPTO_ANY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CRYPTO_SSLV3</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CRYPTO_TLS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CRYPTO_TLS_1_0</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CRYPTO_TLS_1_1</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CRYPTO_TLS_1_2</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CRYPTO_METHODS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_extensions">
+                    static                    protected                                        array
+                </td>
+                <td>$extensions</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../Hayttp/Traits/Common/Extendable.html#property_extensions"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_method">
+                                        protected                                        string
+                </td>
+                <td>$method</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_engine">
+                                        protected                                        <a href="../Hayttp/Contracts/Engine.html"><abbr title="Hayttp\Contracts\Engine">Engine</abbr></a>
+                </td>
+                <td>$engine</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_userAgent">
+                                        protected                                        string
+                </td>
+                <td>$userAgent</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_url">
+                                        protected                                        string
+                </td>
+                <td>$url</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_headers">
+                                        protected                                        array
+                </td>
+                <td>$headers</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_payload">
+                                        protected                                        <a href="../Hayttp/Contracts/Payload.html"><abbr title="Hayttp\Contracts\Payload">Payload</abbr></a>
+                </td>
+                <td>$payload</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_proxy">
+                                        protected                                        string|null
+                </td>
+                <td>$proxy</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_secureSsl">
+                                        protected                                        bool
+                </td>
+                <td>$secureSsl</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timeout">
+                                        protected                                        float
+                </td>
+                <td>$timeout</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cryptoMethod">
+                                        protected                                        string
+                </td>
+                <td>$cryptoMethod</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_responseCalls">
+                                        protected                                        array
+                </td>
+                <td>$responseCalls</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mockedEndpoints">
+                                        protected                                        <a href="../Hayttp/Mock/Endpoint.html"><abbr title="Hayttp\Mock\Endpoint">Endpoint</abbr></a>[]
+                </td>
+                <td>$mockedEndpoints</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_events">
+                                        protected                                        array
+                </td>
+                <td>$events</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasExtension">hasExtension</a>(string $methodName)
+        
+                                            <p>Has this class been extended with a given method?</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Common/Extendable.html#method_hasExtension"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extend">extend</a>(string $methodName, callable $callable)
+        
+                                            <p>Add a method to the class.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Common/Extendable.html#method_extend"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Hayttp\Traits\Common\$object">$object</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mixin">mixin</a>(object $object)
+        
+                                            <p>Mix in all the public methods of an object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Common/Extendable.html#method_mixin"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_execDynamicClosure">execDynamicClosure</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure, array $args)
+        
+                                            <p>Execute a static call with the correct class scope.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Common/Extendable.html#method_execDynamicClosure"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_execStaticCallable">execStaticCallable</a>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure, array $args)
+        
+                                            <p>Execute a static call with the correct class scope.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Common/Extendable.html#method_execStaticCallable"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $methodName, array $args)
+        
+                                            <p>Magic Method for dynamic method names.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___callStatic">__callStatic</a>(string $methodName, array $args)
+        
+                                            <p>Magic Method for dynamic names of static methods.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Common/Extendable.html#method___callStatic"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_instanceVariables">instanceVariables</a>()
+        
+                                            <p>Public accessor for all instance variables.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Common/DebugInfo.html#method_instanceVariables"><abbr title="Hayttp\Traits\Common\DebugInfo">DebugInfo</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___debugInfo">__debugInfo</a>()
+        
+                                            <p>Return debug info for var_dump, et al.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Common/DebugInfo.html#method___debugInfo"><abbr title="Hayttp\Traits\Common\DebugInfo">DebugInfo</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>()
+        
+                                            <p>Send/execute the request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/CanSend.html#method_send"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendRaw">sendRaw</a>(string $payload, string $contentType = &#039;application/octet-stream&#039;)
+        
+                                            <p>Set the raw payload of the request and send/execute the request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/CanSend.html#method_sendRaw"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendJson">sendJson</a>($json)
+        
+                                            <p>Set a JSON payload and send/execute the request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/CanSend.html#method_sendJson"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendXml">sendXml</a>(<abbr title="Hayttp\Traits\Request\SimpleXmlElement">SimpleXmlElement</abbr>|string $xml)
+        
+                                            <p>Set an XML payload and send/execute the request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/CanSend.html#method_sendXml"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendFormData">sendFormData</a>(array $data)
+        
+                                            <p>Set a URL-encoded payload and send/execute the request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/CanSend.html#method_sendFormData"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withTimeout">withTimeout</a>(float $seconds)
+        
+                                            <p>Set the timeout.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withTimeout"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withUserAgent">withUserAgent</a>(string $userAgent)
+        
+                                            <p>Set the user agent header.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withUserAgent"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withCryptoMethod">withCryptoMethod</a>(string $cryptoMethod)
+        
+                                            <p>Set the allowed crypto method.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withCryptoMethod"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_skipCertificateChecks">skipCertificateChecks</a>()
+        
+                                            <p>Disable all SSL certificate checks.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_skipCertificateChecks"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withEngine">withEngine</a>(<a href="../Hayttp/Contracts/Engine.html"><abbr title="Hayttp\Contracts\Engine">Engine</abbr></a> $engine)
+        
+                                            <p>Set the transfer engine.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withEngine"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withHeaders">withHeaders</a>(array $headers)
+        
+                                            <p>Set all headers.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withHeaders"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withAdditionalHeaders">withAdditionalHeaders</a>(array $additionalHeaders)
+        
+                                            <p>Add an array of headers.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withAdditionalHeaders"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withProxy">withProxy</a>(string $proxy)
+        
+                                            <p>Set the proxy server.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withProxy"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withHeader">withHeader</a>(string $name, string $value)
+        
+                                            <p>Add a header to the request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withHeader"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withTls">withTls</a>(string $version)
+        
+                                            <p>Set the TLS version.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withTls"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withBasicAuth">withBasicAuth</a>(string $username, string $password)
+        
+                                            <p>Add a basic authorization (which is actually an authenticaation) header.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withBasicAuth"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withPayload">withPayload</a>(<a href="../Hayttp/Contracts/Payload.html"><abbr title="Hayttp\Contracts\Payload">Payload</abbr></a> $payload)
+        
+                                            <p>Set the payload of the request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withResponseCall">withResponseCall</a>(string $methodName, array $args = [])
+        
+                                            <p>Execute the $response->$methodName(.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withResponseCall"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withRawPayload">withRawPayload</a>(string $payload, string $contentType = &#039;application/octet-stream&#039;)
+        
+                                            <p>Set the raw payload of the request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withRawPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withJsonPayload">withJsonPayload</a>(array|object $payload, string $contentType = &#039;application/json&#039;)
+        
+                                            <p>Set a JSON payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withJsonPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withXmlPayload">withXmlPayload</a>(<a target="_blank" href="http://php.net/SimpleXmlElement">SimpleXmlElement</a>|string $xml, string $contentType = &#039;application/xml&#039;)
+        
+                                            <p>Set an XML payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withXmlPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withFormDataPayload">withFormDataPayload</a>(array $form)
+        
+                                            <p>Set a URL-encoded payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withFormDataPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withMockedEndpoint">withMockedEndpoint</a>(string $methodPattern, string $urlPattern, callable $handler)
+        
+                                            <p>Mock an end point.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withMockedEndpoint"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_method">method</a>()
+        
+                                            <p>The http method.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_method"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Contracts/Engine.html"><abbr title="Hayttp\Contracts\Engine">Engine</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_engine">engine</a>()
+        
+                                            <p>The request engine.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_engine"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_events">events</a>()
+        
+                                            <p>All registered event hooks.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_events"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userAgent">userAgent</a>()
+        
+                                            <p>The user agent string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_userAgent"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_url">url</a>()
+        
+                                            <p>The target url.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_url"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_headers">headers</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_headers"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_header">header</a>(string $headerName)
+        
+                                            <p>Get the contents of a given header.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_header"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Contracts/Payload.html"><abbr title="Hayttp\Contracts\Payload">Payload</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_payload">payload</a>()
+        
+                                            <p>The request payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_payload"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_proxy">proxy</a>()
+        
+                                            <p>The proxy to use.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_proxy"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_secureSsl">secureSsl</a>()
+        
+                                            <p>Are we doing strict SSL checking?</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_secureSsl"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_timeout">timeout</a>()
+        
+                                            <p>Timeout in seconds.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_timeout"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cryptoMethod">cryptoMethod</a>()
+        
+                                            <p>Cryptographic transport method.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_cryptoMethod"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_body">body</a>()
+        
+                                            <p>The request body.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_body"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_contentType">contentType</a>()
+        
+                                            <p>Get the contents of the Content-Type header.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Accessors.html#method_contentType"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_accept">accept</a>(string $mimeType)
+        
+                                            <p>Add Accept header.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_accept"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_acceptMany">acceptMany</a>(array $types)
+        
+                                            <p>Add Accept header with many types.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_acceptMany"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_acceptJson">acceptJson</a>()
+        
+                                            <p>Accept application/json.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_acceptJson"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_acceptXml">acceptXml</a>()
+        
+                                            <p>Accept application/xml.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_acceptXml"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_acceptAny">acceptAny</a>()
+        
+                                            <p>Accept * / *.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_acceptAny"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureJson">ensureJson</a>()
+        
+                                            <p>Expect json response type and throw an exception if json is not returned.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_ensureJson"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureXml">ensureXml</a>()
+        
+                                            <p>Expect json response type and throw an exception if json is not returned.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_ensureXml"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addMultipartField">addMultipartField</a>(string $name, string $data, string|null $filename = null, string|null $contentType = null)
+        
+                                            <p>Add a multipart entry.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Multipart.html#method_addMultipartField"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFile">addFile</a>(string $name, string $file, string $filename = null, string $contentType = null)
+        
+                                            <p>Add a file to the multipart payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Multipart.html#method_addFile"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addBlob">addBlob</a>(string $name, string $data, string|null $contentType = null)
+        
+                                            <p>Add a data field to the multipart payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/Multipart.html#method_addBlob"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendsRaw">sendsRaw</a>(string $payload, string $contentType = &#039;application/octet-stream&#039;)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Set the raw payload of the request.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/DeprecatedMethods.html#method_sendsRaw"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendsJson">sendsJson</a>(array|object $payload)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Set a JSON payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/DeprecatedMethods.html#method_sendsJson"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendsXml">sendsXml</a>(<abbr title="Hayttp\Traits\Request\SimpleXmlElement">SimpleXmlElement</abbr>|string $xml)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Set a XML payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/DeprecatedMethods.html#method_sendsXml"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sends">sends</a>(array $data)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Set a URL-encoded payload.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Hayttp/Traits/Request/DeprecatedMethods.html#method_sends"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_with">with</a>(string $property, mixed $value)
+        
+                                            <p>Clone object with a new property value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preparedHeaders">preparedHeaders</a>()
+        
+                                            <p>Format headers.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $method, string $url)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Return the request as a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___set">__set</a>(string $name, mixed $value)
+        
+                                            <p>Setter.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>()
+        
+                                            <p>Return the request as a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_responseCalls">responseCalls</a>()
+        
+                                            <p>Get the calls that are to be executed on the response
+as soon as we have one.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(string $url)
+        
+                                            <p>Factory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $url)
+        
+                                            <p>Factory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_head">head</a>(string $url)
+        
+                                            <p>Factory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_options">options</a>(string $url)
+        
+                                            <p>Factory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_patch">patch</a>(string $url)
+        
+                                            <p>Factory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_post">post</a>(string $url)
+        
+                                            <p>Factory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_put">put</a>(string $url)
+        
+                                            <p>Factory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_hasExtension">
+        <div class="location">in <a href="../Hayttp/Traits/Common/Extendable.html#method_hasExtension"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a> at         line 36</div>
+        <code>        static            bool
+    <strong>hasExtension</strong>(string $methodName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Has this class been extended with a given method?</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td>The name of the method</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extend">
+        <div class="location">in <a href="../Hayttp/Traits/Common/Extendable.html#method_extend"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a> at         line 47</div>
+        <code>        static            
+    <strong>extend</strong>(string $methodName, callable $callable)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a method to the class.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mixin">
+        <div class="location">in <a href="../Hayttp/Traits/Common/Extendable.html#method_mixin"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a> at         line 59</div>
+        <code>        static            <abbr title="Hayttp\Traits\Common\$object">$object</abbr>
+    <strong>mixin</strong>(object $object)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mix in all the public methods of an object.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Common\$object">$object</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_execDynamicClosure">
+        <div class="location">in <a href="../Hayttp/Traits/Common/Extendable.html#method_execDynamicClosure"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a> at         line 80</div>
+        <code>                    mixed
+    <strong>execDynamicClosure</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute a static call with the correct class scope.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$closure</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Result of calling $callable(...$args)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_execStaticCallable">
+        <div class="location">in <a href="../Hayttp/Traits/Common/Extendable.html#method_execStaticCallable"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a> at         line 95</div>
+        <code>        static            mixed
+    <strong>execStaticCallable</strong>(<a target="_blank" href="http://php.net/Closure">Closure</a> $closure, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute a static call with the correct class scope.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Closure">Closure</a></td>
+                <td>$closure</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Result of calling $callable(...$args)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         line 248</div>
+        <code>                    mixed
+    <strong>__call</strong>(string $methodName, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Magic Method for dynamic method names.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="../Hayttp/Traits/Common/Extendable.html#method___callStatic"><abbr title="Hayttp\Traits\Common\Extendable">Extendable</abbr></a> at         line 134</div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $methodName, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Magic Method for dynamic names of static methods.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_instanceVariables">
+        <div class="location">in <a href="../Hayttp/Traits/Common/DebugInfo.html#method_instanceVariables"><abbr title="Hayttp\Traits\Common\DebugInfo">DebugInfo</abbr></a> at         line 27</div>
+        <code>                    array
+    <strong>instanceVariables</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Public accessor for all instance variables.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___debugInfo">
+        <div class="location">in <a href="../Hayttp/Traits/Common/DebugInfo.html#method___debugInfo"><abbr title="Hayttp\Traits\Common\DebugInfo">DebugInfo</abbr></a> at         line 37</div>
+        <code>                    array
+    <strong>__debugInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return debug info for var_dump, et al.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">in <a href="../Hayttp/Traits/Request/CanSend.html#method_send"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a> at         line 25</div>
+        <code>                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+    <strong>send</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send/execute the request.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Hayttp\Traits\Request\ConnectionException">ConnectionException</abbr></td>
+                <td>if connection could not be established</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendRaw">
+        <div class="location">in <a href="../Hayttp/Traits/Request/CanSend.html#method_sendRaw"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a> at         line 49</div>
+        <code>                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+    <strong>sendRaw</strong>(string $payload, string $contentType = &#039;application/octet-stream&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the raw payload of the request and send/execute the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendJson">
+        <div class="location">in <a href="../Hayttp/Traits/Request/CanSend.html#method_sendJson"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a> at         line 61</div>
+        <code>                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+    <strong>sendJson</strong>($json)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a JSON payload and send/execute the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$json</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendXml">
+        <div class="location">in <a href="../Hayttp/Traits/Request/CanSend.html#method_sendXml"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a> at         line 73</div>
+        <code>                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+    <strong>sendXml</strong>(<abbr title="Hayttp\Traits\Request\SimpleXmlElement">SimpleXmlElement</abbr>|string $xml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set an XML payload and send/execute the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Hayttp\Traits\Request\SimpleXmlElement">SimpleXmlElement</abbr>|string</td>
+                <td>$xml</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendFormData">
+        <div class="location">in <a href="../Hayttp/Traits/Request/CanSend.html#method_sendFormData"><abbr title="Hayttp\Traits\Request\CanSend">CanSend</abbr></a> at         line 85</div>
+        <code>                    <a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a>
+    <strong>sendFormData</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a URL-encoded payload and send/execute the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>key/value pairs to post as normal urlencoded fields</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Response.html"><abbr title="Hayttp\Response">Response</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withTimeout">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withTimeout"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 33</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withTimeout</strong>(float $seconds)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the timeout.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$seconds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withUserAgent">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withUserAgent"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 45</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withUserAgent</strong>(string $userAgent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the user agent header.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userAgent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withCryptoMethod">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withCryptoMethod"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 59</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withCryptoMethod</strong>(string $cryptoMethod)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the allowed crypto method.</p>                    <p>A Crypto method can be one of the CRYPTO_* constants</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cryptoMethod</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_skipCertificateChecks">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_skipCertificateChecks"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 77</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>skipCertificateChecks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disable all SSL certificate checks.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withEngine">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withEngine"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 89</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withEngine</strong>(<a href="../Hayttp/Contracts/Engine.html"><abbr title="Hayttp\Contracts\Engine">Engine</abbr></a> $engine)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the transfer engine.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hayttp/Contracts/Engine.html"><abbr title="Hayttp\Contracts\Engine">Engine</abbr></a></td>
+                <td>$engine</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withHeaders">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withHeaders"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 101</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withHeaders</strong>(array $headers)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set all headers.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withAdditionalHeaders">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withAdditionalHeaders"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 113</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withAdditionalHeaders</strong>(array $additionalHeaders)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an array of headers.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withProxy">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withProxy"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 136</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withProxy</strong>(string $proxy)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the proxy server.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$proxy</td>
+                <td>URI specifying address of proxy server. (e.g. tcp://proxy.example.com:5100).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withHeader">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withHeader"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 149</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withHeader</strong>(string $name, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a header to the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withTls">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withTls"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 161</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withTls</strong>(string $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the TLS version.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$version</td>
+                <td>currently, 1.*, 1.0, 1.1 and 1.2 are supported</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withBasicAuth">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withBasicAuth"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 188</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withBasicAuth</strong>(string $username, string $password)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a basic authorization (which is actually an authenticaation) header.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withPayload">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 203</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withPayload</strong>(<a href="../Hayttp/Contracts/Payload.html"><abbr title="Hayttp\Contracts\Payload">Payload</abbr></a> $payload)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the payload of the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hayttp/Contracts/Payload.html"><abbr title="Hayttp\Contracts\Payload">Payload</abbr></a></td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withResponseCall">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withResponseCall"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 216</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withResponseCall</strong>(string $methodName, array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute the $response->$methodName(.</p>                    <p>..$args) as soon as we have a response.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withRawPayload">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withRawPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 240</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withRawPayload</strong>(string $payload, string $contentType = &#039;application/octet-stream&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the raw payload of the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withJsonPayload">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withJsonPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 258</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withJsonPayload</strong>(array|object $payload, string $contentType = &#039;application/json&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a JSON payload.</p>                    <p>NOTE that the neither unicode characters nor slashes are escaped.
+This behaviors is compatible with the json standard as well as
+most browsers' * JSON.stringify() and JSON.parse().
+However, it is not default output of json_encode.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|object</td>
+                <td>$payload</td>
+                <td>the payload to send - the payload will always be json encoded</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withXmlPayload">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withXmlPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 271</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withXmlPayload</strong>(<a target="_blank" href="http://php.net/SimpleXmlElement">SimpleXmlElement</a>|string $xml, string $contentType = &#039;application/xml&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set an XML payload.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/SimpleXmlElement">SimpleXmlElement</a>|string</td>
+                <td>$xml</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withFormDataPayload">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withFormDataPayload"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 287</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withFormDataPayload</strong>(array $form)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a URL-encoded payload.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$form</td>
+                <td>key/value pairs to post as normal urlencoded fields</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withMockedEndpoint">
+        <div class="location">in <a href="../Hayttp/Traits/Request/HasWithMethods.html#method_withMockedEndpoint"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a> at         line 304</div>
+        <code>                    <a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a>
+    <strong>withMockedEndpoint</strong>(string $methodPattern, string $urlPattern, callable $handler)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mock an end point.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodPattern</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$urlPattern</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$handler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/HasWithMethods.html"><abbr title="Hayttp\Traits\Request\HasWithMethods">HasWithMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_method">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_method"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 23</div>
+        <code>                    string
+    <strong>method</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The http method.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_engine">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_engine"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 33</div>
+        <code>                    <a href="../Hayttp/Contracts/Engine.html"><abbr title="Hayttp\Contracts\Engine">Engine</abbr></a>
+    <strong>engine</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The request engine.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Contracts/Engine.html"><abbr title="Hayttp\Contracts\Engine">Engine</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_events">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_events"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 43</div>
+        <code>                    array
+    <strong>events</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>All registered event hooks.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userAgent">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_userAgent"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 53</div>
+        <code>                    string
+    <strong>userAgent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The user agent string.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_url">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_url"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 63</div>
+        <code>                    string
+    <strong>url</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The target url.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_headers">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_headers"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 71</div>
+        <code>                    array
+    <strong>headers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_header">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_header"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 83</div>
+        <code>                    string|null
+    <strong>header</strong>(string $headerName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the contents of a given header.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$headerName</td>
+                <td>The name of the header to search for</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>the contents of the header or null if it was not found</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_payload">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_payload"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 97</div>
+        <code>                    <a href="../Hayttp/Contracts/Payload.html"><abbr title="Hayttp\Contracts\Payload">Payload</abbr></a>
+    <strong>payload</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The request payload.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Contracts/Payload.html"><abbr title="Hayttp\Contracts\Payload">Payload</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_proxy">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_proxy"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 107</div>
+        <code>                    string|null
+    <strong>proxy</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The proxy to use.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_secureSsl">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_secureSsl"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 117</div>
+        <code>                    bool
+    <strong>secureSsl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Are we doing strict SSL checking?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_timeout">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_timeout"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 127</div>
+        <code>                    float
+    <strong>timeout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Timeout in seconds.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cryptoMethod">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_cryptoMethod"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 137</div>
+        <code>                    string
+    <strong>cryptoMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cryptographic transport method.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_body">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_body"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 147</div>
+        <code>                    string
+    <strong>body</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The request body.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_contentType">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Accessors.html#method_contentType"><abbr title="Hayttp\Traits\Request\Accessors">Accessors</abbr></a> at         line 157</div>
+        <code>                    string|null
+    <strong>contentType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the contents of the Content-Type header.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_accept">
+        <div class="location">in <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_accept"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a> at         line 22</div>
+        <code>                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+    <strong>accept</strong>(string $mimeType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add Accept header.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$mimeType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_acceptMany">
+        <div class="location">in <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_acceptMany"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a> at         line 34</div>
+        <code>                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+    <strong>acceptMany</strong>(array $types)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add Accept header with many types.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$types</td>
+                <td>associative array of [mimeType => qualityFactor]</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_acceptJson">
+        <div class="location">in <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_acceptJson"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a> at         line 51</div>
+        <code>                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+    <strong>acceptJson</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Accept application/json.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_acceptXml">
+        <div class="location">in <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_acceptXml"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a> at         line 61</div>
+        <code>                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+    <strong>acceptXml</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Accept application/xml.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_acceptAny">
+        <div class="location">in <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_acceptAny"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a> at         line 71</div>
+        <code>                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+    <strong>acceptAny</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Accept * / *.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureJson">
+        <div class="location">in <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_ensureJson"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a> at         line 81</div>
+        <code>                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+    <strong>ensureJson</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Expect json response type and throw an exception if json is not returned.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureXml">
+        <div class="location">in <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html#method_ensureXml"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a> at         line 92</div>
+        <code>                    <a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a>
+    <strong>ensureXml</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Expect json response type and throw an exception if json is not returned.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/ExpectsCommonMimeTypes.html"><abbr title="Hayttp\Traits\Request\ExpectsCommonMimeTypes">ExpectsCommonMimeTypes</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addMultipartField">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Multipart.html#method_addMultipartField"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a> at         line 29</div>
+        <code>                    <a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a>
+    <strong>addMultipartField</strong>(string $name, string $data, string|null $filename = null, string|null $contentType = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a multipart entry.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>posted Field name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>the data blob to add</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$filename</td>
+                <td>The filename to use. If null, no filename is sent.</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$contentType</td>
+                <td>The content type to send. If null, no content-type will be sent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFile">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Multipart.html#method_addFile"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a> at         line 51</div>
+        <code>                    <a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a>
+    <strong>addFile</strong>(string $name, string $file, string $filename = null, string $contentType = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a file to the multipart payload.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The posted field name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>The filename on the physical HD</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>The filename to post. If null, the basename of $filename will be used.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$contentType</td>
+                <td>The content type of the file.
+                           If null, the content type will be inferred via mime_content_type()</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addBlob">
+        <div class="location">in <a href="../Hayttp/Traits/Request/Multipart.html#method_addBlob"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a> at         line 73</div>
+        <code>                    <a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a>
+    <strong>addBlob</strong>(string $name, string $data, string|null $contentType = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a data field to the multipart payload.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The posted field name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>the data blob to add</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$contentType</td>
+                <td>The content type to send. If null, no content-type will be sent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/Multipart.html"><abbr title="Hayttp\Traits\Request\Multipart">Multipart</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendsRaw">
+        <div class="location">in <a href="../Hayttp/Traits/Request/DeprecatedMethods.html#method_sendsRaw"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a> at         line 25</div>
+        <code>                    <a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a>
+    <strong>sendsRaw</strong>(string $payload, string $contentType = &#039;application/octet-stream&#039;)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Set the raw payload of the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendsJson">
+        <div class="location">in <a href="../Hayttp/Traits/Request/DeprecatedMethods.html#method_sendsJson"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a> at         line 39</div>
+        <code>                    <a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a>
+    <strong>sendsJson</strong>(array|object $payload)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Set a JSON payload.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|object</td>
+                <td>$payload</td>
+                <td>the payload to send - the payload will always be json encoded</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendsXml">
+        <div class="location">in <a href="../Hayttp/Traits/Request/DeprecatedMethods.html#method_sendsXml"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a> at         line 53</div>
+        <code>                    <a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a>
+    <strong>sendsXml</strong>(<abbr title="Hayttp\Traits\Request\SimpleXmlElement">SimpleXmlElement</abbr>|string $xml)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Set a XML payload.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Hayttp\Traits\Request\SimpleXmlElement">SimpleXmlElement</abbr>|string</td>
+                <td>$xml</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sends">
+        <div class="location">in <a href="../Hayttp/Traits/Request/DeprecatedMethods.html#method_sends"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a> at         line 67</div>
+        <code>                    <a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a>
+    <strong>sends</strong>(array $data)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Set a URL-encoded payload.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>key/value pairs to post as normal urlencoded fields</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Traits/Request/DeprecatedMethods.html"><abbr title="Hayttp\Traits\Request\DeprecatedMethods">DeprecatedMethods</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_with">
+        <div class="location">at         line 116</div>
+        <code>            protected        <a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+    <strong>with</strong>(string $property, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clone object with a new property value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preparedHeaders">
+        <div class="location">at         line 134</div>
+        <code>                    string[]
+    <strong>preparedHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format headers.</p>                    <p>Only one hosts header, which must be the first header
+Only one User Agent header.
+All other headers are copied verbatim.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 170</div>
+        <code>                    
+    <strong>__construct</strong>(string $method, string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at         line 181</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the request as a string.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location">at         line 194</div>
+        <code>                    
+    <strong>__set</strong>(string $name, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/LogicException">LogicException</a></td>
+                <td>whenever setting a non-existing property is attempted</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at         line 207</div>
+        <code>                    string
+    <strong>render</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the request as a string.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_responseCalls">
+        <div class="location">at         line 235</div>
+        <code>                    array
+    <strong>responseCalls</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the calls that are to be executed on the response
+as soon as we have one.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at         line 266</div>
+        <code>        static            <a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+    <strong>delete</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory.</p>                    <p>Initialize a DELETE request</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at         line 280</div>
+        <code>        static            <a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+    <strong>get</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory.</p>                    <p>Initialize a GET request</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_head">
+        <div class="location">at         line 294</div>
+        <code>        static            <a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+    <strong>head</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory.</p>                    <p>Initialize a HEAD request</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_options">
+        <div class="location">at         line 308</div>
+        <code>        static            <a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+    <strong>options</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory.</p>                    <p>Initialize a OPTIONS request</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_patch">
+        <div class="location">at         line 322</div>
+        <code>        static            <a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+    <strong>patch</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory.</p>                    <p>Initialize a PATCH request</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_post">
+        <div class="location">at         line 336</div>
+        <code>        static            <a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+    <strong>post</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory.</p>                    <p>Initialize a POST request</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_put">
+        <div class="location">at         line 350</div>
+        <code>        static            <a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a>
+    <strong>put</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory.</p>                    <p>Initialize a PUT request</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Request.html"><abbr title="Hayttp\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

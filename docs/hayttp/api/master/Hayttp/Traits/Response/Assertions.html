@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Hayttp\Traits\Response\Assertions | Hayttp API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Hayttp_Traits_Response_Assertions" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Hayttp API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../Hayttp.html">Hayttp</a></li><li class="backslash">\</li><li><a href="../../../Hayttp/Traits.html">Traits</a></li><li class="backslash">\</li><li><a href="../../../Hayttp/Traits/Response.html">Response</a></li><li class="backslash">\</li><li>Assertions</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Assertions
+                
+        </h1>
+    </div>
+
+    <p>    trait
+    <strong>Assertions</strong>
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensure">ensure</a>(bool $success, <a href="../../../Hayttp/Exceptions/ResponseException.html"><abbr title="Hayttp\Exceptions\ResponseException">ResponseException</abbr></a> $exception)
+        
+                                            <p>Throw a ResponseException if $success is false.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureStatusInRange">ensureStatusInRange</a>(int $min, int $max)
+        
+                                            <p>Ensure that status code is in a given range.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureStatusIn">ensureStatusIn</a>(array $validCodes)
+        
+                                            <p>Ensure that the status code is in a given et of codes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureStatus">ensureStatus</a>(int $validCode)
+        
+                                            <p>Ensure that the status code equals $validCode.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensure2xx">ensure2xx</a>()
+        
+                                            <p>Ensure that the status code is in the range [200.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensure200">ensure200</a>()
+        
+                                            <p>Ensure that the status code is 200.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensure201">ensure201</a>()
+        
+                                            <p>Ensure that the status code is 201.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensure204">ensure204</a>()
+        
+                                            <p>Ensure that the status code is 204.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensure301">ensure301</a>()
+        
+                                            <p>Ensure that the status code is 301.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensure302">ensure302</a>()
+        
+                                            <p>Ensure that the status code is 302.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureJson">ensureJson</a>(array|object $data = [], bool $strict = true)
+        
+                                            <p>Ensure that the content type is application/json.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureXml">ensureXml</a>()
+        
+                                            <p>Ensure that the content type is application/xml.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureContentType">ensureContentType</a>(string|string[] $contentType)
+        
+                                            <p>Ensure that the response has a given content type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureSuccess">ensureSuccess</a>()
+        
+                                            <p>Ensure that the status code is in the range [200.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureRedirect">ensureRedirect</a>(string $url = null)
+        
+                                            <p>Assert whether the response is redirecting to a given URI.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureHasHeader">ensureHasHeader</a>(string $headerName, mixed $expectedValue = null)
+        
+                                            <p>Asserts that the response contains the given header and equals the optional value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ensureContains">ensureContains</a>(string $value)
+        
+                                            <p>Assert that the given string is contained within the response.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_ensure">
+        <div class="location">at         line 29</div>
+        <code>            protected        <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensure</strong>(bool $success, <a href="../../../Hayttp/Exceptions/ResponseException.html"><abbr title="Hayttp\Exceptions\ResponseException">ResponseException</abbr></a> $exception)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Throw a ResponseException if $success is false.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$success</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/ResponseException.html"><abbr title="Hayttp\Exceptions\ResponseException">ResponseException</abbr></a></td>
+                <td>$exception</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/ResponseException.html"><abbr title="Hayttp\Exceptions\ResponseException">ResponseException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureStatusInRange">
+        <div class="location">at         line 48</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureStatusInRange</strong>(int $min, int $max)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that status code is in a given range.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$min</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$max</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureStatusIn">
+        <div class="location">at         line 75</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureStatusIn</strong>(array $validCodes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the status code is in a given et of codes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$validCodes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureStatus">
+        <div class="location">at         line 99</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureStatus</strong>(int $validCode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the status code equals $validCode.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$validCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensure2xx">
+        <div class="location">at         line 121</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensure2xx</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the status code is in the range [200.</p>                    <p>..299].</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensure200">
+        <div class="location">at         line 133</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensure200</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the status code is 200.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensure201">
+        <div class="location">at         line 145</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensure201</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the status code is 201.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensure204">
+        <div class="location">at         line 157</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensure204</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the status code is 204.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensure301">
+        <div class="location">at         line 169</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensure301</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the status code is 301.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensure302">
+        <div class="location">at         line 181</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensure302</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the status code is 302.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureJson">
+        <div class="location">at         line 196</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureJson</strong>(array|object $data = [], bool $strict = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the content type is application/json.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|object</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$strict</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/ContentTypeException.html"><abbr title="Hayttp\Exceptions\Response\ContentTypeException">ContentTypeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureXml">
+        <div class="location">at         line 237</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureXml</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the content type is application/xml.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/ContentTypeException.html"><abbr title="Hayttp\Exceptions\Response\ContentTypeException">ContentTypeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureContentType">
+        <div class="location">at         line 251</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureContentType</strong>(string|string[] $contentType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the response has a given content type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|string[]</td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/ContentTypeException.html"><abbr title="Hayttp\Exceptions\Response\ContentTypeException">ContentTypeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureSuccess">
+        <div class="location">at         line 277</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureSuccess</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that the status code is in the range [200.</p>                    <p>..299].</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Hayttp/Exceptions/Response/StatusCodeException.html"><abbr title="Hayttp\Exceptions\Response\StatusCodeException">StatusCodeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureRedirect">
+        <div class="location">at         line 289</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureRedirect</strong>(string $url = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Assert whether the response is redirecting to a given URI.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureHasHeader">
+        <div class="location">at         line 303</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureHasHeader</strong>(string $headerName, mixed $expectedValue = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Asserts that the response contains the given header and equals the optional value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$headerName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expectedValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureContains">
+        <div class="location">at         line 337</div>
+        <code>                    <abbr title="Hayttp\Traits\Response\$this">$this</abbr>
+    <strong>ensureContains</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Assert that the given string is contained within the response.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Hayttp\Traits\Response\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

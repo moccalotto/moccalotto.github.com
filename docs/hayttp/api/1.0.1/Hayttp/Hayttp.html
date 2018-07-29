@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Hayttp\Hayttp | Hayttp API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/sami.css">
+        <script src="../js/jquery-1.11.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/typeahead.min.js"></script>
+        <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Hayttp_Hayttp" data-root-path="../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Hayttp API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                                            <li><a href="../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../Hayttp.html">Hayttp</a></li><li class="backslash">\</li><li>Hayttp</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Hayttp
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Hayttp</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Request creation facade.</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_defaultInstance">
+                    static                    protected                                        <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </td>
+                <td>$defaultInstance</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_requestFqcn">
+                                        protected                                        string
+                </td>
+                <td>$requestFqcn</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mountPoint">
+                                                                                string
+                </td>
+                <td>$mountPoint</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_deferredCalls">
+                                        protected                                        array
+                </td>
+                <td>$deferredCalls</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_instance">instance</a>()
+        
+                                            <p>Get the default/global instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mockEndpoint">mockEndpoint</a>(string $methodPattern, string $urlPattern, callable $handler)
+        
+                                            <p>Add a mocked end point to all requests created by the global Hayttp facade.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $requestFqcn)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAsGlobal">setAsGlobal</a>()
+        
+                                            <p>Set this instance as the default global instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Contracts/Request.html"><abbr title="Hayttp\Contracts\Request">Request</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createRequest">createRequest</a>(string $method, string $url)
+        
+                                            <p>Factory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $methodName, array $args)
+        
+                                            <p>Easy request construction.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___callStatic">__callStatic</a>(string $methodName, array $args)
+        
+                                            <p>Forward calls to default instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_with">with</a>(string $property, mixed $value)
+        
+                                            <p>Clone object with a new property value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withDeferredCall">withDeferredCall</a>(string $methodName, array $args = [])
+        
+                                            <p>Having created a request, apply these calls to the.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withMockedEndpoint">withMockedEndpoint</a>()
+        
+                                            <p>Add a mocked end point to all requests created.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withMountPoint">withMountPoint</a>(string $url)
+        
+                                            <p>All requests will have this mount point prepended to their url.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withTimeout">withTimeout</a>()
+        
+                                            <p>All requests will have this timeout.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withUserAgent">withUserAgent</a>()
+        
+                                            <p>Set the user agent header.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withCryptoMethod">withCryptoMethod</a>()
+        
+                                            <p>Set the allowed crypto method.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withInsecureSsl">withInsecureSsl</a>()
+        
+                                            <p>Disable all SSL certificate checks.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withEngine">withEngine</a>()
+        
+                                            <p>Set the transfer engine.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withHeaders">withHeaders</a>()
+        
+                                            <p>Set all headers.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withAdditionalHeaders">withAdditionalHeaders</a>()
+        
+                                            <p>Add an array of headers.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withProxy">withProxy</a>()
+        
+                                            <p>Set the proxy server.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withHeader">withHeader</a>()
+        
+                                            <p>Add a header to the request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withTls">withTls</a>()
+        
+                                            <p>Set the TLS version.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withBasicAuth">withBasicAuth</a>()
+        
+                                            <p>Add a basic authorization (which is actually an authenticaation) header.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    RequestContract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string  $url)
+        
+                                            <p>Create a GET request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    RequestContract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_post">post</a>(string  $url)
+        
+                                            <p>Create a POST request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    RequestContract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_put">put</a>(string  $url)
+        
+                                            <p>Create a PUT request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    RequestContract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_patch">patch</a>(string  $url)
+        
+                                            <p>Create a PATCH request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    RequestContract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_head">head</a>(string  $url)
+        
+                                            <p>Create a HEAD request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    RequestContract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(string  $url)
+        
+                                            <p>Create a DELETE request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    RequestContract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_options">options</a>(string  $url)
+        
+                                            <p>Create a OPTIONS request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    MockResponse
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createMockResponse">createMockResponse</a>($request, $route)
+        
+                                            <p>Create a mock response via a request and a route</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_instance">
+        <div class="location">at         line 57</div>
+        <code>        static            <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>instance</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default/global instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mockEndpoint">
+        <div class="location">at         line 85</div>
+        <code>        static            <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>mockEndpoint</strong>(string $methodPattern, string $urlPattern, callable $handler)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a mocked end point to all requests created by the global Hayttp facade.</p>                    <p>Mocking end points does not necessarily mean that all HTTP calls will be
+intercepted. In order to mock all end points, you must add a catch-all
+end point. Like
+     mockEndpoint(
+         '.*',          // match any method
+         '{anything}',  // match any URL
+         $handler
+     )</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodPattern</td>
+                <td>a regular expression to match the method(s) of the call</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$urlPattern</td>
+                <td>A url "pattern". For instance {protocol}://example.{tld}/foo/{dir1}/{dir2}</td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$handler</td>
+                <td>A callable that returns a ResponseContract object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 97</div>
+        <code>                    
+    <strong>__construct</strong>(string $requestFqcn)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$requestFqcn</td>
+                <td>the fqcn of a class that implements the RequestContract interface</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAsGlobal">
+        <div class="location">at         line 109</div>
+        <code>                    
+    <strong>setAsGlobal</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set this instance as the default global instance.</p>                    <p>The gloabal instance is the one returned by the instance() method.</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>instance()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRequest">
+        <div class="location">at         line 124</div>
+        <code>                    <a href="../Hayttp/Contracts/Request.html"><abbr title="Hayttp\Contracts\Request">Request</abbr></a>
+    <strong>createRequest</strong>(string $method, string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory.</p>                    <p>Create a request object of the $requestFqcn class.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Contracts/Request.html"><abbr title="Hayttp\Contracts\Request">Request</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         line 150</div>
+        <code>                    mixed
+    <strong>__call</strong>(string $methodName, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Easy request construction.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td>if $methodName is incorrect</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">at         line 175</div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $methodName, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Forward calls to default instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td>if $methodName is incorrect</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_with">
+        <div class="location">at         line 188</div>
+        <code>            protected        <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>with</strong>(string $property, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clone object with a new property value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withDeferredCall">
+        <div class="location">at         line 204</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withDeferredCall</strong>(string $methodName, array $args = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Having created a request, apply these calls to the.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withMockedEndpoint">
+        <div class="location">at         line 221</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withMockedEndpoint</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a mocked end point to all requests created.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withMountPoint">
+        <div class="location">at         line 233</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withMountPoint</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>All requests will have this mount point prepended to their url.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withTimeout">
+        <div class="location">at         line 248</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withTimeout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>All requests will have this timeout.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withUserAgent">
+        <div class="location">at         line 260</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withUserAgent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the user agent header.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withCryptoMethod">
+        <div class="location">at         line 274</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withCryptoMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the allowed crypto method.</p>                    <p>A Crypto method can be one of the CRYPTO_* constants</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withInsecureSsl">
+        <div class="location">at         line 284</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withInsecureSsl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disable all SSL certificate checks.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withEngine">
+        <div class="location">at         line 296</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withEngine</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the transfer engine.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withHeaders">
+        <div class="location">at         line 308</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set all headers.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withAdditionalHeaders">
+        <div class="location">at         line 320</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withAdditionalHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an array of headers.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withProxy">
+        <div class="location">at         line 332</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withProxy</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the proxy server.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withHeader">
+        <div class="location">at         line 345</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withHeader</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a header to the request.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withTls">
+        <div class="location">at         line 357</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withTls</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the TLS version.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withBasicAuth">
+        <div class="location">at         line 370</div>
+        <code>                    <a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a>
+    <strong>withBasicAuth</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a basic authorization (which is actually an authenticaation) header.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hayttp/Hayttp.html"><abbr title="Hayttp\Hayttp">Hayttp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at         line 30</div>
+        <code>                    RequestContract
+    <strong>get</strong>(string  $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a GET request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>RequestContract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_post">
+        <div class="location">at         line 30</div>
+        <code>                    RequestContract
+    <strong>post</strong>(string  $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a POST request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>RequestContract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_put">
+        <div class="location">at         line 30</div>
+        <code>                    RequestContract
+    <strong>put</strong>(string  $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a PUT request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>RequestContract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_patch">
+        <div class="location">at         line 30</div>
+        <code>                    RequestContract
+    <strong>patch</strong>(string  $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a PATCH request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>RequestContract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_head">
+        <div class="location">at         line 30</div>
+        <code>                    RequestContract
+    <strong>head</strong>(string  $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a HEAD request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>RequestContract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at         line 30</div>
+        <code>                    RequestContract
+    <strong>delete</strong>(string  $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a DELETE request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>RequestContract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_options">
+        <div class="location">at         line 30</div>
+        <code>                    RequestContract
+    <strong>options</strong>(string  $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a OPTIONS request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>RequestContract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMockResponse">
+        <div class="location">at         line 30</div>
+        <code>                    MockResponse
+    <strong>createMockResponse</strong>($request, $route)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a mock response via a request and a route</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>MockResponse</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
