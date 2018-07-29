@@ -41,6 +41,8 @@ $jsonResponse = Hayttp::post($url)
 
 [Documentation]({{ '/docs/hayttp' | page }})
 |
+[Api-Docs]({{ '/docs/hayttp/api/master' | page }})
+|
 [Packagist](https://packagist.org/packages/moccalotto/hayttp)
 |
 [Github](https://github.com/moccalotto/hayttp)
