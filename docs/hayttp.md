@@ -437,8 +437,9 @@ The example above intercepts all http requests to `foo.bar/{path}`.
 This means that `foo.bar/thing` would be intercepted, but `foo.bar/thing/2` would not.
 
 ```php
-// This request would be intercepted, and no external HTTP call would be attempted.
-
+// This request would be intercepted,
+// so no external HTTP call would be attempted.
+// 
 $response = Hayttp::get('https://foo.bar/some-path');
 
 // The response would look like this:
