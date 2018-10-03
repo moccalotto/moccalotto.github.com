@@ -400,23 +400,10 @@ Metadata for `Hayttp\Engines\CurlEngine`:
 You can mock/intercept outgoing requests when testing.
 
 ```php
-// Create a "controller" for the given end point.
-// The first param is a regex pattern for the
-// http method. In this case we match all methods.
-// The next param is a pseudo-regex that matches
-// the URL. In this case we match all requests to
-// foo.bar, no matter the scheme and http method.
-// The $route will contain the path and the scheme.
-// If we had had a "{foo}" entry in the pattern,
-// then route would have contained a foo variable.
-// that would have been accessible via $route->get('foo')
-//
-// You can define as many controllers as you want.
-// This way, you could mock an entire API.
-
 use Hayttp\Request;
 use Hayttp\Mock\Route;
 
+// This controller handles incomming (intercepted) http requests.
 $controller = function (Request $request, Route $route) {
     return Hayttp::createMockResponse($request, $route)
         ->withJsonBody(
@@ -427,10 +414,22 @@ $controller = function (Request $request, Route $route) {
         );
 };
 
+// Mock GET, POST, and PUT requests to foo.bar/{path} using any scheme.
+// We will match these requests:
+// * GET https://foo.bar/thing1
+// * POST https://foo.bar/thing2
+// * PUT http://foo.bar/thing2
+// 
+// We will NOT match these requests:
+// * DELETE https://foo.bar/thing1
+// * OPTIONS https://foo.bar/thing2
+// * GET http://foo.bar/dir1/dir2
+// * GET http://foo.bar
+//
 Hayttp::mockEndpoint(
-    '.*',
-    '{scheme}://foo.bar/{path}', 
-    $controller
+    'GET|POST|PUT',               // match GET, POST and PUT requests
+    '{scheme}://foo.bar/{path}',  // match requests to foo.bar/{path}
+    $controller                   // the code to execute for the given route.
 );
 ```
 
