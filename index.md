@@ -62,3 +62,11 @@ $internalId = IdHash::with($key)->intToHash($hashedId);
 [Packagist](https://packagist.org/packages/moccalotto/idhash)
 |
 [Github](https://github.com/moccalotto/idhash)
+
+## KAOS RPG
+
+A set of simple and all-purpose tabletop role playing game rules. 
+Even though this document is focussed on the classic medieval fantasy setting,
+these should be adaptable for most campaign types.
+
+[Github](https://github.com/moccalotto/kaosrpg)
