@@ -393,3 +393,49 @@ Metadata for `Hayttp\Engines\CurlEngine`:
      "local_port" => 54294,
 ]
 ```
+
+
+## Mocking and Testing
+
+You can mock/intercept outgoing requests when testing.
+
+```php
+// Create a "controller" for the given end point
+// The first param is a regex pattern for the http method. In this case we match all methods.
+// The next param is a pseudo-regex that matches the URL. In this case we match all
+// requests to foo.bar, no matter what kind of schema or path we're using.
+// The $route will contain the path and the schema.
+// If we had had a "{foo}" entry in the pattern, then route would have contained a foo variable.
+// that would have been accessible via $route->get('foo')
+
+Hayttp::mockEndpoint('.*', '{scheme}://foo.bar/{path}', function (Request $request, \Hayttp\Mock\Route $route) {
+    return Hayttp::createMockResponse($request, $route)
+        ->withJsonBody(
+            [
+                'demo' => true,
+                $route->get('path') => $route->params(),
+            ]
+        )
+        ->withRoute($route);
+});
+```
+
+The example above intercepts all http requests to `foo.bar/{path}`.
+This means that `foo.bar/thing` would be intercepted, but `foo.bar/thing/2` would not.
+
+```php
+// This request would be intercepted, and no external HTTP call would be attempted.
+
+$response = Hayttp::get('https://foo.bar/some-path');
+
+// The response would look like this:
+// stdClass Object
+// (
+//     [demo] => 1
+//     [some-path] => stdClass Object
+//         (
+//             [scheme] => https
+//             [path] => some-path
+//         )
+// )
+```
