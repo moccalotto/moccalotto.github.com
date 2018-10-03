@@ -400,24 +400,38 @@ Metadata for `Hayttp\Engines\CurlEngine`:
 You can mock/intercept outgoing requests when testing.
 
 ```php
-// Create a "controller" for the given end point
-// The first param is a regex pattern for the http method. In this case we match all methods.
-// The next param is a pseudo-regex that matches the URL. In this case we match all
-// requests to foo.bar, no matter what kind of schema or path we're using.
-// The $route will contain the path and the schema.
-// If we had had a "{foo}" entry in the pattern, then route would have contained a foo variable.
+// Create a "controller" for the given end point.
+// The first param is a regex pattern for the
+// http method. In this case we match all methods.
+// The next param is a pseudo-regex that matches
+// the URL. In this case we match all requests to
+// foo.bar, no matter the scheme and http method.
+// The $route will contain the path and the scheme.
+// If we had had a "{foo}" entry in the pattern,
+// then route would have contained a foo variable.
 // that would have been accessible via $route->get('foo')
+//
+// You can define as many controllers as you want.
+// This way, you could mock an entire API.
 
-Hayttp::mockEndpoint('.*', '{scheme}://foo.bar/{path}', function (Request $request, \Hayttp\Mock\Route $route) {
+use Hayttp\Request;
+use Hayttp\Mock\Route;
+
+$controller = function (Request $request, Route $route) {
     return Hayttp::createMockResponse($request, $route)
         ->withJsonBody(
             [
                 'demo' => true,
                 $route->get('path') => $route->params(),
             ]
-        )
-        ->withRoute($route);
-});
+        );
+};
+
+Hayttp::mockEndpoint(
+    '.*',
+    '{scheme}://foo.bar/{path}', 
+    $controller
+);
 ```
 
 The example above intercepts all http requests to `foo.bar/{path}`.
