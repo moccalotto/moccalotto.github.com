@@ -26,6 +26,8 @@
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
                                             <option value="../../../2.0.0-alpha/index.html" data-version="2.0.0-alpha">2.0.0-alpha</option>
+                                            <option value="../../../2.0.0/index.html" data-version="2.0.0">2.0.0</option>
+                                            <option value="../../../2.0.1/index.html" data-version="2.0.1">2.0.1</option>
                                             <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
                                             <option value="../../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
                                             <option value="../../../1.0.2/index.html" data-version="1.0.2">1.0.2</option>
@@ -91,7 +93,7 @@
 
     <p>    class
     <strong>ArrayCheckProvider</strong>        implements
-        <a href="../../Valit/Contracts/CheckProvider.html"><abbr title="Valit\Contracts\CheckProvider">CheckProvider</abbr></a>
+        <a href="../../Valit/Contracts/CheckProvider.html"><abbr title="Valit\Contracts\CheckProvider">CheckProvider</abbr></a>        (<a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php">View source</a>)
 </p>
 
         
@@ -208,6 +210,16 @@
                                             <p>Check that $value is an array or ArrayAccess that has the given $key.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkRelativeCount">checkRelativeCount</a>(mixed $value, string|int $operator, int $against = null)
+        
+                                            <p>Check if $value is an array (or countable) where the count compares to $against using the $operator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -216,7 +228,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_provides">
-        <div class="location">in <a href="../../Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a> at         line 64</div>
+        <div class="location">in <a href="../../Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ProvideViaReflection.php#L64">line 64</a></div>
         <code>                    array
     <strong>provides</strong>()
         </code>
@@ -246,7 +258,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkArrayAccess">
-        <div class="location">at         line 32</div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php#L33">line 33</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkArrayAccess</strong>(mixed $value)
         </code>
@@ -286,7 +298,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkStrictArray">
-        <div class="location">at         line 50</div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php#L51">line 51</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkStrictArray</strong>(mixed $value)
         </code>
@@ -326,7 +338,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkAssociative">
-        <div class="location">at         line 66</div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php#L67">line 67</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkAssociative</strong>(mixed $value)
         </code>
@@ -366,7 +378,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkNumericIndex">
-        <div class="location">at         line 97</div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php#L98">line 98</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkNumericIndex</strong>(mixed $value)
         </code>
@@ -406,7 +418,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkNotEmpty">
-        <div class="location">at         line 128</div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php#L129">line 129</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkNotEmpty</strong>(mixed $value)
         </code>
@@ -446,7 +458,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkEmpty">
-        <div class="location">at         line 144</div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php#L145">line 145</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkEmpty</strong>(mixed $value)
         </code>
@@ -486,7 +498,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkUniqueValues">
-        <div class="location">at         line 160</div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php#L161">line 161</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkUniqueValues</strong>(mixed $value)
         </code>
@@ -526,7 +538,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkKeyExists">
-        <div class="location">at         line 177</div>
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php#L178">line 178</a></div>
         <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
     <strong>checkKeyExists</strong>(mixed $value, string|int $key)
         </code>
@@ -550,6 +562,71 @@
                 <td>string|int</td>
                 <td>$key</td>
                 <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkRelativeCount">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/master/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/ArrayCheckProvider.php#L217">line 217</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkRelativeCount</strong>(mixed $value, string|int $operator, int $against = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is an array (or countable) where the count compares to $against using the $operator.</p>                    <p>Examples:</p>
+
+<pre><code class="php">// count &gt; 20
+Check::that($foo)-&gt;arrayWhereCount('&gt;', 20);
+
+// count &lt;= 255
+Check::that($foo)-&gt;arrayWhereCount('&lt;=', 255);
+
+// alternative:
+Check::that($foo)-&gt;arrayWhereCount('≤', 255);
+
+// check count = 40
+Check::that($foo)-&gt;arrayWhereCount('=', 40);
+Check::that($foo)-&gt;arrayWhereCount(40);     // alt. syntax
+</code></pre>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The inspected variable</td>
+            </tr>
+                    <tr>
+                <td>string|int</td>
+                <td>$operator</td>
+                <td>Must be one of >, &lt;, =, >=, &lt;=, ≥, ≤</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$against</td>
+                <td>The count we should compare to.</td>
             </tr>
             </table>
 

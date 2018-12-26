@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Providers\FileSystemCheckProvider | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Providers_FileSystemCheckProvider" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../2.0.0-alpha/index.html" data-version="2.0.0-alpha">2.0.0-alpha</option>
+                                            <option value="../../../2.0.0/index.html" data-version="2.0.0">2.0.0</option>
+                                            <option value="../../../2.0.1/index.html" data-version="2.0.1">2.0.1</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../../1.0.2/index.html" data-version="1.0.2">1.0.2</option>
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../0.8.1/index.html" data-version="0.8.1">0.8.1</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../Valit/Providers.html">Providers</a></li><li class="backslash">\</li><li>FileSystemCheckProvider</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            FileSystemCheckProvider
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>FileSystemCheckProvider</strong>        implements
+        <a href="../../Valit/Contracts/CheckProvider.html"><abbr title="Valit\Contracts\CheckProvider">CheckProvider</abbr></a>        (<a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Valit/Traits/ProvideViaReflection.html"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_provides">provides</a>()
+        
+                                            <p>Return all the checks provided by this checkprovider.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkFileExists">checkFileExists</a>(mixed $value)
+        
+                                            <p>Check if $value is an existing file.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDirExists">checkDirExists</a>(mixed $value)
+        
+                                            <p>Check if $value is an existing directory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkIsWritable">checkIsWritable</a>(mixed $value)
+        
+                                            <p>Check if $value is exists on the filesystem and is writable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkIsReadable">checkIsReadable</a>(mixed $value)
+        
+                                            <p>Check if $value is exists on the filesystem and is readable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkExecutable">checkExecutable</a>(mixed $value)
+        
+                                            <p>Check if $value is an executable filesystem path.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkLink">checkLink</a>(mixed $value)
+        
+                                            <p>Check if $value is a filesystem link.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkLargerThan">checkLargerThan</a>(mixed $value, string|int $size)
+        
+                                            <p>Check if $value is a filename and that the file is larger than $size.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkSmallerThan">checkSmallerThan</a>(mixed $value, string|int $size)
+        
+                                            <p>Check if $value is a filename and that the file is smaller than $size.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkFileTime">checkFileTime</a>(mixed $value, string $timeFunc, string $compareFunc, mixed $date)
+        
+                                            <p>Check if $value is a file, that the timestamp denoted by $timeFunc compares
+to $against given the $compareFunc.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkCreatedAfter">checkCreatedAfter</a>(mixed $value, mixed $date)
+        
+                                            <p>Check if $value is a file that was created after $date.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkCreatedBefore">checkCreatedBefore</a>(mixed $value, mixed $date)
+        
+                                            <p>Check if $value is a file that was created before $date.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkModifiedAfter">checkModifiedAfter</a>(mixed $value, mixed $date)
+        
+                                            <p>Check if $value is a file that was modified after $date.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkModifiedBefore">checkModifiedBefore</a>(mixed $value, mixed $date)
+        
+                                            <p>Check if $value is a file that was modified before $date.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkAccessedAfter">checkAccessedAfter</a>(mixed $value, mixed $date)
+        
+                                            <p>Check if $value is a file that was accessed after $date.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkAccessedBefore">checkAccessedBefore</a>(mixed $value, mixed $date)
+        
+                                            <p>Check if $value is a file that was accessed before $date.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_provides">
+        <div class="location">in <a href="../../Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ProvideViaReflection.php#L64">line 64</a></div>
+        <code>                    array
+    <strong>provides</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all the checks provided by this checkprovider.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Associative array of [checkName => checkClosure]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkFileExists">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L35">line 35</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkFileExists</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is an existing file.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDirExists">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L52">line 52</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkDirExists</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is an existing directory.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsWritable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L69">line 69</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkIsWritable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is exists on the filesystem and is writable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsReadable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L86">line 86</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkIsReadable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is exists on the filesystem and is readable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkExecutable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L103">line 103</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkExecutable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is an executable filesystem path.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkLink">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L120">line 120</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkLink</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a filesystem link.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkLargerThan">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L138">line 138</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkLargerThan</strong>(mixed $value, string|int $size)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a filename and that the file is larger than $size.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value that must be a file with a size of at least $size</td>
+            </tr>
+                    <tr>
+                <td>string|int</td>
+                <td>$size</td>
+                <td>The file size. It can be a string such as '1.44MB' or '2GiB', or an integer of bytes</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkSmallerThan">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L161">line 161</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkSmallerThan</strong>(mixed $value, string|int $size)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a filename and that the file is smaller than $size.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value that must be a file with a size of at least $size</td>
+            </tr>
+                    <tr>
+                <td>string|int</td>
+                <td>$size</td>
+                <td>The file size. It can be a string such as '1.44MB' or '2GiB', or an integer of bytes</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkFileTime">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L214">line 214</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkFileTime</strong>(mixed $value, string $timeFunc, string $compareFunc, mixed $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a file, that the timestamp denoted by $timeFunc compares
+to $against given the $compareFunc.</p>                    <p>Examples:</p>
+
+<pre><code class="php">// Example 1
+Check::that($file)-&gt;isFileWhereTime(
+    'created',
+    'at',
+    '1987-01-01 00:00:00'
+);
+
+// Example 2
+Check::that($file)-&gt;fileWhereTime(
+    'modified',
+    'beforeOrAt',
+    '1987-01-01 00:00:00'
+);
+
+// Example 3
+Check::that($file)-&gt;fileWhereTime(
+    'accessed',
+    'after',
+    '5 minutes ago'
+);
+</code></pre>
+
+<hr />
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value that must be a file with a size of at least $size</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$timeFunc</td>
+                <td>Which time type should be check. One of
+                           'created', 'modified', or 'accessed'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$compareFunc</td>
+                <td>one of 'before', 'after', 'at', 'beforeOrAt', 'afterOrAt'</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$date</td>
+                <td>A DateTimeInterface, a number (i.e. unix timestamp) or a
+                           string that can be parsed into a DateTime</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkCreatedAfter">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L241">line 241</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkCreatedAfter</strong>(mixed $value, mixed $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a file that was created after $date.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The candidate file</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$date</td>
+                <td>A parseable date</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkCreatedBefore">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L256">line 256</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkCreatedBefore</strong>(mixed $value, mixed $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a file that was created before $date.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The candidate file</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$date</td>
+                <td>A parseable date</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkModifiedAfter">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L271">line 271</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkModifiedAfter</strong>(mixed $value, mixed $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a file that was modified after $date.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The candidate file</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$date</td>
+                <td>A parseable date</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkModifiedBefore">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L286">line 286</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkModifiedBefore</strong>(mixed $value, mixed $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a file that was modified before $date.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The candidate file</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$date</td>
+                <td>A parseable date</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkAccessedAfter">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L301">line 301</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkAccessedAfter</strong>(mixed $value, mixed $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a file that was accessed after $date.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The candidate file</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$date</td>
+                <td>A parseable date</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkAccessedBefore">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/FileSystemCheckProvider.php#L316">line 316</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkAccessedBefore</strong>(mixed $value, mixed $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if $value is a file that was accessed before $date.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The candidate file</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$date</td>
+                <td>A parseable date</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

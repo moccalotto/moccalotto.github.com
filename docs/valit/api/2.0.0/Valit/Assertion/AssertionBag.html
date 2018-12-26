@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Assertion\AssertionBag | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Assertion_AssertionBag" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../2.0.0-alpha/index.html" data-version="2.0.0-alpha">2.0.0-alpha</option>
+                                            <option value="../../../2.0.0/index.html" data-version="2.0.0">2.0.0</option>
+                                            <option value="../../../2.0.1/index.html" data-version="2.0.1">2.0.1</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../../1.0.2/index.html" data-version="1.0.2">1.0.2</option>
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../0.8.1/index.html" data-version="0.8.1">0.8.1</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../Valit/Assertion.html">Assertion</a></li><li class="backslash">\</li><li>AssertionBag</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            AssertionBag
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>AssertionBag</strong>        implements
+        <a target="_blank" href="http://php.net/IteratorAggregate">IteratorAggregate</a>, <a target="_blank" href="http://php.net/Countable">Countable</a>        (<a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_assertions">
+                                                                                <a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a>[]
+                </td>
+                <td>$assertions</td>
+                <td class="last">Internal.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_flags">
+                                                                                array
+                </td>
+                <td>$flags</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a>[] $assertions = [])
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Assertion\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAssertion">addAssertion</a>(<a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a> $assertion)
+        
+                                            <p>Add an assertion.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Assertion\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addNewAssertion">addNewAssertion</a>(string $name, array $args)
+        
+                                            <p>Create an assertion and add it.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_all">all</a>()
+        
+                                            <p>Get all the assertions.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/ArrayIterator">ArrayIterator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIterator">getIterator</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+        
+                                            <p>The number of assertions in the bag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasFlag">hasFlag</a>(string $key)
+        
+                                            <p>Alias of calling is().</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Assertion\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFlag">setFlag</a>(string $key, bool $yes = true)
+        
+                                            <p>Set the flag with the given name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_applyToValidator">applyToValidator</a>(<a href="../../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a> $validator)
+        
+                                            <p>Apply all the stored assertions to a ValueValidator instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_whereValueIs">whereValueIs</a>(mixed $value, string|null $varName = null, <a href="../../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a> $manager = null)
+        
+                                            <p>Execute contained assertions in "check"-mode.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Assertion\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptional">setOptional</a>()
+        
+                                            <p>Set the »optional« flag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Assertion\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequired">setRequired</a>()
+        
+                                            <p>Unset the »optional« flag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Assertion\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $methodName, array $args)
+        
+                                            <p>Add assertions by "calling" them.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L30">line 30</a></div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a>[] $assertions = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a>[]</td>
+                <td>$assertions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addAssertion">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L42">line 42</a></div>
+        <code>                    <abbr title="Valit\Assertion\$this">$this</abbr>
+    <strong>addAssertion</strong>(<a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a> $assertion)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an assertion.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a></td>
+                <td>$assertion</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Assertion\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addNewAssertion">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L57">line 57</a></div>
+        <code>                    <abbr title="Valit\Assertion\$this">$this</abbr>
+    <strong>addNewAssertion</strong>(string $name, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an assertion and add it.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Assertion\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_all">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L75">line 75</a></div>
+        <code>                    <a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a>[]
+    <strong>all</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all the assertions.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Assertion/Assertion.html"><abbr title="Valit\Assertion\Assertion">Assertion</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIterator">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L83">line 83</a></div>
+        <code>                    <a target="_blank" href="http://php.net/ArrayIterator">ArrayIterator</a>
+    <strong>getIterator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/ArrayIterator">ArrayIterator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L93">line 93</a></div>
+        <code>                    int
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The number of assertions in the bag.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasFlag">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L105">line 105</a></div>
+        <code>                    bool
+    <strong>hasFlag</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Alias of calling is().</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFlag">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L118">line 118</a></div>
+        <code>                    <abbr title="Valit\Assertion\$this">$this</abbr>
+    <strong>setFlag</strong>(string $key, bool $yes = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the flag with the given name.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$yes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Assertion\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applyToValidator">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L134">line 134</a></div>
+        <code>                    <a href="../../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>applyToValidator</strong>(<a href="../../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a> $validator)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Apply all the stored assertions to a ValueValidator instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+                <td>$validator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereValueIs">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L160">line 160</a></div>
+        <code>                    <a href="../../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>whereValueIs</strong>(mixed $value, string|null $varName = null, <a href="../../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a> $manager = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute contained assertions in "check"-mode.</p>                    <p>I.e. do not throw an InvalidValueException if an assertion fails.</p>
+
+<p>Create a new ValueValidator, apply all stored assertions on it, and return it.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value to be checked</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$varName</td>
+                <td>The alias/name of the value</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Valit/Manager.html"><abbr title="Valit\Manager">Manager</abbr></a></td>
+                <td>$manager</td>
+                <td>The check manager to use.
+                             If none given, the default
+                             manager will be used</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>a validator that will not throw exceptions on failures</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptional">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L180">line 180</a></div>
+        <code>                    <abbr title="Valit\Assertion\$this">$this</abbr>
+    <strong>setOptional</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the »optional« flag.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Assertion\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequired">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L190">line 190</a></div>
+        <code>                    <abbr title="Valit\Assertion\$this">$this</abbr>
+    <strong>setRequired</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unset the »optional« flag.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Assertion\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Assertion/AssertionBag.php#L203">line 203</a></div>
+        <code>                    <abbr title="Valit\Assertion\$this">$this</abbr>
+    <strong>__call</strong>(string $methodName, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add assertions by "calling" them.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Assertion\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
