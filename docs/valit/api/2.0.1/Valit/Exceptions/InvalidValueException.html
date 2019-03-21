@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Exceptions\InvalidValueException | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Exceptions_InvalidValueException" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../2.0.0-alpha/index.html" data-version="2.0.0-alpha">2.0.0-alpha</option>
+                                            <option value="../../../2.0.0/index.html" data-version="2.0.0">2.0.0</option>
+                                            <option value="../../../2.0.1/index.html" data-version="2.0.1">2.0.1</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../../1.0.2/index.html" data-version="1.0.2">1.0.2</option>
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../0.8.1/index.html" data-version="0.8.1">0.8.1</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../Valit/Exceptions.html">Exceptions</a></li><li class="backslash">\</li><li>InvalidValueException</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            InvalidValueException
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>InvalidValueException</strong>        extends <a target="_blank" href="http://php.net/UnexpectedValueException">UnexpectedValueException</a>        (<a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Exceptions/InvalidValueException.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Exception to throw when one or more assertions failed.</p>                                </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Valit/Traits/ContainsResults.html"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_results">
+                                                                                <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+                </td>
+                <td>$results</td>
+                <td class="last">Internal.</td>
+                <td><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#property_results"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_varName">
+                                                                                string
+                </td>
+                <td>$varName</td>
+                <td class="last">Internal.</td>
+                <td><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#property_varName"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_value">
+                                                                                mixed
+                </td>
+                <td>$value</td>
+                <td class="last">Internal.</td>
+                <td><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#property_value"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_successes">
+                                                                                int
+                </td>
+                <td>$successes</td>
+                <td class="last">Internal.</td>
+                <td><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#property_successes"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_failures">
+                                                                                int
+                </td>
+                <td>$failures</td>
+                <td class="last">Internal.</td>
+                <td><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#property_failures"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_varName">varName</a>()
+        
+                                            <p>The the variable name alias.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_varName"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Traits\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_alias">alias</a>(string $varName)
+        
+                                            <p>Set the variable name alias.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_alias"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_value">value</a>()
+        
+                                            <p>Get the validated value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_value"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_success">success</a>()
+        
+                                            <p>Have all checks been completed successfully?</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_success"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasErrors">hasErrors</a>()
+        
+                                            <p>Return true if there are errors.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_hasErrors"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_valueOr">valueOr</a>(mixed $valueIfValidationFails)
+        
+                                            <p>Get the validated value, but use a fallback if the validation failed.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_valueOr"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_results">results</a>()
+        
+                                            <p>Get the assertie results.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_results"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Valit\Traits\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAssertionResult">addAssertionResult</a>(<a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a> $result)
+        
+                                            <p>Add new result to the internal results list.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_addAssertionResult"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errors">errors</a>()
+        
+                                            <p>Get all failed assertion results.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_errors"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errorMessages">errorMessages</a>()
+        
+                                            <p>Return an array of rendered error messages.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_errorMessages"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusMessages">statusMessages</a>()
+        
+                                            <p>Status messages.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_statusMessages"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_firstErrorMessage">firstErrorMessage</a>()
+        
+                                            <p>Get the first error message.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ContainsResults.html#method_firstErrorMessage"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $varName, mixed $value, array $results)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_detailedMessage">detailedMessage</a>()
+        
+                                            <p>Get a detailed error message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errorBullets">errorBullets</a>()
+        
+                                            <p>Get a bulleted list of error messages.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_varName">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_varName"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L57">line 57</a></div>
+        <code>                    
+    <strong>varName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The the variable name alias.</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_alias">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_alias"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L69">line 69</a></div>
+        <code>                    <abbr title="Valit\Traits\$this">$this</abbr>
+    <strong>alias</strong>(string $varName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the variable name alias.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$varName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Traits\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_value">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_value"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L81">line 81</a></div>
+        <code>                    
+    <strong>value</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the validated value.</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_success">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_success"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L91">line 91</a></div>
+        <code>                    bool
+    <strong>success</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Have all checks been completed successfully?</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasErrors">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_hasErrors"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L101">line 101</a></div>
+        <code>                    bool
+    <strong>hasErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return true if there are errors.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valueOr">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_valueOr"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L113">line 113</a></div>
+        <code>                    mixed
+    <strong>valueOr</strong>(mixed $valueIfValidationFails)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the validated value, but use a fallback if the validation failed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$valueIfValidationFails</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_results">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_results"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L125">line 125</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+    <strong>results</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the assertie results.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addAssertionResult">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_addAssertionResult"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L137">line 137</a></div>
+        <code>                    <abbr title="Valit\Traits\$this">$this</abbr>
+    <strong>addAssertionResult</strong>(<a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a> $result)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add new result to the internal results list.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+                <td>$result</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Valit\Traits\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errors">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_errors"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L155">line 155</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]
+    <strong>errors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all failed assertion results.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorMessages">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_errorMessages"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L169">line 169</a></div>
+        <code>                    string[]
+    <strong>errorMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an array of rendered error messages.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusMessages">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_statusMessages"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L184">line 184</a></div>
+        <code>                    string[]
+    <strong>statusMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Status messages.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_firstErrorMessage">
+        <div class="location">in <a href="../../Valit/Traits/ContainsResults.html#method_firstErrorMessage"><abbr title="Valit\Traits\ContainsResults">ContainsResults</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ContainsResults.php#L203">line 203</a></div>
+        <code>                    string|null
+    <strong>firstErrorMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the first error message.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Exceptions/InvalidValueException.php#L31">line 31</a></div>
+        <code>                    
+    <strong>__construct</strong>(string $varName, mixed $value, array $results)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$varName</td>
+                <td>The name of the variable that was validated</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value validated</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$results</td>
+                <td>The results of validating the variable</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_detailedMessage">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Exceptions/InvalidValueException.php#L49">line 49</a></div>
+        <code>                    string
+    <strong>detailedMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a detailed error message.</p>                    <p>Note that this message spans multiple lines.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorBullets">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Exceptions/InvalidValueException.php#L62">line 62</a></div>
+        <code>            protected        string
+    <strong>errorBullets</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a bulleted list of error messages.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

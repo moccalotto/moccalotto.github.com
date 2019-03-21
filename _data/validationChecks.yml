@@ -949,6 +949,19 @@
         "paramlist": "string|int $key"
     },
     {
+        "name": "checkRelativeCount",
+        "headline": "Check if $value is an array (or countable) where the count compares to $against using the $operator",
+        "description": "Examples:\n\n```php\n// count > 20\nCheck::that($foo)->arrayWhereCount('>', 20);\n\n// count <= 255\nCheck::that($foo)->arrayWhereCount('<=', 255);\n\n// alternative:\nCheck::that($foo)->arrayWhereCount('≤', 255);\n\n// check count = 40\nCheck::that($foo)->arrayWhereCount('=', 40);\nCheck::that($foo)->arrayWhereCount(40);     // alt. syntax\n```",
+        "aliases": [
+            "arrayWhereCount",
+            "isArrayWhereCount",
+            "whereCount",
+            "withCount",
+            "hasCount"
+        ],
+        "paramlist": "string|int $operator, [int $against = null]"
+    },
+    {
         "name": "checkObjectOrClass",
         "headline": "Check if is object or class",
         "description": "",

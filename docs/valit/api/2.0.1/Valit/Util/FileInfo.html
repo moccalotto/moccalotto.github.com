@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Util\FileInfo | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Util_FileInfo" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../2.0.0-alpha/index.html" data-version="2.0.0-alpha">2.0.0-alpha</option>
+                                            <option value="../../../2.0.0/index.html" data-version="2.0.0">2.0.0</option>
+                                            <option value="../../../2.0.1/index.html" data-version="2.0.1">2.0.1</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../../1.0.2/index.html" data-version="1.0.2">1.0.2</option>
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../0.8.1/index.html" data-version="0.8.1">0.8.1</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../Valit/Util.html">Util</a></li><li class="backslash">\</li><li>FileInfo</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            FileInfo
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>FileInfo</strong>        (<a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Util/FileInfo.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Provide file information.</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_name">
+                                                                                string|null
+                </td>
+                <td>$name</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isCustom">
+                                                                                bool
+                </td>
+                <td>$isCustom</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_exists">
+                                                                                bool
+                </td>
+                <td>$exists</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_permissions">
+                                                                                int
+                </td>
+                <td>$permissions</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_userId">
+                                                                                int
+                </td>
+                <td>$userId</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_groupId">
+                                                                                int
+                </td>
+                <td>$groupId</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_size">
+                                                                                int
+                </td>
+                <td>$size</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_realpath">
+                                                                                string|null
+                </td>
+                <td>$realpath</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dirname">
+                                                                                string
+                </td>
+                <td>$dirname</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_basename">
+                                                                                string
+                </td>
+                <td>$basename</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_extension">
+                                                                                string
+                </td>
+                <td>$extension</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isReadable">
+                                                                                bool
+                </td>
+                <td>$isReadable</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isWritable">
+                                                                                bool
+                </td>
+                <td>$isWritable</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isExecutable">
+                                                                                bool
+                </td>
+                <td>$isExecutable</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isFile">
+                                                                                bool
+                </td>
+                <td>$isFile</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isDir">
+                                                                                bool
+                </td>
+                <td>$isDir</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isLink">
+                                                                                bool
+                </td>
+                <td>$isLink</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_createdAt">
+                                                                                <a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>|null
+                </td>
+                <td>$createdAt</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modifiedAt">
+                                                                                <a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>|null
+                </td>
+                <td>$modifiedAt</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_accessedAt">
+                                                                                <a target="_blank" href="http://php.net/DateTimeInterface">DateTimeInterface</a>|null
+                </td>
+                <td>$accessedAt</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $file)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Valit/Util/FileInfo.html"><abbr title="Valit\Util\FileInfo">FileInfo</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_custom">custom</a>(string $file, array $info)
+        
+                                            <p>Create custum FileInfo instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>(<a target="_blank" href="http://php.net/SplFileInfo">SplFileInfo</a>|string $file)
+        
+                                            <p>Initialize instance variables for a given file.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initFromFileInfo">initFromFileInfo</a>(<a target="_blank" href="http://php.net/SplFileInfo">SplFileInfo</a> $info)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Util/FileInfo.php#L126">line 126</a></div>
+        <code>                    
+    <strong>__construct</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_custom">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Util/FileInfo.php#L139">line 139</a></div>
+        <code>        static            <a href="../../Valit/Util/FileInfo.html"><abbr title="Valit\Util\FileInfo">FileInfo</abbr></a>
+    <strong>custom</strong>(string $file, array $info)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create custum FileInfo instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$info</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Util/FileInfo.html"><abbr title="Valit\Util\FileInfo">FileInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Util/FileInfo.php#L158">line 158</a></div>
+        <code>            protected        
+    <strong>init</strong>(<a target="_blank" href="http://php.net/SplFileInfo">SplFileInfo</a>|string $file)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize instance variables for a given file.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/SplFileInfo">SplFileInfo</a>|string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initFromFileInfo">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Util/FileInfo.php#L176">line 176</a></div>
+        <code>            protected        
+    <strong>initFromFileInfo</strong>(<a target="_blank" href="http://php.net/SplFileInfo">SplFileInfo</a> $info)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/SplFileInfo">SplFileInfo</a></td>
+                <td>$info</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

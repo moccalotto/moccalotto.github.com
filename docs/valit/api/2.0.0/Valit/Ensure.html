@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Ensure | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/sami.css">
+        <script src="../js/jquery-1.11.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/typeahead.min.js"></script>
+        <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Ensure" data-root-path="../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../2.0.0-alpha/index.html" data-version="2.0.0-alpha">2.0.0-alpha</option>
+                                            <option value="../../2.0.0/index.html" data-version="2.0.0">2.0.0</option>
+                                            <option value="../../2.0.1/index.html" data-version="2.0.1">2.0.1</option>
+                                            <option value="../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../1.0.2/index.html" data-version="1.0.2">1.0.2</option>
+                                            <option value="../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../0.8.1/index.html" data-version="0.8.1">0.8.1</option>
+                                            <option value="../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                                            <li><a href="../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../Valit.html">Valit</a></li><li class="backslash">\</li><li>Ensure</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Ensure
+                
+        </h1>
+    </div>
+
+    <p>abstract     class
+    <strong>Ensure</strong>        (<a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Facade for checking values and containers, throwing an exception if an assertion fails.</p>                                </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_that">that</a>(mixed $value)
+        
+                                            <p>Ensure that a single variable passes certain criteria.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_oneOf">oneOf</a>($scenarios, $value = null)
+        
+                                            <p>Check that exactly one of the given scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_anyOf">anyOf</a>($scenarios, $value = null)
+        
+                                            <p>Check that at least one of the given scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allOf">allOf</a>($scenarios, $value = null)
+        
+                                            <p>Check that all of the given scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_noneOf">noneOf</a>($scenarios, $value = null)
+        
+                                            <p>Check that none of the given scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_notAnyOf">notAnyOf</a>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios, mixed $value = null)
+        
+                                            <p>Alias of noneOf().</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allOrNone">allOrNone</a>($scenarios, $value = null)
+        
+                                            <p>Check all or none of the givens scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ifThenElse">ifThenElse</a>(mixed $condition, mixed $then, mixed $else = true, mixed $value = null)
+        
+                                            <p>Check conditional if-then-else clause.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ifThen">ifThen</a>(mixed $condition, mixed $then, mixed $value = null)
+        
+                                            <p>Check conditional if-then clause.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_not">not</a>($scenario, $value = null)
+        
+                                            <p>Check that none of the given scenarios succeed.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_that">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L28">line 28</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>that</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ensure that a single variable passes certain criteria.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>the value to check</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_oneOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L41">line 41</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>oneOf</strong>($scenarios, $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that exactly one of the given scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_anyOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L56">line 56</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>anyOf</strong>($scenarios, $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that at least one of the given scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L71">line 71</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>allOf</strong>($scenarios, $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that all of the given scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_noneOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L86">line 86</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>noneOf</strong>($scenarios, $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that none of the given scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_notAnyOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L104">line 104</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>notAnyOf</strong>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $scenarios, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Alias of noneOf().</p>                    <p>Check that none of of the given scenarios succeed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allOrNone">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L117">line 117</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>allOrNone</strong>($scenarios, $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check all or none of the givens scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$scenarios</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ifThenElse">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L138">line 138</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>ifThenElse</strong>(mixed $condition, mixed $then, mixed $else = true, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check conditional if-then-else clause.</p>                    <p>if the given $condition evaluates to true,
+the $then must also evaluate to true,</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$then</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$else</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ifThen">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L160">line 160</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>ifThen</strong>(mixed $condition, mixed $then, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check conditional if-then clause.</p>                    <p>if the given $condition evaluates to true,
+the $then must also evaluate to true,</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$then</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_not">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.0/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Ensure.php#L178">line 178</a></div>
+        <code>        static            <a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a>
+    <strong>not</strong>($scenario, $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that none of the given scenarios succeed.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$scenario</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Valit/Validators/ValueValidator.html"><abbr title="Valit\Validators\ValueValidator">ValueValidator</abbr></a></td>
+            <td>instance that has been configured to throw a
+                       InvalidValueException as soon as a single validation fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

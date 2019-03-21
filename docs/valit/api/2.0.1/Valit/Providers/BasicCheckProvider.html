@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Valit\Providers\BasicCheckProvider | Valit API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Valit_Providers_BasicCheckProvider" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../2.0.0-alpha/index.html" data-version="2.0.0-alpha">2.0.0-alpha</option>
+                                            <option value="../../../2.0.0/index.html" data-version="2.0.0">2.0.0</option>
+                                            <option value="../../../2.0.1/index.html" data-version="2.0.1">2.0.1</option>
+                                            <option value="../../../1.0.0/index.html" data-version="1.0.0">1.0.0</option>
+                                            <option value="../../../1.0.1/index.html" data-version="1.0.1">1.0.1</option>
+                                            <option value="../../../1.0.2/index.html" data-version="1.0.2">1.0.2</option>
+                                            <option value="../../../0.8.0/index.html" data-version="0.8.0">0.8.0</option>
+                                            <option value="../../../0.8.1/index.html" data-version="0.8.1">0.8.1</option>
+                                            <option value="../../../master/index.html" data-version="master">master dev branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Valit API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Valit.html">Valit</a></li><li class="backslash">\</li><li><a href="../../Valit/Providers.html">Providers</a></li><li class="backslash">\</li><li>BasicCheckProvider</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            BasicCheckProvider
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>BasicCheckProvider</strong>        implements
+        <a href="../../Valit/Contracts/CheckProvider.html"><abbr title="Valit\Contracts\CheckProvider">CheckProvider</abbr></a>        (<a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php">View source</a>)
+</p>
+
+        
+    
+
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../Valit/Traits/ProvideViaReflection.html"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_provides">provides</a>()
+        
+                                            <p>Return all the checks provided by this checkprovider.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkIdenticalTo">checkIdenticalTo</a>(mixed $value, mixed $against)
+        
+                                            <p>Check that $value === $against.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkEquals">checkEquals</a>(mixed $value, mixed $equals)
+        
+                                            <p>Check that $value == $against (loose comparison).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkIsOneOf">checkIsOneOf</a>($value, $allowedValues)
+        
+                                            <p>Check that $value is equal to (==) one of the values in $allowedValues.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkIsNotOneOf">checkIsNotOneOf</a>(mixed $value, mixed[] $unacceptableValues)
+        
+                                            <p>Check that $value is NOT equal to (==) any of the values in $unacceptableValues.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkIsTruthy">checkIsTruthy</a>(mixed $value)
+        
+                                            <p>Check that $value is truthy.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkIsFalsy">checkIsFalsy</a>(mixed $value)
+        
+                                            <p>Check that $value is falsy.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkIsTrue">checkIsTrue</a>(mixed $value)
+        
+                                            <p>Check that $value is identical to true.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkIsFalse">checkIsFalse</a>(mixed $value)
+        
+                                            <p>Check that $value is identical to false.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkHasType">checkHasType</a>(mixed $value, string|string[] $type)
+        
+                                            <p>Check that $value has a given type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkScalar">checkScalar</a>(mixed $value)
+        
+                                            <p>Check that $value is scalar.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkBool">checkBool</a>(mixed $value)
+        
+                                            <p>Check that $value is a boolean.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkArray">checkArray</a>(mixed $value)
+        
+                                            <p>Check that $value is an array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkFloat">checkFloat</a>(mixed $value)
+        
+                                            <p>Check that $value is a float.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkInteger">checkInteger</a>(mixed $value, string|null $comparison = null, int $against = null)
+        
+                                            <p>Check that $value is a an integer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkString">checkString</a>(mixed $value)
+        
+                                            <p>Check that $value is a float.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkObject">checkObject</a>(mixed $value)
+        
+                                            <p>Check that $value is a float.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkNull">checkNull</a>(mixed $value)
+        
+                                            <p>Check that $value is null.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkNotNull">checkNotNull</a>(mixed $value)
+        
+                                            <p>Check that $value is null.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkResource">checkResource</a>(mixed $value)
+        
+                                            <p>Check that $value is a resource.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkResourceType">checkResourceType</a>(mixed $value, string $type)
+        
+                                            <p>Check that $value is a resource of the given type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkCallable">checkCallable</a>(mixed $value)
+        
+                                            <p>Check that $value is callable.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_provides">
+        <div class="location">in <a href="../../Valit/Traits/ProvideViaReflection.html#method_provides"><abbr title="Valit\Traits\ProvideViaReflection">ProvideViaReflection</abbr></a> at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Traits/ProvideViaReflection.php#L64">line 64</a></div>
+        <code>                    array
+    <strong>provides</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all the checks provided by this checkprovider.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Associative array of [checkName => checkClosure]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIdenticalTo">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L33">line 33</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkIdenticalTo</strong>(mixed $value, mixed $against)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value === $against.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$against</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkEquals">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L64">line 64</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkEquals</strong>(mixed $value, mixed $equals)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value == $against (loose comparison).</p>                    <p>Examples:</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">$value</th>
+  <th align="left">$equals</th>
+  <th align="left">Valid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">true</td>
+  <td align="left">true</td>
+  <td align="left">yes</td>
+</tr>
+<tr>
+  <td align="left">true</td>
+  <td align="left">1</td>
+  <td align="left">yes</td>
+</tr>
+<tr>
+  <td align="left">"true"</td>
+  <td align="left">1</td>
+  <td align="left">no</td>
+</tr>
+<tr>
+  <td align="left">"true"</td>
+  <td align="left">true</td>
+  <td align="left">yes</td>
+</tr>
+<tr>
+  <td align="left">"true"</td>
+  <td align="left">"foo"</td>
+  <td align="left">no</td>
+</tr>
+<tr>
+  <td align="left">"1"</td>
+  <td align="left">true</td>
+  <td align="left">yes</td>
+</tr>
+<tr>
+  <td align="left">"1"</td>
+  <td align="left">1</td>
+  <td align="left">yes</td>
+</tr>
+<tr>
+  <td align="left">"1"</td>
+  <td align="left">"foo"</td>
+  <td align="left">no</td>
+</tr>
+<tr>
+  <td align="left">"0"</td>
+  <td align="left">true</td>
+  <td align="left">no</td>
+</tr>
+<tr>
+  <td align="left">"0"</td>
+  <td align="left">false</td>
+  <td align="left">yes</td>
+</tr>
+<tr>
+  <td align="left">"0"</td>
+  <td align="left">0</td>
+  <td align="left">yes</td>
+</tr>
+</tbody>
+</table>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$equals</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsOneOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L99">line 99</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkIsOneOf</strong>($value, $allowedValues)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is equal to (==) one of the values in $allowedValues.</p>                    <p>If you give multiple arguments to this function, each argument will
+be treated as a possible option.
+If you give only one argument to this function, then that argument must
+be iterable (array or Traversable). The entries in that variable will
+be treated as the options allowed.</p>
+
+<p>Code examples:</p>
+
+<pre><code class="php">// Check that $foo is either 'foo' or 'bar'
+Check::that($foo)-&gt;isOneOf('foo', 'bar');
+Check::that($foo)-&gt;isOneOf(['foo', 'bar']);
+
+// Check that $foo is either ['a', 'b'] or ['c', 'd']
+Check::that($foo)-&gt;isOneOf(['a', 'b'], ['c', 'd']);
+Check::that($foo)-&gt;isOneOf([ ['a', 'b'], ['c', 'd'] ]);
+</code></pre>
+
+<hr />
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$allowedValues</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsNotOneOf">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L127">line 127</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkIsNotOneOf</strong>(mixed $value, mixed[] $unacceptableValues)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is NOT equal to (==) any of the values in $unacceptableValues.</p>                    <p>See isOneOf() for examples.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed[]</td>
+                <td>$unacceptableValues</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsTruthy">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L152">line 152</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkIsTruthy</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is truthy.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsFalsy">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L166">line 166</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkIsFalsy</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is falsy.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsTrue">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L180">line 180</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkIsTrue</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is identical to true.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkIsFalse">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L194">line 194</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkIsFalse</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is identical to false.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkHasType">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L263">line 263</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkHasType</strong>(mixed $value, string|string[] $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value has a given type.</p>                    <p>Possible types:</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">$type</th>
+  <th align="left">Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left"><code>null</code></td>
+  <td align="left"><code>is_null()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>object</code></td>
+  <td align="left"><code>is_object()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>int</code></td>
+  <td align="left"><code>is_int()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>integer</code></td>
+  <td align="left"><code>is_int()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>bool</code></td>
+  <td align="left"><code>is_bool()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>boolean</code></td>
+  <td align="left"><code>is_bool()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>string</code></td>
+  <td align="left"><code>is_string()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>float</code></td>
+  <td align="left"><code>is_float()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>double</code></td>
+  <td align="left"><code>is_float()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>numeric</code></td>
+  <td align="left"><code>is_numeric()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>nan</code></td>
+  <td align="left"><code>is_nan()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>inf</code></td>
+  <td align="left"><code>is_inf()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>callable</code></td>
+  <td align="left"><code>is_callable()</code></td>
+</tr>
+<tr>
+  <td align="left"><code>intable</code></td>
+  <td align="left"><code>stringable</code> that can be converted to an int</td>
+</tr>
+<tr>
+  <td align="left"><code>iterable</code></td>
+  <td align="left"><code>is_array() || is_a($value, 'Traversable')</code></td>
+</tr>
+<tr>
+  <td align="left"><code>countable</code></td>
+  <td align="left"><code>is_array() || is_a($value, 'Cointable')</code></td>
+</tr>
+<tr>
+  <td align="left"><code>arrayable</code></td>
+  <td align="left"><code>is_array() || is_a($value, 'ArrayAccess')</code></td>
+</tr>
+<tr>
+  <td align="left"><code>container</code></td>
+  <td align="left"><code>iterable</code>, <code>countable</code> and <code>arrayable</code></td>
+</tr>
+<tr>
+  <td align="left"><code>stringable</code></td>
+  <td align="left">scalar or object with a<code>__toString()</code> method</td>
+</tr>
+<tr>
+  <td align="left"><em>class name</em></td>
+  <td align="left"><code>is_a()</code></td>
+</tr>
+<tr>
+  <td align="left"><em>foo[]</em></td>
+  <td align="left">array of <em>foo</em></td>
+</tr>
+</tbody>
+</table>
+
+<p>Code examples:</p>
+
+<pre><code class="php">// single type
+Check::that($foo)-&gt;hasType('callable');
+
+// multiple allowed types via the pipe character
+Check::that($foo)-&gt;hasType('float | int');
+
+// check that $foo is an array of floats
+// or an array of integers
+Check::that($foo)-&gt;hasType('float[] | int[]')
+
+// mixing classes, interfaces and basic types.
+Check::that($foo)-&gt;hasType('int|DateTime|DateTimeImmutable')
+
+// multiple types via array notation
+Check::that($foo)-&gt;hasType(['object', 'array'])
+
+// a strict array with 0-based numeric index
+Val::mustBe($value, 'mixed[]');
+
+// a strict array of strict arrays
+Val::mustBe($value, 'mixed[][]');
+</code></pre>
+
+<hr />
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkScalar">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L288">line 288</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkScalar</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is scalar.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkBool">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L305">line 305</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkBool</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is a boolean.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkArray">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L319">line 319</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkArray</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is an array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkFloat">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L333">line 333</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkFloat</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is a float.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkInteger">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L369">line 369</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkInteger</strong>(mixed $value, string|null $comparison = null, int $against = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is a an integer.</p>                    <p>If $comparison and $against are given, we also check that $value
+comparest to $against via the $comparison.</p>
+
+<p>For instance:</p>
+
+<pre><code class="php">// Check that foo is an integer.
+Check::that($foo)-&gt;isInt();
+
+// Check that foo is an integer that is greater than 20
+Check::that($foo)-&gt;isInt('&gt;', 20);
+
+// Check that foo is an integer that is greater than or equal to 0
+Check::that($foo)-&gt;isInt('&gt;=', 20);
+Check::that($foo)-&gt;isInt('≥', 20);   // alternate syntax
+
+// Check that foo is an integer that is equal to 5
+Check::that($foo)-&gt;isInt('=', 5);
+</code></pre>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$comparison</td>
+                <td>one of [null, '&lt;', '>', '=', '>=', '≥', '&lt;=', '≤']</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$against</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkString">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L421">line 421</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkString</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is a float.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkObject">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L435">line 435</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkObject</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is a float.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkNull">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L449">line 449</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkNull</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is null.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkNotNull">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L463">line 463</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkNotNull</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is null.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkResource">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L480">line 480</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkResource</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is a resource.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkResourceType">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L495">line 495</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkResourceType</strong>(mixed $value, string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is a resource of the given type.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkCallable">
+        <div class="location">at         <a href="https://github.com/moccalotto/valit/blob/2.0.1/Volumes/Macintosh HD/Code/github.com/moccalotto/valit/Providers/BasicCheckProvider.php#L517">line 517</a></div>
+        <code>                    <a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a>
+    <strong>checkCallable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that $value is callable.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Valit/Result/AssertionResult.html"><abbr title="Valit\Result\AssertionResult">AssertionResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
